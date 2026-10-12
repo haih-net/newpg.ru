@@ -1,4 +1,3 @@
-import tel10Image from './assets/template/images/tel10.png'
 import type * as React from 'react'
 import { Link } from 'react-router'
 
@@ -214,7 +213,7 @@ export const Footer: React.FC = () => (
             </div>
 
             <div className="phone">
-              <img src={tel10Image} alt="Контактная информация" />
+              <a href="mailto:info@newpg.ru">info@newpg.ru</a>
             </div>
 
             <div id="statistics">

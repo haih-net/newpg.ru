@@ -1,6 +1,6 @@
 import type * as React from 'react'
 import { Link } from 'react-router'
-import { ContactsPageStyled, AddressStyled, MapLinkStyled } from './styles'
+import { ContactsPageStyled } from './styles'
 
 export const ContactsPage: React.FC = () => {
   return (
@@ -71,49 +71,10 @@ export const ContactsPage: React.FC = () => {
             <p>{' '}</p>
 
             <p>
-              <AddressStyled>
-                Наш адрес: 119019, г. Москва, ул. Новый Арбат 21, оф. 2307
-              </AddressStyled>
-              <AddressStyled>{' '}</AddressStyled>
-            </p>
-
-            <p>{' '}</p>
-
-            <p>Телефон: +7 (495) 774-67-02</p>
-
-            <p>{' '}</p>
-
-            <p>
               Email: <a href="mailto:info@newpg.ru">info@newpg.ru</a>
             </p>
 
             <p>{' '}</p>
-
-            <p>
-              <input
-                disabled
-                title="Архивная форма пока не восстановлена"
-                type="button"
-                value="Отправить нам сообщение"
-              />
-            </p>
-
-            <p>{' '}</p>
-
-            <p>{' '}</p>
-
-            <p>
-              <br />
-              <small>
-                <MapLinkStyled
-                  href={
-                    'http://maps.google.ru/maps?f=q&source=embed&hl=ru&geocode=&q=%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9+%D0%B0%D1%80%D0%B1%D0%B0%D1%82,++21&sll=55.354135,40.297852&sspn=34.169392,135.263672&ie=UTF8&hq=&hnear=%D1%83%D0%BB.+%D0%9D%D0%BE%D0%B2.+%D0%90%D1%80%D0%B1%D0%B0%D1%82,+21,+%D0%90%D1%80%D0%B1%D0%B0%D1%82,+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%90%D0%9E+%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9&ll=55.755375,37.597704&spn=0.016905,0.054932&z=14&iwloc=A'
-                  }
-                >
-                  Просмотреть увеличенную карту
-                </MapLinkStyled>
-              </small>
-            </p>
           </div>
         </div>
 

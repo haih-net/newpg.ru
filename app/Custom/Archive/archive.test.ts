@@ -102,6 +102,15 @@ describe('Страницы сохраняют архивное содержим�
           `многое другое... ${mainPageIntroduction} Поисковое продвижение`,
         )
       }
+      if (path === '/contacts.html') {
+        expectedText = expectedText
+          .replace(
+            'Наш адрес: 119019, г. Москва, ул. Новый Арбат 21, оф. 2307 ',
+            '',
+          )
+          .replace('Телефон: +7 (495) 774-67-02 ', '')
+          .replace(' Просмотреть увеличенную карту', '')
+      }
       const renderedText: string = visibleText(rendered)
       expect(renderedText).toBe(expectedText)
       const isFilled: boolean = !renderedText.includes(
@@ -109,7 +118,13 @@ describe('Страницы сохраняют архивное содержим�
       )
       expect(page.isFilled).toBe(isFilled)
       expect(getArchivePage(path).page?.isFilled).toBe(isFilled)
-      expect(links(rendered)).toEqual(links(snapshots[path].html))
+      expect(links(rendered)).toEqual(
+        links(snapshots[path].html).filter(
+          (href) =>
+            path !== '/contacts.html' ||
+            !href.startsWith('http://maps.google.ru/'),
+        ),
+      )
       expect(rendered).not.toMatch(/<script\b|<iframe\b|\son[a-z]+=/i)
       expect(getArchivePage(path).page).not.toHaveProperty('Component')
       expect(getArchivePage(path).page).not.toHaveProperty('html')

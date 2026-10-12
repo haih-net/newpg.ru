@@ -1,4 +1,3 @@
-import tel_topImage from './assets/template/images/tel_top.png'
 import aboutImage from './assets/images/menu/about.png'
 import black_aboutImage from './assets/images/menu/black_about.png'
 import serviceImage from './assets/images/menu/service.png'
@@ -18,7 +17,7 @@ export const Header: React.FC = () => (
     <div className="header">
       <div className="contacts">
         <span className="text middle">
-          <img src={tel_topImage} alt="Контактная информация" />
+          <a href="mailto:info@newpg.ru">info@newpg.ru</a>
         </span>
       </div>
 
