@@ -79,7 +79,15 @@ async function startServer() {
   } else {
     // Production: serve static files and prebuilt SSR bundle
     const sirv = (await import('sirv')).default
-    app.use(sirv('build/client', { extensions: [] }))
+    const serveStatic = sirv('build/client', { extensions: [] })
+    app.use((req, res, next) => {
+      // Исторический URL требует собственных метаданных и данных гидратации.
+      if (req.path === '/index.html') {
+        next()
+        return
+      }
+      serveStatic(req, res, next)
+    })
 
     const buildUrl: string = pathToFileURL(
       resolve('build/server/index.js'),

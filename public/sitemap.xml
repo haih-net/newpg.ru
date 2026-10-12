@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://haih.site/</loc></url>
-  <url><loc>https://haih.site/solutions</loc></url>
-  <url><loc>https://haih.site/blog</loc></url>
-  <url><loc>https://haih.site/blog/a-small-site-and-the-limits-we-found</loc></url>
-  <url><loc>https://haih.site/blog/one-server-two-modes-and-an-api</loc></url>
-  <url><loc>https://haih.site/blog/eighteen-hours-a-real-portal-in-production</loc></url>
-  <url><loc>https://haih.site/blog/the-tests-passed-which-tests</loc></url>
-  <url><loc>https://haih.site/blog/open-to-bots-closed-to-abuse</loc></url>
-  <url><loc>https://haih.site/blog/two-protocols-one-development-loop</loc></url>
+  <url><loc>https://newpg.ru/</loc></url>
+  <url><loc>https://newpg.ru/about.html</loc></url>
+  <url><loc>https://newpg.ru/contacts.html</loc></url>
+  <url><loc>https://newpg.ru/documentation.html</loc></url>
+  <url><loc>https://newpg.ru/documentation/extjs.html</loc></url>
+  <url><loc>https://newpg.ru/index.html</loc></url>
+  <url><loc>https://newpg.ru/portfolio.html</loc></url>
+  <url><loc>https://newpg.ru/services.html</loc></url>
+  <url><loc>https://newpg.ru/services/poddergka-prodvigenie.html</loc></url>
+  <url><loc>https://newpg.ru/services/poddergka-prodvigenie/kak-obnovlyat-sait-samomu.html</loc></url>
+  <url><loc>https://newpg.ru/services/poddergka-prodvigenie/kak-samomu-obnovliat-site.html</loc></url>
+  <url><loc>https://newpg.ru/services/poddergka-prodvigenie/obzor-populyarnyh-cms.html</loc></url>
+  <url><loc>https://newpg.ru/services/poddergka-prodvigenie/polnaya-poddergka-saytov.html</loc></url>
+  <url><loc>https://newpg.ru/services/poiskovoe-prodvigenie.html</loc></url>
+  <url><loc>https://newpg.ru/services/poiskovoe-prodvigenie/301_redirect.html</loc></url>
+  <url><loc>https://newpg.ru/services/poiskovoe-prodvigenie/geograficheskaya-prinadlegnost.html</loc></url>
+  <url><loc>https://newpg.ru/services/poiskovoe-prodvigenie/slogno-li-byt-pervym-v-rossii.html</loc></url>
 </urlset>

@@ -1,9 +1,9 @@
 export const site = {
-  origin: 'https://haih.site',
-  name: 'HAIH',
-  language: 'en',
+  origin: 'https://newpg.ru',
+  name: 'Новая Парадигма',
+  language: 'ru',
   description:
-    'Building a website with AI, starting from requirements. Explore the working implementation, technology choices, experiments and lessons from HAIH.',
+    'Архивный сайт веб-студии «Новая Парадигма»: создание, поддержка и продвижение сайтов.',
 }
 
 // Preserve the identity published at https://fi1osof.ru/about.

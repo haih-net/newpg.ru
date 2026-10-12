@@ -1,16 +1,13 @@
 import type { Config } from '@react-router/dev/config'
+import { inventory } from './app/Custom/Archive/inventory'
+
 export default {
   ssr: true,
-  prerender: [
-    '/',
-    '/solutions',
-    '/blog',
-    '/blog/two-protocols-one-development-loop',
-    '/blog/open-to-bots-closed-to-abuse',
-    '/blog/the-tests-passed-which-tests',
-    '/blog/eighteen-hours-a-real-portal-in-production',
-    '/blog/a-small-site-and-the-limits-we-found',
-    '/blog/one-server-two-modes-and-an-api',
-  ],
+  // /index.html обслуживается SSR: его каталог конфликтует с файлом главной.
+  prerender: inventory
+    .filter(
+      (entry) => entry.status === 'restored' && entry.path !== '/index.html',
+    )
+    .map((entry) => entry.path),
   routeDiscovery: { mode: 'initial' },
 } satisfies Config

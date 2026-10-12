@@ -7,6 +7,7 @@ export interface SeoHeadersProps {
   title: string
   description: string
   path?: string
+  publicationDate?: string
   noindex?: boolean
   image?: { src: string; alt: string; width: number; height: number }
   breadcrumbs?: { name: string; path: string }[]
@@ -31,8 +32,8 @@ export interface SeoHandle {
 }
 
 const notFound: SeoHeadersProps = {
-  title: 'Page not found — HAIH',
-  description: 'The requested page could not be found.',
+  title: 'Страница не найдена — Новая Парадигма',
+  description: 'Запрошенная страница не найдена.',
   noindex: true,
 }
 
@@ -50,6 +51,7 @@ export function createSeoMeta({
   description,
   path,
   noindex = false,
+  publicationDate,
   image,
   breadcrumbs = [],
   collection,
@@ -79,6 +81,7 @@ export function createSeoMeta({
           name: title,
           description,
           inLanguage: site.language,
+          ...(publicationDate ? { datePublished: publicationDate } : {}),
           isPartOf: { '@id': websiteId },
           ...(breadcrumbs.length
             ? { breadcrumb: { '@id': `${canonical}#breadcrumbs` } }

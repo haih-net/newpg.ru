@@ -1,0 +1,263 @@
+{
+  "reference": "https://web.archive.org/web/20101011095509/http://newpg.ru/",
+  "assets": [
+    {
+      "path": "/assets/images/CSS/Blocks/block3.jpg",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/CSS/Blocks/block3.jpg",
+      "url": "https://web.archive.org/web/20120125204312id_/http://newpg.ru/assets/images/CSS/Blocks/block3.jpg",
+      "bytes": 29384
+    },
+    {
+      "path": "/assets/images/CSS/Blocks/search_engine_optimization.png",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/CSS/Blocks/search_engine_optimization.png",
+      "url": "https://web.archive.org/web/20120125181808id_/http://newpg.ru/assets/images/CSS/Blocks/search_engine_optimization.png",
+      "bytes": 41205
+    },
+    {
+      "path": "/assets/images/CSS/Blocks/support_updates.png",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/CSS/Blocks/support_updates.png",
+      "url": "https://web.archive.org/web/20120125211151id_/http://newpg.ru/assets/images/CSS/Blocks/support_updates.png",
+      "bytes": 48634
+    },
+    {
+      "path": "/assets/images/CSS/Blocks/website_development.png",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/CSS/Blocks/website_development.png",
+      "url": "https://web.archive.org/web/20120125215434id_/http://newpg.ru/assets/images/CSS/Blocks/website_development.png",
+      "bytes": 41639
+    },
+    {
+      "path": "/assets/images/CSS/Blocks/website_doc.png",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/CSS/Blocks/website_doc.png",
+      "url": "https://web.archive.org/web/20120125173657id_/http://newpg.ru/assets/images/CSS/Blocks/website_doc.png",
+      "bytes": 36409
+    },
+    {
+      "path": "/assets/images/icons/extjs.jpeg",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/icons/extjs.jpeg",
+      "url": "https://web.archive.org/web/20110826004405id_/http://newpg.ru/assets/images/icons/extjs.jpeg",
+      "bytes": 5205
+    },
+    {
+      "path": "/assets/images/portfolio/small/medportaldv.ru.jpg",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/portfolio/small/medportaldv.ru.jpg",
+      "url": "https://web.archive.org/web/20120201082433id_/http://newpg.ru/assets/images/portfolio/small/medportaldv.ru.jpg",
+      "bytes": 51232
+    },
+    {
+      "path": "/assets/images/portfolio/small/msk.spravedlivo.ru.jpg",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/portfolio/small/msk.spravedlivo.ru.jpg",
+      "url": "https://web.archive.org/web/20120201082431id_/http://newpg.ru/assets/images/portfolio/small/msk.spravedlivo.ru.jpg",
+      "bytes": 50635
+    },
+    {
+      "path": "/assets/images/portfolio/small/promsvyaz.info.jpg",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/portfolio/small/promsvyaz.info.jpg",
+      "url": "https://web.archive.org/web/20120201082432id_/http://newpg.ru/assets/images/portfolio/small/promsvyaz.info.jpg",
+      "bytes": 30676
+    },
+    {
+      "path": "/assets/images/portfolio/small/naee.ru.jpg",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/portfolio/small/naee.ru.jpg",
+      "url": "http://web.archive.org/web/20120201082434id_/http://newpg.ru/assets/images/portfolio/small/naee.ru.jpg",
+      "bytes": 41814
+    },
+    {
+      "path": "/assets/images/portfolio/small/radioma.ru.jpg",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/portfolio/small/radioma.ru.jpg",
+      "url": "http://web.archive.org/web/20120201082432id_/http://newpg.ru/assets/images/portfolio/small/radioma.ru.jpg",
+      "bytes": 49343
+    },
+    {
+      "path": "/assets/images/portfolio/small/sportbooking.ru.jpg",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/portfolio/small/sportbooking.ru.jpg",
+      "url": "http://web.archive.org/web/20120201082434id_/http://newpg.ru/assets/images/portfolio/small/sportbooking.ru.jpg",
+      "bytes": 53286
+    },
+    {
+      "path": "/assets/images/portfolio/small/sportclubvisa.ru.jpg",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/portfolio/small/sportclubvisa.ru.jpg",
+      "url": "http://web.archive.org/web/20120201082432id_/http://newpg.ru/assets/images/portfolio/small/sportclubvisa.ru.jpg",
+      "bytes": 41145
+    },
+    {
+      "path": "/assets/images/portfolio/small/truskavets-kurort.ru.jpg",
+      "file": "app/Custom/pages/MainPage/assets/assets/images/portfolio/small/truskavets-kurort.ru.jpg",
+      "url": "http://web.archive.org/web/20120201082435id_/http://newpg.ru/assets/images/portfolio/small/truskavets-kurort.ru.jpg",
+      "bytes": 61973
+    },
+    {
+      "path": "/diz/images/button_bg.png",
+      "file": "app/Custom/Layout/assets/diz/images/button_bg.png",
+      "url": "http://web.archive.org/web/20120510092533id_/http://newpg.ru/diz/images/button_bg.png",
+      "bytes": 129
+    },
+    {
+      "path": "/diz/images/footer_hr.png",
+      "file": "app/Custom/Layout/assets/diz/images/footer_hr.png",
+      "url": "http://web.archive.org/web/20120201082508id_/http://newpg.ru/diz/images/footer_hr.png",
+      "bytes": 851
+    },
+    {
+      "path": "/diz/images/footer_line2.png",
+      "file": "app/Custom/Layout/assets/diz/images/footer_line2.png",
+      "url": "http://web.archive.org/web/20110912115504id_/http://newpg.ru/diz/images/footer_line2.png",
+      "bytes": 257
+    },
+    {
+      "path": "/diz/images/ful2_li.gif",
+      "file": "app/Custom/Layout/assets/diz/images/ful2_li.gif",
+      "url": "http://web.archive.org/web/20120201082508id_/http://newpg.ru/diz/images/ful2_li.gif",
+      "bytes": 111
+    },
+    {
+      "path": "/diz/images/header_bg.jpg",
+      "file": "app/Custom/Layout/assets/diz/images/header_bg.jpg",
+      "url": "http://web.archive.org/web/20120201082508id_/http://newpg.ru/diz/images/header_bg.jpg",
+      "bytes": 394
+    },
+    {
+      "path": "/diz/images/header_razdelitel.png",
+      "file": "app/Custom/Layout/assets/diz/images/header_razdelitel.png",
+      "url": "http://web.archive.org/web/20120201082508id_/http://newpg.ru/diz/images/header_razdelitel.png",
+      "bytes": 117
+    },
+    {
+      "path": "/diz/images/l_corner.png",
+      "file": "app/Custom/Layout/assets/diz/images/l_corner.png",
+      "url": "http://web.archive.org/web/20110911184255id_/http://newpg.ru/diz/images/l_corner.png",
+      "bytes": 304
+    },
+    {
+      "path": "/diz/images/line_top_short.jpg",
+      "file": "app/Custom/Layout/assets/diz/images/line_top_short.jpg",
+      "url": "http://web.archive.org/web/20110912172907id_/http://newpg.ru/diz/images/line_top_short.jpg",
+      "bytes": 309
+    },
+    {
+      "path": "/diz/images/r_corner.png",
+      "file": "app/Custom/Layout/assets/diz/images/r_corner.png",
+      "url": "http://web.archive.org/web/20120510095129id_/http://newpg.ru/diz/images/r_corner.png",
+      "bytes": 314
+    },
+    {
+      "path": "/diz/images/search_engine_optimization.png",
+      "file": "app/Custom/Layout/assets/diz/images/search_engine_optimization.png",
+      "url": "http://web.archive.org/web/20120510094530id_/http://newpg.ru/diz/images/search_engine_optimization.png",
+      "bytes": 41205
+    },
+    {
+      "path": "/diz/images/support_updates.png",
+      "file": "app/Custom/Layout/assets/diz/images/support_updates.png",
+      "url": "http://web.archive.org/web/20120510095741id_/http://newpg.ru/diz/images/support_updates.png",
+      "bytes": 48704
+    },
+    {
+      "path": "/diz/images/website_development.png",
+      "file": "app/Custom/Layout/assets/diz/images/website_development.png",
+      "url": "http://web.archive.org/web/20120510094807id_/http://newpg.ru/diz/images/website_development.png",
+      "bytes": 41228
+    },
+    {
+      "path": "/images/diz/poddergka_obnovlenie.jpg",
+      "file": "app/Custom/pages/MainPage/assets/images/diz/poddergka_obnovlenie.jpg",
+      "url": "http://web.archive.org/web/20110828152657id_/http://newpg.ru/images/diz/poddergka_obnovlenie.jpg",
+      "bytes": 9502
+    },
+    {
+      "path": "/images/diz/poiskovoe_prodvigenie.jpg",
+      "file": "app/Custom/pages/MainPage/assets/images/diz/poiskovoe_prodvigenie.jpg",
+      "url": "http://web.archive.org/web/20120125193913id_/http://newpg.ru/images/diz/poiskovoe_prodvigenie.jpg",
+      "bytes": 9681
+    },
+    {
+      "path": "/images/diz/sozdanie_saytov.jpg",
+      "file": "app/Custom/pages/MainPage/assets/images/diz/sozdanie_saytov.jpg",
+      "url": "http://web.archive.org/web/20120125195743id_/http://newpg.ru/images/diz/sozdanie_saytov.jpg",
+      "bytes": 8436
+    },
+    {
+      "path": "/images/diz/zakaz.jpg",
+      "file": "app/Custom/pages/MainPage/assets/images/diz/zakaz.jpg",
+      "url": "http://web.archive.org/web/20120125162952id_/http://newpg.ru/images/diz/zakaz.jpg",
+      "bytes": 4868
+    },
+    {
+      "path": "/images/logo.png",
+      "file": "app/Custom/Layout/assets/images/logo.png",
+      "url": "http://web.archive.org/web/20120125163923id_/http://newpg.ru/images/logo.png",
+      "bytes": 2937
+    },
+    {
+      "path": "/images/menu/about.png",
+      "file": "app/Custom/Layout/assets/images/menu/about.png",
+      "url": "http://web.archive.org/web/20120125180147id_/http://newpg.ru/images/menu/about.png",
+      "bytes": 577
+    },
+    {
+      "path": "/images/menu/black_about.png",
+      "file": "app/Custom/Layout/assets/images/menu/black_about.png",
+      "url": "http://web.archive.org/web/20120125215043id_/http://newpg.ru/images/menu/black_about.png",
+      "bytes": 579
+    },
+    {
+      "path": "/images/menu/black_contact.png",
+      "file": "app/Custom/Layout/assets/images/menu/black_contact.png",
+      "url": "http://web.archive.org/web/20120125214631id_/http://newpg.ru/images/menu/black_contact.png",
+      "bytes": 978
+    },
+    {
+      "path": "/images/menu/black_documentation.png",
+      "file": "app/Custom/Layout/assets/images/menu/black_documentation.png",
+      "url": "http://web.archive.org/web/20120125223359id_/http://newpg.ru/images/menu/black_documentation.png",
+      "bytes": 688
+    },
+    {
+      "path": "/images/menu/black_portfolio.png",
+      "file": "app/Custom/Layout/assets/images/menu/black_portfolio.png",
+      "url": "http://web.archive.org/web/20110817190203id_/http://newpg.ru/images/menu/black_portfolio.png",
+      "bytes": 522
+    },
+    {
+      "path": "/images/menu/black_service.png",
+      "file": "app/Custom/Layout/assets/images/menu/black_service.png",
+      "url": "http://web.archive.org/web/20120125190326id_/http://newpg.ru/images/menu/black_service.png",
+      "bytes": 419
+    },
+    {
+      "path": "/images/menu/contact.png",
+      "file": "app/Custom/Layout/assets/images/menu/contact.png",
+      "url": "http://web.archive.org/web/20110827052321id_/http://newpg.ru/images/menu/contact.png",
+      "bytes": 969
+    },
+    {
+      "path": "/images/menu/documentation.png",
+      "file": "app/Custom/Layout/assets/images/menu/documentation.png",
+      "url": "http://web.archive.org/web/20110818185619id_/http://newpg.ru/images/menu/documentation.png",
+      "bytes": 713
+    },
+    {
+      "path": "/images/menu/portfolio.png",
+      "file": "app/Custom/Layout/assets/images/menu/portfolio.png",
+      "url": "http://web.archive.org/web/20120125211543id_/http://newpg.ru/images/menu/portfolio.png",
+      "bytes": 542
+    },
+    {
+      "path": "/images/menu/service.png",
+      "file": "app/Custom/Layout/assets/images/menu/service.png",
+      "url": "http://web.archive.org/web/20120125160021id_/http://newpg.ru/images/menu/service.png",
+      "bytes": 434
+    },
+    {
+      "path": "/template/images/tel10.png",
+      "file": "app/Custom/Layout/assets/template/images/tel10.png",
+      "url": "http://web.archive.org/web/20120125224635id_/http://newpg.ru/template/images/tel10.png",
+      "bytes": 1791
+    },
+    {
+      "path": "/template/images/tel_top.png",
+      "file": "app/Custom/Layout/assets/template/images/tel_top.png",
+      "url": "http://web.archive.org/web/20120125175326id_/http://newpg.ru/template/images/tel_top.png",
+      "bytes": 2570
+    }
+  ]
+}
