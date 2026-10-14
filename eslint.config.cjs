@@ -11,6 +11,7 @@ module.exports = [
   {
     ignores: [
       'project/**',
+      '**/generated/**',
       'node_modules/**',
       'coverage/**',
       'playwright-report/**',

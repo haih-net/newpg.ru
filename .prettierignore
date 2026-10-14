@@ -1,4 +1,5 @@
 /project
+generated
 /node_modules
 /build
 /.react-router
