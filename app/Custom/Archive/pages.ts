@@ -1,4 +1,5 @@
 import type { PageRegistry } from './interfaces'
+import { documentationPages } from './documentation'
 import { MainPage } from '../pages/MainPage'
 import { AboutPage } from '../pages/AboutPage'
 import { ContactsPage } from '../pages/ContactsPage'
@@ -15,7 +16,18 @@ import { RedirectPage } from '../pages/RedirectPage'
 import { GeographyPage } from '../pages/GeographyPage'
 import { FirstInRussiaPage } from '../pages/FirstInRussiaPage'
 
+import { ExtJsLesson1Page } from '../pages/ExtJsLesson1Page'
+
 export const pages: PageRegistry = {
+  ...documentationPages,
+  '/documentation/extjs/extjs_lessons/lesson1.html': {
+    isFilled: true,
+    title: 'Веб-студия «Новая Парадигма» | ExtJS. Урок 1. Hello, world!',
+    description: 'ExtJS. Урок первый. Демонстрирует работу библиотеки ExtJS',
+    archiveUrl:
+      'https://web.archive.org/web/20101027085749id_/http://newpg.ru/documentation/extjs/extjs_lessons/lesson1.html',
+    Component: ExtJsLesson1Page,
+  },
   '/': {
     isFilled: true,
     title: 'Веб-студия «Новая Парадигма» | Главная страница',

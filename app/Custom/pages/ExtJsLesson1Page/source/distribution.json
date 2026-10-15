@@ -1,0 +1,17 @@
+{
+  "url": "https://codeload.github.com/galgeri/extjs-docs-archive/zip/refs/heads/main",
+  "version": "3.0.3",
+  "archiveSha256": "8cdd9f5e0bf2d28d554441cb2fec5f174d3b3a12834b89aacba2cdc60d5bd3dd",
+  "existingFiles": "Сохранены без замены; ext-all.js и adapter/ext/ext-base.js побайтово совпадают с копией Web Archive.",
+  "addedFiles": 2376,
+  "publicPath": "/ExtJS/",
+  "excludedFromPublic": [
+    "pkgs",
+    "adapter/jquery",
+    "adapter/prototype",
+    "adapter/yui",
+    "INCLUDE_ORDER.txt",
+    "ext.jsb2",
+    "src (кроме locale, используемого примерами)"
+  ]
+}

@@ -213,3 +213,47 @@ Stack tests require the [monitoring preview](docker/monitoring/README.md), its p
 Add unit tests under `tests/unit/`, or colocate `*.test.ts` / `*.test.tsx` in `app/` (`*.test.ts` in `server/`). Put local integration tests in `tests/integration/`, stack checks in `tests/stack/`, and browser `*.spec.ts` files in `tests/e2e/`. Each runner discovers its own suite. Unit tests currently use the Node environment; browser behavior belongs in Playwright. Configurations use CommonJS exports to avoid adding default exports. Coverage measures the configured SEO and server source scope; it is unit coverage, not combined integration/browser coverage.
 
 Playwright checks hydration errors, same-document navigation, heading focus, metadata updates, browser history, deep-link refresh and 404 responses. Its default local server run does not prove Traefik/Varnish cache behavior or development HMR.
+
+## Восстановление документации — 15 октября 2026
+
+Сохранены исторические URL оглавления ExtJS, уроков 1–6, обзора MODX Revolution
+и статьи об оптимизации кеширования. Текст и листинги отдаются в HTML до запуска
+JavaScript. `app/Custom/DocumentationLayout` подключает локальные стили и скрипты,
+ожидает готовности библиотеки, затем активирует примеры. При уходе закрываются
+сообщения, уничтожаются окна и хранилища примеров, удаляются стили документации.
+Совместимость с SPA обеспечена отдельной отменой отложенного resize перед
+уничтожением контейнеров ExtJS 3.0.3; исходные файлы библиотеки не изменены.
+
+Библиотека, API и штатные примеры доступны в `/ExtJS/`. Полный комплект взят из
+https://github.com/galgeri/extjs-docs-archive/tree/main/3.0.3; SHA-256 ZIP и сверка
+основных скриптов с Web Archive записаны в
+`app/Custom/pages/ExtJsLesson1Page/source/distribution.json`.
+Удалены неиспользуемые сборочные пакеты, альтернативные адаптеры и исходники
+сборки; локализации оставлены для штатных примеров. API содержит собственные
+листинги исходного кода. Примеры дистрибутива, требующие PHP или Flash, сохранены
+как исторические материалы; соответствующие серверы и плагины не подключены.
+
+Оригиналы страниц, журнал запросов, обнаруженные ссылки и список недостающих
+изображений находятся в `app/Custom/Archive/source/documentation/`. Материалы
+первого урока сохранены отдельно рядом с его компонентом. Архив отказал в
+соединении на `js/ExtJS/lessons/lesson6.js`; после этого сетевые загрузки
+остановлены. Текст шестого урока доступен; скрипт не подменяется выдуманной копией.
+Остались 14 изображений новых страниц и две иллюстрации первого урока, а также
+дополнительные страницы MODX из найденного оглавления. Старые адреса `106.html`
+и `examples.html` вернули HTTP 404 архива, что не доказывает исходный 404 сайта.
+
+Проверки:
+
+```sh
+./node_modules/.bin/vitest run app/Custom/Archive/archive.test.ts app/Custom/DocumentationLayout/compatibility.test.ts
+./node_modules/.bin/tsc --noEmit
+./node_modules/.bin/react-router build
+TMPDIR="$PWD/test-results" XDG_CONFIG_HOME="$PWD/test-results/config" XDG_CACHE_HOME="$PWD/test-results/cache" node scripts/archive/check-lesson1.mjs
+TMPDIR="$PWD/test-results" XDG_CONFIG_HOME="$PWD/test-results/config" XDG_CACHE_HOME="$PWD/test-results/cache" node scripts/archive/check-documentation.mjs
+```
+
+Браузерные проверки используют запущенный сайт на порту 3000 и установленный
+`/usr/bin/google-chrome`. Проверяются примеры, форма, таблица, история браузера,
+переходы с открытыми окнами, мобильная ширина и отсутствие ошибок/потерянных
+ресурсов у проверенных страниц. Иллюстрации без локального файла показаны
+подписями; это не проверка полного визуального совпадения с архивом.

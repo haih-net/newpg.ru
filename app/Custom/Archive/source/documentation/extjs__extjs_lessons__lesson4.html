@@ -1,0 +1,447 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+<meta name="keywords" content="extjs уроки, extjs примеры, extjs для начинающих, extjs toolbar, extjs, Ext.Window, веб-студия" />
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<title>Веб-студия «Новая Парадигма» | ExtJS. Урок 4. Окна, часть третья, Ext.Window properties</title>
+
+<meta name="Description" content='ExtJS. Урок 4. Окна. Изменение размеров и другие свойства окон. Ext.Window properties'>
+
+<base href="http://newpg.ru/" />
+
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+<link type="text/css" rel="stylesheet" href="diz/css/style_new.css" />
+
+
+
+<!-- Header -->
+
+
+
+<!-- End of Header -->
+<link type="text/css" rel="stylesheet" href="diz/css/index.css" />
+
+<!-- <script type='text/javascript' src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>-->
+
+
+
+<link type="text/css" rel="stylesheet" href="css/jsLessons.css" />
+
+<link rel="stylesheet" href="ExtJS/resources/css/ext-all.css" type="text/css" media="screen" />
+<script type="text/javascript" src="ExtJS/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="ExtJS/ext-all.js"></script>
+<script type="text/javascript" src="ExtJS/bugFix/fix.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<link type="text/css"  rel="stylesheet" href="js/google/prettify/prettify.css" />
+
+<script type="text/javascript" src="js/google/prettify/prettify.js"></script>
+<script type="text/javascript" src="js/ExtJS/lessons/lesson3.js"></script>
+
+<script  type="text/javascript">
+
+Ext.onReady(function(){
+    prettyPrint();
+})
+</script>
+
+</head>
+
+<body>
+
+
+
+<div class="wrap">
+
+	<div class="body">
+
+		<div class="header">
+
+			<div class="contacts"><span class="text middle"><img style="padding-top:5px;" src=/template/images/tel_top.png border=0></span>
+</div>
+
+<!-- 
+<div class="contacts"><span class="contacts">Для срочных вопросов: <span class="tel"><span class="code green">8 (495)</span> 772-67-02</span> <span class="mail">Почта: <a href="mailto:info@newpg.ru" class="mail green">info@newpg.ru</a></span></span>
+</div>
+-->
+
+<div class="main_menu">
+	<div class="menu">
+	<ul class="menu"><li><span  class="l_corner"></span><span class="row"><a href="/about.html" title="О компании"><img class="white" alt="О компании" src="images/menu/about.png" /><img class="black" alt="О компании" src="images/menu/black_about.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/services.html" title="Услуги"><img class="white" alt="Услуги" src="images/menu/service.png" /><img class="black" alt="Услуги" src="images/menu/black_service.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/portfolio.html" title="Портфолио"><img class="white" alt="Портфолио" src="images/menu/portfolio.png" /><img class="black" alt="Портфолио" src="images/menu/black_portfolio.png" /></a></span><span class="r_corner"></span></li>
+<li class="active"><span  class="l_corner"></span><span class="row"><a href="/documentation.html" title="Документация"><img class="white" alt="Документация" src="images/menu/documentation.png" /><img class="black" alt="Документация" src="images/menu/black_documentation.png" /></a></span><span class="r_corner"></span></li class="active">
+<li class="last"><span  class="l_corner"></span><span class="row"><a href="/contacts.html" title="Контактная  информация"><img class="white" alt="Контактная  информация" src="images/menu/contact.png" /><img class="black" alt="Контактная  информация" src="images/menu/black_contact.png" /></a></span><span class="r_corner"></span></li class="last">
+</ul>	</div> 
+	<div class="logo"><a href="http://newpg.ru/" title="На главную"><img src="images/logo.png" alt="На главную" title="Студия Новая Парадигма"  /></a></div>
+	<div  class="clear"></div>
+	
+</div> 
+		</div>
+
+		<div class="middle">
+
+			 <div class="left_block">
+	<div class="menu">
+			<ul class="menu"><li class="level1"><a href="http://newpg.ru/" title="Главная страница" >Главная</a></li>
+<li class="level1"><a href="/about.html" title="О компании" >О компании</a></li>
+<li class="level1"><a href="/services.html" title="Услуги" >Услуги</a></li>
+<li class="level1"><a href="/portfolio.html" title="Портфолио" >Портфолио</a></li>
+<li class="level1 active"><a href="/documentation.html" title="Документация" >Документация</a><ul><li class="level2 active"><a href="/documentation/extjs.html" title="ExtJS" >ExtJS</a><ul><li class="level3 active"><a href="/documentation/extjs/extjs_lessons.html" title="Уроки ExtJS" >Уроки ExtJS</a><ul><li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson1.html" title="ExtJS. Урок 1. Hello, world!" >Урок 1. Hello, world!</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson2.html" title="ExtJS. Урок 2. Окна. Ext.Window" >Урок 2. Окна</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson3.html" title="ExtJS. Урок 3. Окна, часть вторая. Ext.Window, Ext.Toolbar" >Урок 3. Окна, часть вторая</a></li>
+<li class="level4 active self"><a href="/documentation/extjs/extjs_lessons/lesson4.html" title="ExtJS. Урок 4. Окна, часть третья, Ext.Window properties" >Урок 4. Окна, часть третья</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson5.html" title="ExtJS. Урок 5. Хранилища и таблицы. Ext.grid, Ext.data.Store" >Урок 5. Хранилища и таблицы</a></li>
+<li class="last level4"><a href="/documentation/extjs/extjs_lessons/lesson6.html" title="ExtJS. Урок 6. Шаблоны элементов. Ext.Template" >Урок 6. Шаблоны элементов</a></li>
+</ul></li>
+<li class="level3"><a href="ExtJS/docs" title="Документация по ExtJS" target="_blank">Документация по ExtJS</a></li>
+<li class="last level3"><a href="ExtJS/examples" title="Примеры ExtJS" target="_blank">Примеры ExtJS</a></li>
+</ul></li>
+</ul></li>
+<li class="last level1"><a href="/contacts.html" title="Контактная  информация" >Контактная  информация</a></li>
+</ul>	</div> 
+	
+</div>
+
+<div class="center_block">
+	<div class="breadcrumbs"><span class="B_crumbBox"><span class="B_firstCrumb"><a href="/">Главная</a></span> &raquo; <a class="B_crumb" href="/documentation.html" title="Документация по ExtJS">Документация</a> &raquo; <a class="B_crumb" href="/documentation/extjs.html" title="ExtJS">ExtJS</a> &raquo; <a class="B_crumb" href="/documentation/extjs/extjs_lessons.html" title="Уроки ExtJS">Уроки ExtJS</a> &raquo; <h1 class="B_lastCrumb"><span class="B_currentCrumb">Урок 4. Окна, часть третья</span></h1></span></div>
+	<div id="content"><p>На прошлом уроке мы разобрали создание тулбаров для окон. Поверхностно конечно же, но достаточно чтобы понять принцип построения окон. Итак, чем же мы займемся сейчас? А разберем мы сейчас свойства окна сворачиваться, расширяться и т.п. Тут мы будем продолжать расширять наш класс WINDOW, так что если перескочили через урок, вернитесь в прошлый и просмотрите листинги. Вот код функции для нашей следующей кнопки:</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">showResizable:function(){
+		
+		params = this.extend(this.params, {
+			// Наши уже используемые ранее объекты баров
+			tbar:this.toolbar,
+			bbar:this.bbar,
+			fbar:this.fbar,
+			
+			// Новые параметры: 
+			resizable: true,		// Можно изменять размеры окна
+			collapsible: true,		// Можно схлопывать/расхлопывать окно
+			minimizable: true,		// Можно минимизировать окно
+			maximizable:true		// Можно максимизировать окно
+		})
+		this.show(params);	
+}<br /></pre>
+<p>&nbsp;</p>
+<p>
+  <input onclick="WINDOW.showResizable();" name="button" type="button" value="Открыть расширяемое окно" />
+</p>
+<p>&nbsp;</p>
+<p>Разберем детально все новые параметры, хотя наверняка для многих тут итак все понятно. </p>
+<p>&nbsp;</p>
+<p>Во-первых, сразу отметим что не считая параметра resizable, все эти параметры влияют на наличие или отсутствие соответствующих функциональных кнопок в верхнем правом углу окна. К примеру, если мы укажем closable: false , у нас исчезнет крестик, закрывающий окно при клике и если не будет других кнопок для закрытия окна (или навешано каких-нибудь событий, по которым окно закрывалось бы), окно будет считаться не закрываемым. </p>
+<p>&nbsp;</p>
+<p><strong>resizable: true</strong> . По умолчанию true, так что в нашем случае мы ничего не меняем. Но если бы мы поставили false, изменять размеры окна уже нельзя было бы. </p>
+<p>&nbsp;</p>
+<p><strong>collapsible: true</strong> . Указывает на то, что окно схлопываемое. </p>
+<p>&nbsp;</p>
+<p><strong>minimizable: true</strong> . Вот тут нюанс есть. true указывает на то, что окно может быть минимизировано и появляется соответствующая кнопка, но само по себе наличие кнопки еще не говорит о том, что окно будет минимизироваться при клике по кнопочке. Для этого нужно навешать соответствующий листнер и обработчик, и указать область куда будет сворачиваться окошко при клике на кнопку. Честно сказать еще некогда было детально поковыряться и разобраться как все это работает, но обязательно это сделаю. А кому очень интересно и не втерпешь, могут залезть в примеры, там есть пример Десктопа, вот в примере можно этот вопрос и разобрать, если знания позволяют.</p>
+<p>&nbsp;</p>
+<p><strong>maximizable:true</strong> .  Тут все проще. Поставьте true и будет вам счастье :-) </p>
+<p>&nbsp;</p>
+<p>А теперь навешаем еще несколько фишек на окошко. Вообще если изучать окна очень тщательно, это займет очень много времени, по этому мы этого делать не будем. Я считаю что на львиную часть задач достаточно и этих знаний. Итак, листинг.</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">&lt;script type="text/javascript"&gt;
+	tools:function(){
+		return [
+		{
+			id:'print', 
+			handler:function(){
+				WINDOW.click_('Печать');	
+			}
+		},{
+			id:'refresh', 
+			handler:function(){
+				WINDOW.click_('Обновить');	
+			}
+		},{
+			id:'search', 
+			handler:function(){
+				WINDOW.click_('Поиск');	
+			}
+		}]
+	},
+	
+	onEsc:function(){
+				Ext.Msg.confirm(
+					'Подтверждение закрытия',
+					'Вы нажали Esc. Мне закрыться? :-(', 
+					function(act){ 
+						if(act == 'yes') WINDOW.win.close();		 
+					}
+				);	
+	},
+	
+	showWithTools:function(){
+		
+		tabPanel = new Ext.TabPanel({
+			activeTab: 0,
+			defaults:{
+				bodyStyle:{
+					padding:'5px'	
+				}	
+			},
+			items:[{
+				title:'Первая вкладка',
+				html:'&lt;h2&gt;HTML, размещенный в панели 1&lt;/h2&gt;'
+			},{
+				title:'Вторая вкладка',
+				html:'&lt;h2&gt;HTML, размещенный в панели 2&lt;/h2&gt;'	   
+			},{
+				title:'Третья вкладка',
+				html:'&lt;h2&gt;HTML, размещенный в панели 3&lt;/h2&gt;'	   
+			}]
+		});
+		
+		listeners = this.extend(this.getParams().listeners,{
+			show:function(){
+				alert('Окно открыто');	
+			},
+			resize:function(){
+				var win = WINDOW.win;
+				if(win.isVisible())alert(
+					'Размеры окна были изменены. Размеры окна: ' + 
+win.getWidth() +' на '+ win.getHeight()+' пикселов.'
+				);	
+			},
+			close:function(){
+				WINDOW.win = false;
+				alert('Окно закрыто');	
+			}
+		});
+		
+		params = this.extend(this.getParams(), {
+			// Наши уже используемые ранее объекты 
+			tbar:this.toolbar,
+			bbar:this.bbar,
+			fbar:this.fbar,
+			
+			tools: this.tools(),
+			onEsc:this.onEsc,
+			listeners: listeners,
+			items:[tabPanel]
+		})
+		this.show(params);	
+	}
+&lt;script&gt;
+&lt;input name="button" type="button" onclick="WINDOW.showWithTools();" value="Открыть окно с разными фишками" /&gt;
+</pre>
+<p>&nbsp;</p>
+<p>
+  <input onclick="WINDOW.showWithTools();" name="button" type="button" value="Открыть окно с разными фишками" />
+</p>
+<p>&nbsp;</p>
+<p>Что мы тут имеем?<br />
+  1) Наша пользовательская функия tools. Возвращает массив элементов, которые мы передадим нашему окну в качестве параметра tools. Вообще интересный и богатый инструмент. Советую в документации ознакомиться детально с этим моментом. Приведу только скрин, чтобы сразу стало ясно что это такое и зачем оно надо.</p>
+<p>&nbsp;</p>
+<p><img src="images/extjs/lesson4/tools.jpg" alt="" /> </p>
+<p>&nbsp;</p>
+<p>Как вы видите, это набор предустановленных популярных кнопок. Достаточно в конфигурации каждой кнопочки прописать нужный handler.</p>
+<p>&nbsp;</p>
+<p>2) onEsc. Функция, срабатываемая при нажатии на кнопку Эскейп. Иногда очень нужная фишка. Нажмите и гляньте что происходит в нашем случае ;-) </p>
+<p>&nbsp;</p>
+<p>3) tabPanel = new Ext.TabPanel({... <br />
+Создаем ТабПанель с необходимым набором вкладок. Каждая вкладка представляет из себя отдельный объект Ext.Panel (вкладки перечислены в теле массива items нашей ТабПанели. По умолчанию xtype объектов ТабПанели - panel , то есть Ext.Panel). Тут важно понимать что вы создаете ТабПанель, но каждый ее элемент - Панель, полностью независимый элемент. То есть если вы хотите управлять вкладкой, вы должны обращаться не к ТабПанели, а именно к нужной вам панели. Легче всего любому необходимому вам объекту сразу задать id в качестве параметра, а обращаться к этому объекту посредством метода Ext.getCmp(elID), который возвращает ссылку на объект по его id.<br />
+Отметим так же параметр ТабПанели activeTab. Через него мы указываем какую вкладку открыть первой при рендеренге ТабПанели. Если мы пропустим этот параметр, ни одна вкладка не будет на переднем плане по умолчанию.</p>
+<p>&nbsp;</p>
+<p>4) Плюс ко всему мы подвесили еще несколько листнеров на открытие окна, закрытие и ресайз его.</p>
+<p>&nbsp;</p>
+<p>Вообще соглашусь со многими что как-то это все не предметно, но у нас тут не узкопрофильное окно под заказ. Мы тут пробуем поиграться, прощупать свойства окон, посмотреть что с ними можно выполнять в принципе. А когда вы все это освоите, вот тогда вы и будете создавать предметные окна под свои нужды.</p>
+<p>&nbsp;</p>
+<p>А в следующем уроке я хотел коснуться менеджеров окон, которые используются для управления несколькими окнами, но пока не буду этого делать, а то наверно многим становится скучно, ибо окна не самый интересный момент в Экста. А в следующем уроке я коснусь Хранилищ и Гридов (таблиц). Вот это действительно захватывающий и мощный инструмент! </p>
+	  
+	  <div  class="clear"></div>
+	  <p>&nbsp; </p>
+      <div class="meOnHabr">Если вам помог мой материал и вы есть на Хабрахабре, <a href="http://fi1osof.habrahabr.ru/" title="я на Хабре" target="_blank">плюсание карму в дар</a> :-)</div><div id="rang" class="center">&nbsp;</div><div id="navigator"><a href="/documentation/extjs/extjs_lessons/lesson3.html"><< Урок 3. Окна, часть вторая</a> --- <a href="/documentation/extjs/extjs_lessons/lesson5.html">Урок 5. Хранилища и таблицы >></a></div>
+	</div>
+	
+                              
+</div>
+
+<div class="clear"></div>
+
+		</div>
+
+	</div>
+
+	<div class="footer">
+
+	
+
+
+
+			<div class="footer_content">
+
+	<div class="footer_wrapper">
+
+		<div class="footer_menu">
+
+		<ul class="footer_menu"><li class="first"><a href="http://newpg.ru/" title="Главная страница" >Главная</a></li>
+<li><a href="/about.html" title="О компании" >О компании</a></li>
+<li><a href="/services.html" title="Услуги" >Услуги</a></li>
+<li><a href="/portfolio.html" title="Портфолио" >Портфолио</a></li>
+<li class="active"><a href="/documentation.html" title="Документация" >Документация</a></li>
+<li class="last"><a href="/contacts.html" title="Контактная  информация" >Контактная  информация</a></li>
+</ul>
+		</div>
+
+		<div class="hr"></div>
+
+		
+
+		<div class="bottom_menu">
+
+		<ul class="bottom_menu"><li class="first level1"><ul><li class="first level2"><a href="/services/sozdanie-saitov/obnovlenie-saitov.html" title="Обновление сайтов" >Обновление сайтов</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/sait-kak-samovyragenie.html" title="Самовыражение" >Самовыражение</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/kak-sostavit-tehzadanie.html" title="Как составить техзадание?" >Как составить техзадание?</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/primer-audita-sayta.html" title="Аудит и анализ сайта" >Аудит и анализ сайта</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/statistika-poseschaemosti.html" title="Статистика посещений сайта" >Статистика посещений</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/skolko-stoit-site.html" title="Сколько стоит сайт?" >Сколько стоит сайт?</a></li>
+<li class="last level2"><a href="/services/sozdanie-saitov/tipy-saitov.html" title="Типы сайтов" >Типы сайтов</a></li>
+</ul></li>
+<li class="level1"><ul><li class="first level2"><a href="/services/poiskovoe-prodvigenie/301_redirect.html" title="Как правильно перенести сайт" >Как правильно перенести сайт</a></li>
+<li class="level2"><a href="/services/poiskovoe-prodvigenie/geograficheskaya-prinadlegnost.html" title="Географическая принадлежность" >Географическая принадлежность</a></li>
+<li class="last level2"><a href="/services/poiskovoe-prodvigenie/slogno-li-byt-pervym-v-rossii.html" title="Сложно ли быть первым в России?" >Сложно ли быть первым в России?</a></li>
+</ul></li>
+<li class="last level1"><ul><li class="first level2"><a href="/services/poddergka-prodvigenie/polnaya-poddergka-saytov.html" title="Полная поддержка сайтов" >Полная поддержка сайтов</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/kak-samomu-obnovliat-site.html" title="Как самому обновлять сайт?" >Как самому обновлять сайт?</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/kak-obnovlyat-sait-samomu.html" title="Как обновлять сайт самому?" >Как обновлять сайт самому?</a></li>
+<li class="last level2"><a href="/services/poddergka-prodvigenie/obzor-populyarnyh-cms.html" title="Краткий обзор популярных Систем Управления Контентом" >Обзор популярных CMS</a></li>
+</ul></li>
+</ul>
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="hr"></div>
+
+		
+
+		<div class="footer_contacts">
+
+			<div class="copy">
+
+				<p>&copy; 2010 Компания Новая Парадигма</p>
+				<p>Все права защищены.</p>
+
+			</div>
+
+			<div class="phone">
+				<img src="/template/images/tel10.png" /> 		
+			</div>
+			
+			<div id="statistics">
+								                <div class="counter">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t13.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+</div><div class="counter">
+
+<!--Rating@Mail.ru counter-->
+<script language="javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+<script language="javascript1.1"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1910053" target="_blank">'+
+'<img src="http://d5.c2.bd.a1.top.mail.ru/counter?id=1910053;t=130;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
+'height="40" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
+<noscript><a target="_blank" href="http://top.mail.ru/jump?from=1910053">
+<img src="http://d5.c2.bd.a1.top.mail.ru/counter?js=na;id=1910053;t=130" 
+height="40" width="88" border="0" alt="Рейтинг@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//--></script>
+<!--// Rating@Mail.ru counter-->
+
+</div>
+			</div>
+
+			<div  class="clear"></div>
+
+		</div>
+
+	</div>
+
+</div>
+	</div>
+
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17101674-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter1446525 = new Ya.Metrika(1446525); } catch(e){}
+</script></div>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1446525" alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->
+
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,60 @@
+
+  
+code{
+	margin:15px 10px 15px 0px;
+	display:block;
+	background-color:#CCCCCC;
+	border:1px dotted #333333;
+	padding:10px;
+	white-space:pre;
+} 
+
+#feedback{
+	margin:15px  0px 10px 15px;
+	padding:5px;
+	border:1px #CCCCCC dotted;
+	background-color:#DDDDDD;
+	font-size:14px;
+}
+
+#navigator{
+	text-align:center;
+	margin:10px auto;
+	padding:10px 5px;
+	background-color:#CCCCCC;
+}
+#navigator a{
+	text-decoration:none;
+}
+#navigator a:hover{
+	text-decoration:underline;
+}
+
+.center{text-align:center;}
+.right{text-align:right;}
+
+#reiting{
+	margin:30px auto 20px auto;
+}
+
+
+.banner_left{
+	margin:10px auto 10px 15px;
+	padding:10px 5px;
+	background-color:#DDDDDD;
+}
+
+
+ 
+
+.meOnHabr{
+	background-image:url(../ExtJS/resources/images/default/panel/white-top-bottom.gif);
+	background-repeat:repeat-x;
+	border-left:1px #99BBE8 solid ; 
+	border-right:1px #99BBE8 solid ;
+	border-bottom:1px #99BBE8 solid ;
+	color:#15428B;
+	text-align:center;
+	font-size:14px;
+	padding:5px 0;
+}

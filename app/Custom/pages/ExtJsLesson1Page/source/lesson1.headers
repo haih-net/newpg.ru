@@ -1,0 +1,60 @@
+HTTP/2 302 
+server: nginx
+date: Thu, 15 Oct 2026 09:49:50 GMT
+content-type: text/plain; charset=utf-8
+content-length: 0
+x-archive-redirect-reason: found capture at 20101027085749
+location: https://web.archive.org/web/20101027085749id_/http://newpg.ru/documentation/extjs/extjs_lessons/lesson1.html
+server-timing: captures_list;dur=0.375895, exclusion.robots;dur=0.040076, exclusion.robots.policy;dur=0.032882, esindex;dur=0.006529, cdx.remote;dur=8.139785, LoadShardBlock;dur=301.323932, PetaboxLoader3.datanode;dur=202.918821, PetaboxLoader3.resolve;dur=34.554247
+x-app-server: wwwb-app222-dc8
+x-ts: 302
+x-tr: 322
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=1
+set-cookie: wb-p-SERVER=wwwb-app222; path=/
+x-location: All
+x-as: 7552
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+server-timing: MISS
+x-nid: Viettel Group
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+
+HTTP/2 200 
+server: nginx
+date: Thu, 15 Oct 2026 09:49:50 GMT
+content-type: text/html; charset=UTF-8
+x-archive-orig-server: nginx/0.8.53
+x-archive-orig-date: Wed, 27 Oct 2010 08:57:48 GMT
+x-archive-orig-connection: close
+x-archive-orig-x-powered-by: PHP/5.2.12
+x-archive-orig-p3p: CP="NOI NID ADMa OUR IND UNI COM NAV"
+x-archive-orig-cache-control: private, must-revalidate
+x-archive-orig-set-cookie: SN4c4049852625b=5898a7e6e5c5749064ac9bb15a0c8d1c; path=/
+x-archive-orig-set-cookie: SN4c4049852625b=5898a7e6e5c5749064ac9bb15a0c8d1c; path=/
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Wed, 27 Oct 2010 08:57:49 GMT
+link: <http://newpg.ru:80/documentation/extjs/extjs_lessons/lesson1.html>; rel="original", <https://web.archive.org/web/timemap/link/http://newpg.ru:80/documentation/extjs/extjs_lessons/lesson1.html>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/http://newpg.ru:80/documentation/extjs/extjs_lessons/lesson1.html>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-archive-src: 52_18_20101027073731_crawl100-c/52_18_20101027085656_crawl103.arc.gz
+server-timing: captures_list;dur=0.506277, exclusion.robots;dur=0.060560, exclusion.robots.policy;dur=0.049487, esindex;dur=0.008733, cdx.remote;dur=12.256928, LoadShardBlock;dur=233.075465, PetaboxLoader3.datanode;dur=134.562004, PetaboxLoader3.resolve;dur=108.394382, load_resource;dur=108.690638
+x-app-server: wwwb-app265-dc8
+x-ts: 200
+x-tr: 372
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=1
+set-cookie: wb-p-SERVER=wwwb-app265; path=/
+cache-control: private
+x-location: All
+x-as: 7552
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+server-timing: MISS
+x-nid: Viettel Group
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+

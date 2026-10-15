@@ -1,0 +1,454 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+<meta name="keywords" content="extjs уроки, extjs примеры, extjs для начинающих, extjs alert, extjs, Ext.Msg.alert, Ext.MessageBox, веб-студия, учебник extjs" />
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<title>Веб-студия «Новая Парадигма» | ExtJS. Урок 1. Hello, world!</title>
+
+<meta name="Description" content='ExtJS. Урок первый. Демонстрирует работу библиотеки ExtJS'>
+
+<base href="http://newpg.ru/" />
+
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+<link type="text/css" rel="stylesheet" href="diz/css/style_new.css" />
+
+
+
+<!-- Header -->
+
+
+
+<!-- End of Header -->
+<link type="text/css" rel="stylesheet" href="diz/css/index.css" />
+
+<!-- <script type='text/javascript' src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>-->
+
+
+
+<link type="text/css" rel="stylesheet" href="css/jsLessons.css" />
+
+<link rel="stylesheet" href="ExtJS/resources/css/ext-all.css" type="text/css" media="screen" />
+<script type="text/javascript" src="ExtJS/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="ExtJS/ext-all.js"></script>
+<script type="text/javascript" src="ExtJS/bugFix/fix.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<link type="text/css"  rel="stylesheet" href="js/google/prettify/prettify.css" />
+
+<script type="text/javascript" src="js/google/prettify/prettify.js"></script>
+<script type="text/javascript" src="js/ExtJS/lessons/lesson1.js"></script>
+
+<script  type="text/javascript">
+
+Ext.onReady(function(){
+    prettyPrint();
+})
+</script>
+
+</head>
+
+<body>
+
+
+
+<div class="wrap">
+
+	<div class="body">
+
+		<div class="header">
+
+			<div class="contacts"><span class="text middle"><img style="padding-top:5px;" src=/template/images/tel_top.png border=0></span>
+</div>
+
+<!-- 
+<div class="contacts"><span class="contacts">Для срочных вопросов: <span class="tel"><span class="code green">8 (495)</span> 772-67-02</span> <span class="mail">Почта: <a href="mailto:info@newpg.ru" class="mail green">info@newpg.ru</a></span></span>
+</div>
+-->
+
+<div class="main_menu">
+	<div class="menu">
+	<ul class="menu"><li><span  class="l_corner"></span><span class="row"><a href="/about.html" title="О компании"><img class="white" alt="О компании" src="images/menu/about.png" /><img class="black" alt="О компании" src="images/menu/black_about.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/services.html" title="Услуги"><img class="white" alt="Услуги" src="images/menu/service.png" /><img class="black" alt="Услуги" src="images/menu/black_service.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/portfolio.html" title="Портфолио"><img class="white" alt="Портфолио" src="images/menu/portfolio.png" /><img class="black" alt="Портфолио" src="images/menu/black_portfolio.png" /></a></span><span class="r_corner"></span></li>
+<li class="active"><span  class="l_corner"></span><span class="row"><a href="/documentation.html" title="Документация"><img class="white" alt="Документация" src="images/menu/documentation.png" /><img class="black" alt="Документация" src="images/menu/black_documentation.png" /></a></span><span class="r_corner"></span></li class="active">
+<li class="last"><span  class="l_corner"></span><span class="row"><a href="/contacts.html" title="Контактная  информация"><img class="white" alt="Контактная  информация" src="images/menu/contact.png" /><img class="black" alt="Контактная  информация" src="images/menu/black_contact.png" /></a></span><span class="r_corner"></span></li class="last">
+</ul>	</div> 
+	<div class="logo"><a href="http://newpg.ru/" title="На главную"><img src="images/logo.png" alt="На главную" title="Студия Новая Парадигма"  /></a></div>
+	<div  class="clear"></div>
+	
+</div> 
+		</div>
+
+		<div class="middle">
+
+			 <div class="left_block">
+	<div class="menu">
+			<ul class="menu"><li class="level1"><a href="http://newpg.ru/" title="Главная страница" >Главная</a></li>
+<li class="level1"><a href="/about.html" title="О компании" >О компании</a></li>
+<li class="level1"><a href="/services.html" title="Услуги" >Услуги</a></li>
+<li class="level1"><a href="/portfolio.html" title="Портфолио" >Портфолио</a></li>
+<li class="level1 active"><a href="/documentation.html" title="Документация" >Документация</a><ul><li class="level2 active"><a href="/documentation/extjs.html" title="ExtJS" >ExtJS</a><ul><li class="level3 active"><a href="/documentation/extjs/extjs_lessons.html" title="Уроки ExtJS" >Уроки ExtJS</a><ul><li class="level4 active self"><a href="/documentation/extjs/extjs_lessons/lesson1.html" title="ExtJS. Урок 1. Hello, world!" >Урок 1. Hello, world!</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson2.html" title="ExtJS. Урок 2. Окна. Ext.Window" >Урок 2. Окна</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson3.html" title="ExtJS. Урок 3. Окна, часть вторая. Ext.Window, Ext.Toolbar" >Урок 3. Окна, часть вторая</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson4.html" title="ExtJS. Урок 4. Окна, часть третья, Ext.Window properties" >Урок 4. Окна, часть третья</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson5.html" title="ExtJS. Урок 5. Хранилища и таблицы. Ext.grid, Ext.data.Store" >Урок 5. Хранилища и таблицы</a></li>
+<li class="last level4"><a href="/documentation/extjs/extjs_lessons/lesson6.html" title="ExtJS. Урок 6. Шаблоны элементов. Ext.Template" >Урок 6. Шаблоны элементов</a></li>
+</ul></li>
+<li class="level3"><a href="ExtJS/docs" title="Документация по ExtJS" target="_blank">Документация по ExtJS</a></li>
+<li class="last level3"><a href="ExtJS/examples" title="Примеры ExtJS" target="_blank">Примеры ExtJS</a></li>
+</ul></li>
+</ul></li>
+<li class="last level1"><a href="/contacts.html" title="Контактная  информация" >Контактная  информация</a></li>
+</ul>	</div> 
+	
+</div>
+
+<div class="center_block">
+	<div class="breadcrumbs"><span class="B_crumbBox"><span class="B_firstCrumb"><a href="/">Главная</a></span> &raquo; <a class="B_crumb" href="/documentation.html" title="Документация по ExtJS">Документация</a> &raquo; <a class="B_crumb" href="/documentation/extjs.html" title="ExtJS">ExtJS</a> &raquo; <a class="B_crumb" href="/documentation/extjs/extjs_lessons.html" title="Уроки ExtJS">Уроки ExtJS</a> &raquo; <h1 class="B_lastCrumb"><span class="B_currentCrumb">Урок 1. Hello, world!</span></h1></span></div>
+	<div id="content"><p>Всякий учебник по программированию начинается с примера Hello, World! Вот и я начну с него же.</p>
+<p>Кликните кнопку и вы увидете результат.</p>
+<p>&nbsp;</p>
+<p><input onclick="hello1();" type="button" value="Hello, World!" /></p>
+<p>&nbsp;</p>
+<p>А вот тут заканчивается все легкое (хотя легкого ничего вроде как и не было)) ) и начинаются сложности.</p>
+<p>ExtJS - очень мощный инструмент! И насколько он мощный, настолько же он и сложный. Разберем все по порядку:</p>
+<p>Во-первых, для работы Экста (так я иногда буду называть ExtJS), требуются соответствующие файлы, а именно:</p>
+<pre id="line13"><a href="ExtJS/resources/css/ext-all.css" target="_blank">ExtJS/resources/css/ext-all.css</a>
+<a href="ExtJS/adapter/ext/ext-base.js" target="_blank">ExtJS/adapter/ext/ext-base.js</a>
+<a href="ExtJS/ext-all.js" target="_blank">ExtJS/ext-all.js</a></pre>
+<p>то есть стили и скрипты. Все это добро вместе со всеми примерами и документацией вы можете скачать с официального сайта <a href="http://www.extjs.com" target="_blank">ExtJS.com</a> . Вообще в нашем случае мы будем использовать более тяжелый файл <a href="ExtJS/adapter/ext/ext-base-debug.js" target="_blank">ExtJS/adapter/ext/ext-base-debug.js</a> , чтобы легче было отлаживать и чтобы изучая функции всякие, мы смотрели не на загадочные переменные типа a, b, c и т.п. , а нормальные width, scope и т.д. </p>
+<p>&nbsp;</p>
+<p>Итак, при клике на кнопочку, мы вызывает функцию hello1. Вот код функции:</p>
+<p>&nbsp;</p>
+<pre class="prettyprint lang-js">&nbsp;&nbsp;&nbsp;&nbsp; Ext.Msg.alert('Наше пробное сообщение','Hello, World!' );<br /></pre>
+<p>&nbsp;</p>
+<p>Что мы имеем?</p>
+<p>&nbsp;</p>
+<p>1) Сам объект Ext - Объект, хранящий все методы, свойства и т.п. нашей библиотеки (плин, по делетански так звучит!)) но пусть не будут ко мне строги профы. В первую очередь данный материал для начинающих прогеров, и я стараюсь выражаться как можно понятней. Ведь смысл часто не в том, как что-то называешь, а как ты это понимаешь).</p>
+<p>&nbsp;</p>
+<p>2) Объект Msg, который является дочерним объекта Ext. На самом деле это очень большой объект, хранящий много всяких свойств, собственно говоря как и большинство других объектов Экста</p>
+<p>&nbsp;</p>
+<p>3) alert - метод объекта Msg</p>
+<p>То есть мы вызываем метод (функцию) alert объекта Msg, который в свою очередь является частью объекта Ext.</p>
+<p>По большому счету, если не считать моей писанины, тут ничего сложного нет. Но это на первый взгляд. На самом деле нужно сначала посмотреть на то, что мы получили. А получили мы не самое красивое сообщение. </p>
+<p>&nbsp;</p>
+<p><img title="Сообщение Hello, World!" src="images/extjs/lesson1/hello1.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p>То есть какие минусы? Окошко сообщения слишком узкое, заголовок сообщния разбито на несколько строк.</p>
+<p>Чтобы это исправить, нам нужно внимательно изучить объект Msg, а для этого мы <a href="ExtJS/docs" target="_blank">обратимся к документации</a>. </p>
+<p>В первую очередь нужно разобраться с навигатором.</p>
+<p>&nbsp;</p>
+<p><img title="Панель навигации" src="images/extjs/lesson1/docmenu.jpg" alt="" /> </p>
+<p>&nbsp;</p>
+<p>Документация имеет несколько плюсов и минусов.</p>
+<p>&nbsp;</p>
+<p>Плюсы:</p>
+<p>&nbsp;</p>
+<p>1) Богатая</p>
+<p>&nbsp;</p>
+<p>2) Структурированая</p>
+<p>&nbsp;</p>
+<p>Минусы:</p>
+<p>&nbsp;</p>
+<p>1) Структурирована несколько запутано   , ИМХО. Хотя наверняка будут и другие мнения</p>
+<p>&nbsp;</p>
+<p>2) Очень мало примеров, тем более с подробными комментами</p>
+<p>&nbsp;</p>
+<p>Итак, к делу. В первую очередь уже в корне мы видим два объекта Ext. Почему так? Вот тот что с плюсиком, это сам объект со всеми вложенными в него объектами, структура его. То есть разложив дерево, мы увидим все входящие в него объекты с их методами, свойствами  и т.п. <br />
+А тот что ниже, содержит описание методов и свойств главного объекта, то есть Ext не только содержит в себе различные объекты, типа Msg, но и сам по себе содержит различные функции и т.п., что само по себе разумеющееся, но важно для понимание структуры как самого объекта, так и документации.</p>
+<p>&nbsp;</p>
+<p>Так где же нам найти принадлежащий Эксту объект Msg? А вот это сделать сложно, ибо на самом деле Msg - сокращенное название объекта Ext.MessageBox . Конечно вроде и не сложно догадаться и можно наткнувшись на него в списке, понять что это именно он, но если искать буквально, то можно уже на этом этапе здорово раздосадоваться и забить на доку. Другого такого примера я не помню, так что уже легче :-)</p>
+<p>&nbsp;</p>
+<p>Итак, Объект MessageBox объекта Ext.</p>
+<p>&nbsp;</p>
+<p><img title="Объект Msg" src="images/extjs/lesson1/msg.jpg" alt="" />  </p>
+<p>&nbsp;</p>
+<p>В перечне публичных свойств объекта MessageBox мы и видим что одно из них и указано как сокращеное наименование объекта.</p>
+<p>&nbsp;</p>
+<p>На самом деле очень хочется надеяться что у вас имеется хорошее представление об ООП, ибо будет очень сложно с пониманием всех этих вложений объектов в объекты, а их уже в другие обэекты, и функций ихних, которые будут возвращать сами же себя и свои родительские объекты и свойства и т.п. Жуть в общем! Короче, буду дальше излагать как есть, и да не судите строго.</p>
+<p>&nbsp;</p>
+<p>В общем, Изучая свойства и методы объекта Msg, мы находим тот метод, который мы вызывали в нашем примере, а именно alert.</p>
+<p>&nbsp;</p>
+<p><img title="метод alert объекта Msg" src="images/extjs/lesson1/alert.jpg" alt="" /> </p>
+<p>&nbsp;</p>
+<p>Рассмотрим его внимательней</p>
+<p>&nbsp;</p>
+<pre class="prettyprint lang-js">
+alert( String title, String msg, [Function fn], [Object scope] ) : Ext.MessageBox;
+</pre>
+<p>Что мы тут имеем?:</p>
+<p>1) 2 обязательных параметра: title (Заголовок сообщения) , msg (собственно говоря само сообщение)</p>
+<p>2) Необязательный параметр fn (пользовательская функция). Очень полезная штука! Тут в качестве параметра мы можем указать функцию, которая будет вызвана после закрытия сообщения, то есть при клике по кнопочке Ok сообщения. Синтаксис может быть двух видов:</p>
+<p>а) название вызываемой функции. То есть если у вас объявлена ранее функция, к примеру callback() , то вы можете просто указать название функции, и она будет вызвана после закрытия сообщения. Вот пример:</p>
+
+<pre class="prettyprint lang-html">&lt;script type="text/javascript">
+	callback = function(){
+		alert('Была вызвана функция callback');
+	}
+		
+	function hello2(){
+		 Ext.Msg.alert('Наше пробное сообщение','Hello, World!', callback );	
+	}
+&lt;/script&gt;
+&lt;input type="button" onclick="hello2();" value="Hello, World!" /&gt; 
+</pre>
+
+<p>&nbsp;</p>
+<p><input onclick="hello2();" type="button" value="Hello, World!" /></p>
+<p>Обратите внимание, что название функции, передаваемой в качестве параметра, вы должны указывать не в ковычках, потому что вы передаете именно объект, то есть саму функцию, а не строковый параемтр, и сказать "название функции" на самом деле было вообще не корректно в данном случае.</p>
+<p>&nbsp;</p>
+<p>б) Scope. Очень полезный параметр. Тут в качестве параметра передается ссылка на целевой объект, который внутри функции будет виден в качестве this. Это может быть любой объект, в том числе и сам Ext.</p>
+<p>&nbsp;</p>
+<pre class="prettyprint ">&lt;script type="text/javascript"&gt;
+callback2 = function(){
+	alert(this.MessageBox.alert);
+}
+	
+function hello3(){
+	 Ext.Msg.alert('Наше пробное сообщение','Hello, World!', callback2, Ext );	
+}
+&lt;/script&gt;
+&lt;input type="button" onclick="hello3();" value="Hello, World!" /&gt; 
+</pre>
+<p>&nbsp;</p>
+<p><input onclick="hello3();" type="button" value="Hello, World!" /> </p>
+<p>А вот тут нужно разобрать очень важный момент: на самом деле мы пошли на маленькую хитрость и в качестве параметра для базовой функции alert указали элемент this.MessageBox.alert, а так как scope у нас - Ext, соответсвенно мы и передали Ext.MessageBox.alert , то есть по сути мы вывели в сообщение функцию alert нашего объекта. И мы можем рассмотреть чтоже из себя представляет данная функция.</p>
+<p>Вот листинг данной функции:</p>
+<p>&nbsp;</p>
+<pre class="prettyprint lang-js">function (title, msg, fn, scope) {
+    this.show({title: title, msg: msg, buttons: this.OK, fn: fn, scope: scope});
+    return this;
+}</pre>
+<p>&nbsp;</p>
+<p>То если если внимательно ее изучить, можно заметить что возвращает она результат выполнения своей же функции show, то есть Ext.Msg.show . Вообще конечно было бы проще просто в документации кликнуть на ссылку alert и открылся бы нужный участок кода, но не всегда же есть документация, а уметь отладить код и понять где что из себя представляет, всегда важно. В общем это на заметку.</p>
+<p>Но тем не менее это все нам нужно и по другой причине. Вернемся все к той же проблеме: окошко сообщения "Hello, World!" у нас узкое, и нам нужно это дело поправить. Вот сейчас мы этим и займемся. Итак, изучив метод alert, мы теперь знаем что на самом деле мы через данный метод вызываем метод show все того же объекта Ext.Msg (Ext.MessageBox), а значит нам нужно изучить свойства данного метода. Кликнув по треугольничку перед названием метода, мы раскроем всю доку по данному методу, в котором очень подробно перечислены все возможные входящие параметры, которые можно указать при вызове данного метода. Итак, что же нам нужно чтобы решить нашу проблему? А достаточно на самом деле использовать не метод alert, а метод show, и передать в него нужные параметры, которые позволят сделать окошко таким, как нам надо. Учтите что в качестве параметра передается объект, а не куча параметров через запятую, как это происходит в случае с использованием метода alert. </p>
+<p>&nbsp;</p>
+<pre class="prettyprint lang-html">&lt;script type="text/javascript"&gt;
+function hello4(){
+	Ext.Msg.show({
+		title: 'Наше пробное сообщение',
+		msg: 'Hello, World!', 
+		width: 300,
+		buttons: Ext.Msg.OK
+	});	
+}
+&lt;/script&gt;
+&lt;input type="button" onclick="hello4();" value="Hello, World!" /&gt;
+</pre>
+<p>&nbsp;</p>
+<p><input onclick="hello4();" type="button" value="Hello, World!" /></p>
+<p>Вот теперь у нас сообщение по ширине составляет 300 пикселей, ибо столько мы указали и окошко выглядит гораздо симпатичней. Однако в данном случае нам пришлось указать еще один параметр, который мы не указывали при использовании метода alert, это buttons: Ext.Msg.OK</p>
+<p>Что же это такое? На самом деле догадаться не сложно, это кнопка, то чнее это может быть и несколько кнопок, если мы укажем другой тип, к примеру Ext.Msg.YESNOCANCEL , в результате чего у нас будет 3 кнопки (Yes, No и Cancel соответственно). Еще тут можно кучу всяких параметров указать, такие как значек (внимание, вопрос и т.п. , fn , scope и прочие). Вообще только объект Msg можно изучать пару дней, не говоря уже о всяких там Гридах и т.п. Но изучив как следует, вы получите очень мощный инструментарий для своих веб-разработок. </p>
+<p>Вот продемонстрирую еще один пример. Его не сложно понять, внимательно изучив документацию. Очень настоятельно рекомендую это зделать, ибо если вы поймете каждый символ этого листинга, можно утверждать с огромной долей вероятности что освоение Экста у вас пойдет довольно сносно. Итак. </p>
+<p>&nbsp;</p>
+<pre class="prettyprint lang-js">&lt;script type="text/javascript"&gt;
+function hello5(){
+	var msg = Ext.MessageBox;
+	msg.minWidth = 300;		
+		// обратите внимание что именно minWidth, а не width. 
+		// Почему - предстоит вам понять, изучив внимательно доку 
+	msg.alert('Наше пробное сообщение','Hello, World!' );	
+}
+&lt;/script&gt;
+&lt;input type="button" onclick="hello5();" value="Hello, World!" /&gt;
+</pre>
+<p>&nbsp;</p>
+<p>
+  <input onclick="hello5();" name="button" type="button" value="Hello, World!" />
+</p>
+<p>Вот такой на самом деле не простой получился первый урок. Те, кто дочитал до последних строк, достойны уважения за великое терпение как минимум ;-)<br />
+А чтобы мне легче было понимать значимость моих скромных трудов, <input onclick="showMsgBox();" type="button" value="шлите мне свои пожелания, заметки и т.п. " /></p>
+	  
+	  <div  class="clear"></div>
+	  <p>&nbsp; </p>
+      <div class="meOnHabr">Если вам помог мой материал и вы есть на Хабрахабре, <a href="http://fi1osof.habrahabr.ru/" title="я на Хабре" target="_blank">плюсание карму в дар</a> :-)</div><div id="rang" class="center">&nbsp;</div><div id="navigator"><a href="/documentation/extjs/extjs_lessons/lesson2.html">Урок 2. Окна >></a></div>
+	</div>
+	
+                              
+</div>
+
+<div class="clear"></div>
+
+		</div>
+
+	</div>
+
+	<div class="footer">
+
+	
+
+
+
+			<div class="footer_content">
+
+	<div class="footer_wrapper">
+
+		<div class="footer_menu">
+
+		<ul class="footer_menu"><li class="first"><a href="http://newpg.ru/" title="Главная страница" >Главная</a></li>
+<li><a href="/about.html" title="О компании" >О компании</a></li>
+<li><a href="/services.html" title="Услуги" >Услуги</a></li>
+<li><a href="/portfolio.html" title="Портфолио" >Портфолио</a></li>
+<li class="active"><a href="/documentation.html" title="Документация" >Документация</a></li>
+<li class="last"><a href="/contacts.html" title="Контактная  информация" >Контактная  информация</a></li>
+</ul>
+		</div>
+
+		<div class="hr"></div>
+
+		
+
+		<div class="bottom_menu">
+
+		<ul class="bottom_menu"><li class="first level1"><ul><li class="first level2"><a href="/services/sozdanie-saitov/obnovlenie-saitov.html" title="Обновление сайтов" >Обновление сайтов</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/sait-kak-samovyragenie.html" title="Самовыражение" >Самовыражение</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/kak-sostavit-tehzadanie.html" title="Как составить техзадание?" >Как составить техзадание?</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/primer-audita-sayta.html" title="Аудит и анализ сайта" >Аудит и анализ сайта</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/statistika-poseschaemosti.html" title="Статистика посещений сайта" >Статистика посещений</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/skolko-stoit-site.html" title="Сколько стоит сайт?" >Сколько стоит сайт?</a></li>
+<li class="last level2"><a href="/services/sozdanie-saitov/tipy-saitov.html" title="Типы сайтов" >Типы сайтов</a></li>
+</ul></li>
+<li class="level1"><ul><li class="first level2"><a href="/services/poiskovoe-prodvigenie/301_redirect.html" title="Как правильно перенести сайт" >Как правильно перенести сайт</a></li>
+<li class="level2"><a href="/services/poiskovoe-prodvigenie/geograficheskaya-prinadlegnost.html" title="Географическая принадлежность" >Географическая принадлежность</a></li>
+<li class="last level2"><a href="/services/poiskovoe-prodvigenie/slogno-li-byt-pervym-v-rossii.html" title="Сложно ли быть первым в России?" >Сложно ли быть первым в России?</a></li>
+</ul></li>
+<li class="last level1"><ul><li class="first level2"><a href="/services/poddergka-prodvigenie/polnaya-poddergka-saytov.html" title="Полная поддержка сайтов" >Полная поддержка сайтов</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/kak-samomu-obnovliat-site.html" title="Как самому обновлять сайт?" >Как самому обновлять сайт?</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/kak-obnovlyat-sait-samomu.html" title="Как обновлять сайт самому?" >Как обновлять сайт самому?</a></li>
+<li class="last level2"><a href="/services/poddergka-prodvigenie/obzor-populyarnyh-cms.html" title="Краткий обзор популярных Систем Управления Контентом" >Обзор популярных CMS</a></li>
+</ul></li>
+</ul>
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="hr"></div>
+
+		
+
+		<div class="footer_contacts">
+
+			<div class="copy">
+
+				<p>&copy; 2010 Компания Новая Парадигма</p>
+				<p>Все права защищены.</p>
+
+			</div>
+
+			<div class="phone">
+				<img src="/template/images/tel10.png" /> 		
+			</div>
+			
+			<div id="statistics">
+								                <div class="counter">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t13.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+</div><div class="counter">
+
+<!--Rating@Mail.ru counter-->
+<script language="javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+<script language="javascript1.1"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1910053" target="_blank">'+
+'<img src="http://d5.c2.bd.a1.top.mail.ru/counter?id=1910053;t=130;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
+'height="40" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
+<noscript><a target="_blank" href="http://top.mail.ru/jump?from=1910053">
+<img src="http://d5.c2.bd.a1.top.mail.ru/counter?js=na;id=1910053;t=130" 
+height="40" width="88" border="0" alt="Рейтинг@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//--></script>
+<!--// Rating@Mail.ru counter-->
+
+</div>
+			</div>
+
+			<div  class="clear"></div>
+
+		</div>
+
+	</div>
+
+</div>
+	</div>
+
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17101674-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter1446525 = new Ya.Metrika(1446525); } catch(e){}
+</script></div>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1446525" alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->
+
+
+
+
+</body>
+
+</html>
+

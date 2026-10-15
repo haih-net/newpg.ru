@@ -1,0 +1,485 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+<meta name="keywords" content="веб-студия, extjs уроки, extjs примеры, extjs для начинающих, extjs, Ext.Template, Ext.layout, Ext.form, Ext.Button" />
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<title>Веб-студия «Новая Парадигма» | ExtJS. Урок 6. Шаблоны элементов. Ext.Template</title>
+
+<meta name="Description" content='ExtJS. Урок 6. Экспериментируем с шаблонами элементов.  Ext.Template'>
+
+<base href="http://newpg.ru/" />
+
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+<link type="text/css" rel="stylesheet" href="diz/css/style_new.css" />
+
+
+
+<!-- Header -->
+
+
+
+<!-- End of Header -->
+<link type="text/css" rel="stylesheet" href="diz/css/index.css" />
+
+<!-- <script type='text/javascript' src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>-->
+
+
+
+<link type="text/css" rel="stylesheet" href="css/jsLessons.css" />
+
+<link rel="stylesheet" href="ExtJS/resources/css/ext-all.css" type="text/css" media="screen" />
+<script type="text/javascript" src="ExtJS/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="ExtJS/ext-all.js"></script>
+<script type="text/javascript" src="ExtJS/bugFix/fix.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<link type="text/css"  rel="stylesheet" href="js/google/prettify/prettify.css" />
+
+<script type="text/javascript" src="js/google/prettify/prettify.js"></script>
+<script type="text/javascript" src="js/ExtJS/lessons/lesson6.js"></script>
+
+<script  type="text/javascript">
+
+Ext.onReady(function(){
+    prettyPrint();
+})
+</script>
+
+</head>
+
+<body>
+
+
+
+<div class="wrap">
+
+	<div class="body">
+
+		<div class="header">
+
+			<div class="contacts"><span class="text middle"><img style="padding-top:5px;" src=/template/images/tel_top.png border=0></span>
+</div>
+
+<!-- 
+<div class="contacts"><span class="contacts">Для срочных вопросов: <span class="tel"><span class="code green">8 (495)</span> 772-67-02</span> <span class="mail">Почта: <a href="mailto:info@newpg.ru" class="mail green">info@newpg.ru</a></span></span>
+</div>
+-->
+
+<div class="main_menu">
+	<div class="menu">
+	<ul class="menu"><li><span  class="l_corner"></span><span class="row"><a href="/about.html" title="О компании"><img class="white" alt="О компании" src="images/menu/about.png" /><img class="black" alt="О компании" src="images/menu/black_about.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/services.html" title="Услуги"><img class="white" alt="Услуги" src="images/menu/service.png" /><img class="black" alt="Услуги" src="images/menu/black_service.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/portfolio.html" title="Портфолио"><img class="white" alt="Портфолио" src="images/menu/portfolio.png" /><img class="black" alt="Портфолио" src="images/menu/black_portfolio.png" /></a></span><span class="r_corner"></span></li>
+<li class="active"><span  class="l_corner"></span><span class="row"><a href="/documentation.html" title="Документация"><img class="white" alt="Документация" src="images/menu/documentation.png" /><img class="black" alt="Документация" src="images/menu/black_documentation.png" /></a></span><span class="r_corner"></span></li class="active">
+<li class="last"><span  class="l_corner"></span><span class="row"><a href="/contacts.html" title="Контактная  информация"><img class="white" alt="Контактная  информация" src="images/menu/contact.png" /><img class="black" alt="Контактная  информация" src="images/menu/black_contact.png" /></a></span><span class="r_corner"></span></li class="last">
+</ul>	</div> 
+	<div class="logo"><a href="http://newpg.ru/" title="На главную"><img src="images/logo.png" alt="На главную" title="Студия Новая Парадигма"  /></a></div>
+	<div  class="clear"></div>
+	
+</div> 
+		</div>
+
+		<div class="middle">
+
+			 <div class="left_block">
+	<div class="menu">
+			<ul class="menu"><li class="level1"><a href="http://newpg.ru/" title="Главная страница" >Главная</a></li>
+<li class="level1"><a href="/about.html" title="О компании" >О компании</a></li>
+<li class="level1"><a href="/services.html" title="Услуги" >Услуги</a></li>
+<li class="level1"><a href="/portfolio.html" title="Портфолио" >Портфолио</a></li>
+<li class="level1 active"><a href="/documentation.html" title="Документация" >Документация</a><ul><li class="level2 active"><a href="/documentation/extjs.html" title="ExtJS" >ExtJS</a><ul><li class="level3 active"><a href="/documentation/extjs/extjs_lessons.html" title="Уроки ExtJS" >Уроки ExtJS</a><ul><li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson1.html" title="ExtJS. Урок 1. Hello, world!" >Урок 1. Hello, world!</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson2.html" title="ExtJS. Урок 2. Окна. Ext.Window" >Урок 2. Окна</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson3.html" title="ExtJS. Урок 3. Окна, часть вторая. Ext.Window, Ext.Toolbar" >Урок 3. Окна, часть вторая</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson4.html" title="ExtJS. Урок 4. Окна, часть третья, Ext.Window properties" >Урок 4. Окна, часть третья</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson5.html" title="ExtJS. Урок 5. Хранилища и таблицы. Ext.grid, Ext.data.Store" >Урок 5. Хранилища и таблицы</a></li>
+<li class="last level4 active self"><a href="/documentation/extjs/extjs_lessons/lesson6.html" title="ExtJS. Урок 6. Шаблоны элементов. Ext.Template" >Урок 6. Шаблоны элементов</a></li>
+</ul></li>
+<li class="level3"><a href="ExtJS/docs" title="Документация по ExtJS" target="_blank">Документация по ExtJS</a></li>
+<li class="last level3"><a href="ExtJS/examples" title="Примеры ExtJS" target="_blank">Примеры ExtJS</a></li>
+</ul></li>
+</ul></li>
+<li class="last level1"><a href="/contacts.html" title="Контактная  информация" >Контактная  информация</a></li>
+</ul>	</div> 
+	
+</div>
+
+<div class="center_block">
+	<div class="breadcrumbs"><span class="B_crumbBox"><span class="B_firstCrumb"><a href="/">Главная</a></span> &raquo; <a class="B_crumb" href="/documentation.html" title="Документация по ExtJS">Документация</a> &raquo; <a class="B_crumb" href="/documentation/extjs.html" title="ExtJS">ExtJS</a> &raquo; <a class="B_crumb" href="/documentation/extjs/extjs_lessons.html" title="Уроки ExtJS">Уроки ExtJS</a> &raquo; <h1 class="B_lastCrumb"><span class="B_currentCrumb">Урок 6. Шаблоны элементов</span></h1></span></div>
+	<div id="content"><p>На самом деле этот "урок" мне не хотелось бы называть уроком, ибо сейчас мы будем больше экспериментировать, играться, нежели изучать конкретный материал. Лично для меня работа с шаблонами - из области научного тыка. Чтобы четко понимать что и как происходин, нужно слишком глубоко копать, изучить кучу взаимосвязанных функций всей модели Экста, четко и досконально все знать. У меня на самом деле нет столько времени на это, да и это для меня больше хобби, нежели профессиональная деятельность. Но все равно интересно покапаться :-) Так о чем же пойдет разговор дальше? А коснемся мы вопроса оформления наших элементов, разберем, что же из себя представляют наши эти красивые окошки, кнопочки и т.п. и как их изменить по своему желанию. А вопрос довольно заковыристый.За основу возьммем мою прошлую головную боль: форму подписки "Подписаться на рассылку" здесь же, который всякий увидит слева. Задача состояла в следующем: Сделать ее такой, какой она выглядит сейчас.</p>
+<p>&nbsp;</p>
+<p><img src="images/extjs/lesson6/form1.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p>Сравним с тем, как она выглядела в необработанном варианте:</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Вот листинг формы:</p>
+<pre class="prettyprint">Ext.onReady(function(){
+
+	// Тестовое поле
+	emailFieldTest = new Ext.form.TextField({ 
+		width: '95%' 
+	});
+	
+	// Кнопка
+	subscribeButtonTest = new Ext.Button({ 
+		text: 'Отправить' 
+	}); 
+	
+	// Форма подписки
+	FieldSet = new Ext.form.FieldSet({
+		title: 'Подписаться на рассылку',
+		renderTo: Ext.get('subscribeForm1') , 
+		items: [
+			emailFieldTest,
+			subscribeButtonTest
+		] 
+});</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Попробуем разобраться в механизме. Сразу скажу что я по хлебным крошкам шел к цели. <br />
+  Если мы заглянем в доку по элементу Ext.form.FieldSet, то увидим что layout по умолчанию 'form'.</p>
+<p>&nbsp;</p>
+<p><img title="Тип шаблона по умолчанию" src="images/extjs/lesson6/layout.jpg" alt="" /> </p>
+<p>&nbsp;</p>
+<p>Значит наш пациент - Ext.layout.FormLayout. Мы конечно можем попробовать использовать другие лейауты (fit, toolbar и т.п.), но в нашем случае это совсем не то получится. Так что пытаемся разобраться с этим шаблоном и его механизмами. Честно сказать потратил часа 3, чтобы эту форму сделать, и потом еще несколько часов на то, чтобы боле менее разобраться в деталях. Итак, открываем доку по FormLayout. В конфиге находим такое:</p>
+<p>&nbsp;</p>
+<p><img title="Шаблон формы" src="images/extjs/lesson6/formTpl.jpg" alt="" /> </p>
+<p>&nbsp;</p>
+<p>Это описан шаблон, используемый по умолчанию, если мы не указываем свой. Теперь рассмотрим наш код HTML, получаемый на выходе. Надеюсь у вас у всех есть Firebug или какая другая альтернатива. Лично я пользуюсь им. Итак, просмотрим код формы, полученной на выходе.</p>
+<p>&nbsp;</p>
+<p>Вот это весь нащ FieldSet:</p>
+<p>&nbsp;</p>
+<p><img title="Код Диелдсета" src="images/extjs/lesson6/fieldset.jpg" alt="" /> </p>
+<p>&nbsp;</p>
+<p>Теперь сравните полученный результат с шаблоном. Найдите элемент с классом "x-form-item". Вот от него и стоит плясать. Уверен, найдете много общего. Так что нам мешает в данном случае сделать форму такой как хочется? А мешает нам 3 вещи:</p>
+<p><br />
+  1) <span>&lt;label&nbsp;id="<span>ext-gen54</span>"&nbsp;<span>class</span>="x-form-item-label"&nbsp;style="width: 100px;"&nbsp;for="ext-comp-1013"/&gt;</span> со своей шириной в 100px.</p>
+<p>2) &lt;div id="x-form-el-ext-comp-1013" class="x-form-element" style="padding-left: 105px;"&gt; со своим паддингом в 105px</p>
+<p>3) Выравнивание влево по умолчанию, а надо вправо.</p>
+<p>&nbsp;</p>
+<p>Честно сказать решить грамотно эти проблемы я смог только сегодня :-), но как, расскажу позже. А сейчас расскажу как я решил эти проблемы тогда.<br />
+  Ну во-первых, для начала я просто изменил шаблон. Для этого мы можем сконфигурить параметр формы layoutConfig (за деталями обращаемся к доке)</p>
+<p>&nbsp;</p>
+<p><img title="конфигурация формы" src="images/extjs/lesson6/layoutConfig.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p>В качестве значения принимается соответствующий объект layout, в нашем случае Ext.layout.FormLayout, то есть возможные параметры уже смотрим доку по данному объекту. </p>
+<p>&nbsp;</p>
+<p>Вот листинг нашей новой формы:</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">// Форма подписки с измененным шаблоном
+new Ext.form.FieldSet({
+		title: 'Подписаться на рассылку',
+		renderTo: Ext.get('subscribeForm2'),  
+		width: 220, 
+		layoutConfig:{
+			fieldTpl: new Ext.Template(
+				'&lt;div class="x-form-item {itemCls} " tabIndex="-1"&gt;',
+					'&lt;div class="" id="x-form-el-{id}" style=""&gt;',
+					'&lt;/div&gt;&lt;div class="{clearCls}"&gt;&lt;/div&gt;',
+				'&lt;/div&gt;'
+			) 
+		}
+		,
+		items: [
+			emailFieldTest
+			,subscribeButtonTest2
+		] 
+});  </pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Как вы наверно заметили, мы просто вырезали не нужные нам элементы и свойства в шаблоне, чтобы не мешались :-))) . Как говорит один мой знакомый прогер: "Работает - отойди и не трож!"</p>
+<p>
+  Так и у нас получается: красиво или нет сделали, а получили желаемое и рады. Ну да ладно, тут осталось еще один момент поправить: выравнить элементы по правому краю.</p>
+<p>&nbsp;</p>
+<p>Для этого мы</p>
+<p>&nbsp;</p>
+<p>1) Зададим класс контейнеру через параметр ctCls: 'right'. Хочу сразу отметить, что данный параметр вы можете задать любому элементу контейнера, в любом случае класс задастся самому контейнеру. В css у меня прописаны стили для этого класса.</p>
+<p>&nbsp;</p>
+<p>2) В ИЕ нормально выравнивается по правому краю, а в FF не хочет просто так, значит еще стили кнопочке зададим. margin: 'auto 0px auto auto'</p>
+<p>&nbsp;</p>
+<p>В итоге мы получаем такой вот код:</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">// Правильная форма<br />&nbsp; emailFieldTest = new Ext.form.TextField({ <br />&nbsp; &nbsp;&nbsp; &nbsp;width: '95%'&nbsp; &nbsp;<br />&nbsp; });<br />&nbsp; <br />&nbsp; subscribeButtonTest = new Ext.Button({ <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Отправить',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; style: { <br />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;margin: 'auto 0px auto auto'<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />&nbsp; });<br />&nbsp; <br />&nbsp; new Ext.form.FieldSet({<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title: 'Подписаться на рассылку',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; renderTo: Ext.get('subscribeForm3'),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; layout: 'form',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctCls: 'right',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; width:220,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; layoutConfig:{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fieldTpl: new Ext.Template(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '&lt;div class="x-form-item {itemCls} " tabIndex="-1"&gt;',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '&lt;div class="" id="x-form-el-{id}" style=""&gt;',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '&lt;/div&gt;&lt;div class="{clearCls}"&gt;&lt;/div&gt;',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '&lt;/div&gt;'<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; items: [<br />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;emailFieldTest,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; subscribeButtonTest<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ] <br />&nbsp; }); <br /></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>И вот такую форму:</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Ляпота! :-)))</p>
+<p>&nbsp;</p>
+<div class="center_block clear">
+<div id="subscribeForm3">&nbsp;</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Форма отображается как мне и нужно было. Но все таки спал я плохо: совесть мучала. Не красиво вот так вот брать и вырезать, тем более когда полностью не разобрался и не знаешь к чему это приведет в итоге. В общем я продолжил копать и таки нашел решение :-)))<br />
+  Начнем с того, что мне мешало изначально и что сбивало с толку. Во-первых мешало не достаточное знание английского, лень и невнимательность. В документации к вышеупомянутому Ext.layout.FormLayout.fieldTml (см. картинку-скрин выше) перечислены такие параметры как labelStyle, label, labelSeparator, elementStyle и другие. Короче у меня чуть мозк не лопнул от непонимания почему я указываю эти параметры в конфиге шаблона, а они нифига не меняют на выходе. Короче я понял что придется лезть в код библиотеки и там искать ответы. Вот эта функция набивает контейнер:</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">setContainer : function(ct){
+        Ext.layout.FormLayout.superclass.setContainer.call(this, ct);
+        if(ct.labelAlign){
+            ct.addClass('x-form-label-'+ct.labelAlign);
+        }
+
+        if(ct.hideLabels){
+            Ext.apply(this, {
+                labelStyle: 'display:none',
+                elementStyle: 'padding-left:0;',
+                labelAdjust: 0
+            });
+        }else{
+            this.labelSeparator = ct.labelSeparator || this.labelSeparator;
+            ct.labelWidth = ct.labelWidth || 100;
+            if(Ext.isNumber(ct.labelWidth)){
+                var pad = Ext.isNumber(ct.labelPad) ? ct.labelPad : 5;
+                Ext.apply(this, {
+                    labelAdjust: ct.labelWidth + pad,
+                    labelStyle: 'width:' + ct.labelWidth + 'px;',
+                    elementStyle: 'padding-left:' + (ct.labelWidth + pad) + 'px'
+                });
+            }
+            if(ct.labelAlign == 'top'){
+                Ext.apply(this, {
+                    labelStyle: 'width:auto;',
+                    labelAdjust: 0,
+                    elementStyle: 'padding-left:0;'
+                });
+            }
+        }
+}</pre>
+<p>&nbsp;</p>
+<p>В качестве входящего параметра ct выступает наш объект Ext.form.FieldSet, который мы и рендерим.<br />
+Что мы тут видим? Во-первых:</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">if(ct.hideLabels){
+   	Ext.apply(this, {
+   		labelStyle: 'display:none',
+    	elementStyle: 'padding-left:0;',
+        labelAdjust: 0
+    });
+}</pre>
+<p><br />
+То есть достаточно было в нашей форме указать hideLabels: true , и элемент label был бы скрыт, а padding:105px, который нам очень мешал, был бы выставлен в 0, что сразу же решало как минимум 2 наши проблемы.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Во-вторых, вот строчка:</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">elementStyle: 'padding-left:' + (ct.labelWidth + pad) + 'px' </pre>
+<p><br />
+Теперь становится ясно почему я во всей библиотеке не мог найти 105, когда пытался поиском найти, где же паддинг в 105 задается. В общем если покопать эту функцию, сразу можно понять какие параметры можно задавать в конфигурации формы, чтобы оказать воздействие на форму. И теперь понятно, что читать надо было с самого начала, где сразу указывается какие переменные можно указывать<strong> жирным шрифтом</strong>:</p>
+<p>&nbsp;</p>
+<p><br />
+  <img src="images/extjs/lesson6/formLayout.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p>Таким образом таже форма у нас получится гораздо проще, а код будет меньше:</p>
+<pre class="prettyprint">new Ext.form.FieldSet({
+	title: 'Подписаться на рассылку',
+	renderTo: Ext.get('subscribeForm4'), 
+	ctCls: 'right',
+	width:220,
+	items: [
+		emailFieldTest
+		,subscribeButtonTest
+	],
+	hideLabels: true
+});</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Вот это уже правильно :-) Но уметь делать и свои шаблоны тоже очень правильно.<br />
+  Но свою рабочую форму я уже не буду переделывать. </p>
+	  
+	  <div  class="clear"></div>
+	  <p>&nbsp; </p>
+      <div class="meOnHabr">Если вам помог мой материал и вы есть на Хабрахабре, <a href="http://fi1osof.habrahabr.ru/" title="я на Хабре" target="_blank">плюсание карму в дар</a> :-)</div><div id="rang" class="center">&nbsp;</div><div id="navigator"><a href="/documentation/extjs/extjs_lessons/lesson5.html"><< Урок 5. Хранилища и таблицы</a></div>
+	</div>
+	
+                              
+</div>
+
+<div class="clear"></div>
+
+		</div>
+
+	</div>
+
+	<div class="footer">
+
+	
+
+
+
+			<div class="footer_content">
+
+	<div class="footer_wrapper">
+
+		<div class="footer_menu">
+
+		<ul class="footer_menu"><li class="first"><a href="http://newpg.ru/" title="Главная страница" >Главная</a></li>
+<li><a href="/about.html" title="О компании" >О компании</a></li>
+<li><a href="/services.html" title="Услуги" >Услуги</a></li>
+<li><a href="/portfolio.html" title="Портфолио" >Портфолио</a></li>
+<li class="active"><a href="/documentation.html" title="Документация" >Документация</a></li>
+<li class="last"><a href="/contacts.html" title="Контактная  информация" >Контактная  информация</a></li>
+</ul>
+		</div>
+
+		<div class="hr"></div>
+
+		
+
+		<div class="bottom_menu">
+
+		<ul class="bottom_menu"><li class="first level1"><ul><li class="first level2"><a href="/services/sozdanie-saitov/obnovlenie-saitov.html" title="Обновление сайтов" >Обновление сайтов</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/sait-kak-samovyragenie.html" title="Самовыражение" >Самовыражение</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/kak-sostavit-tehzadanie.html" title="Как составить техзадание?" >Как составить техзадание?</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/primer-audita-sayta.html" title="Аудит и анализ сайта" >Аудит и анализ сайта</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/statistika-poseschaemosti.html" title="Статистика посещений сайта" >Статистика посещений</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/skolko-stoit-site.html" title="Сколько стоит сайт?" >Сколько стоит сайт?</a></li>
+<li class="last level2"><a href="/services/sozdanie-saitov/tipy-saitov.html" title="Типы сайтов" >Типы сайтов</a></li>
+</ul></li>
+<li class="level1"><ul><li class="first level2"><a href="/services/poiskovoe-prodvigenie/301_redirect.html" title="Как правильно перенести сайт" >Как правильно перенести сайт</a></li>
+<li class="level2"><a href="/services/poiskovoe-prodvigenie/geograficheskaya-prinadlegnost.html" title="Географическая принадлежность" >Географическая принадлежность</a></li>
+<li class="last level2"><a href="/services/poiskovoe-prodvigenie/slogno-li-byt-pervym-v-rossii.html" title="Сложно ли быть первым в России?" >Сложно ли быть первым в России?</a></li>
+</ul></li>
+<li class="last level1"><ul><li class="first level2"><a href="/services/poddergka-prodvigenie/polnaya-poddergka-saytov.html" title="Полная поддержка сайтов" >Полная поддержка сайтов</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/kak-samomu-obnovliat-site.html" title="Как самому обновлять сайт?" >Как самому обновлять сайт?</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/kak-obnovlyat-sait-samomu.html" title="Как обновлять сайт самому?" >Как обновлять сайт самому?</a></li>
+<li class="last level2"><a href="/services/poddergka-prodvigenie/obzor-populyarnyh-cms.html" title="Краткий обзор популярных Систем Управления Контентом" >Обзор популярных CMS</a></li>
+</ul></li>
+</ul>
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="hr"></div>
+
+		
+
+		<div class="footer_contacts">
+
+			<div class="copy">
+
+				<p>&copy; 2010 Компания Новая Парадигма</p>
+				<p>Все права защищены.</p>
+
+			</div>
+
+			<div class="phone">
+				<img src="/template/images/tel10.png" /> 		
+			</div>
+			
+			<div id="statistics">
+								                <div class="counter">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t13.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+</div><div class="counter">
+
+<!--Rating@Mail.ru counter-->
+<script language="javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+<script language="javascript1.1"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1910053" target="_blank">'+
+'<img src="http://d5.c2.bd.a1.top.mail.ru/counter?id=1910053;t=130;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
+'height="40" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
+<noscript><a target="_blank" href="http://top.mail.ru/jump?from=1910053">
+<img src="http://d5.c2.bd.a1.top.mail.ru/counter?js=na;id=1910053;t=130" 
+height="40" width="88" border="0" alt="Рейтинг@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//--></script>
+<!--// Rating@Mail.ru counter-->
+
+</div>
+			</div>
+
+			<div  class="clear"></div>
+
+		</div>
+
+	</div>
+
+</div>
+	</div>
+
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17101674-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter1446525 = new Ya.Metrika(1446525); } catch(e){}
+</script></div>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1446525" alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->
+
+
+
+
+</body>
+
+</html>
+

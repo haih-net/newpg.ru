@@ -48,6 +48,15 @@ async function startServer() {
   app.set('trust proxy', true)
   app.disable('x-powered-by')
 
+  // Исторические ссылки на отдельные HTML-приложения библиотеки.
+  app.get(
+    ['/ExtJS/docs', '/ExtJS/docs/', '/ExtJS/examples', '/ExtJS/examples/'],
+    (req, res) => {
+      const query = new URL(req.originalUrl, 'http://localhost').search
+      res.redirect(302, req.path.replace(/\/$/, '') + '/index.html' + query)
+    },
+  )
+
   setupMedia(app)
 
   const httpServer = createServer(app)

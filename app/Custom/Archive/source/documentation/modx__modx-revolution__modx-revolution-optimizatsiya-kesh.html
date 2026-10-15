@@ -1,0 +1,910 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="keywords" content="управление сайтом, статистика, Система Управления Контентом , CMS/CMF MODx, CMS" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MODx Revolution оптимизация кэш. Быстрая загрузка | Веб-студия «Новая парадигма» Москва 774-67-02</title>
+<meta name="Description" content="Оптимизация КЭШ" />
+<base href="http://newpg.ru/" />
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("jquery", "1.4.2");
+</script>
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="diz/css/style_new.css" /> 
+<link type="text/css" rel="stylesheet" href="css/newsList.css" />
+
+<!-- Ya.Share -->
+<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+<link type="text/css" rel="stylesheet" href="css/share.css" />
+
+<link type="text/css" rel="stylesheet" href="js/google/prettify/prettify.css" />
+<script type="text/javascript" src="js/google/prettify/prettify.js"></script>
+<script type="text/javascript" src="js/lesson.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    prettyPrint();
+})
+</script>
+
+<!-- Header -->
+
+<!-- End of Header -->
+<link type="text/css" rel="stylesheet" href="diz/css/index.css" />
+<link type="text/css" rel="stylesheet" href="css/jsLessons.css" />
+
+<link rel="stylesheet" href="ExtJS/resources/css/ext-all.css" type="text/css" media="screen" />
+<script type="text/javascript" src="ExtJS/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="ExtJS/ext-all.js"></script>
+<script type="text/javascript" src="ExtJS/bugFix/fix.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+
+
+
+<link type="text/css"  rel="stylesheet" href="js/google/prettify/prettify.css" />
+
+<script type="text/javascript" src="js/google/prettify/prettify.js"></script>
+
+<script  type="text/javascript">
+
+Ext.onReady(function(){
+    prettyPrint();
+})
+</script>
+
+</head>
+<body>
+<div class="wrap">
+	<div class="body">
+		<div class="header">
+			<div class="contacts"><!-- span class="text middle"><img style="padding-top:5px;" src="/template/images/tel_top.png" alt="" /></span --></div>
+
+<div class="main_menu">
+	<div class="menu">
+		<ul class="menu"><li><span  class="l_corner"></span><span class="row"><a href="/about.html" title="О компании"><img class="white" alt="О компании" src="images/menu/about.png" /><img class="black" alt="О компании" src="images/menu/black_about.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/services.html" title="Услуги"><img class="white" alt="Услуги" src="images/menu/service.png" /><img class="black" alt="Услуги" src="images/menu/black_service.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/portfolio.html" title="Портфолио"><img class="white" alt="Портфолио" src="images/menu/portfolio.png" /><img class="black" alt="Портфолио" src="images/menu/black_portfolio.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/contacts.html" title="Контактная информация"><img class="white" alt="Контактная информация" src="images/menu/contact.png" /><img class="black" alt="Контактная информация" src="images/menu/black_contact.png" /></a></span><span class="r_corner"></span></li>
+<li class="last active"><span  class="l_corner"></span><span class="row"><a href="/documentation.html" title="Документация"><img class="white" alt="Документация" src="images/menu/documentation.png" /><img class="black" alt="Документация" src="images/menu/black_documentation.png" /></a></span><span class="r_corner"></span></li class="last active">
+</ul>
+	</div> 
+	<div class="logo"><a href="http://newpg.ru/" title="На главную"><img src="images/logo.png" alt="На главную" title="Студия Новая Парадигма"  /></a></div>
+	<div  class="clear"></div>
+</div> 
+		</div>
+		<div class="middleBlock">
+			 
+    <div class="left_block">
+       <div class="menu"><!-- <a style="text-decoration: none;" href="http://pro-cent.ru/partnery/ooo-novaya-paradigma/actions/master-klass-po-modx-revolution-ot-razrabotchika-gipermarketa-skidok-pro-cent.ru.html" "Мастер-классы и тренинги по MODx Revolution"><img border="0" title="" alt="" src="images/baners/modx-masterclass.jpg"></a> -->
+ </div>
+	<div class="menu">
+		<ul class="menu"><li class="level1"><a href="http://newpg.ru/" title="Главная страница" >Главная</a></li>
+<li class="level1"><a href="/about.html" title="О компании" >О компании</a></li>
+<li class="level1"><a href="/nashi-proekty.html" title="Наши проекты" >Наши проекты</a></li>
+<li class="level1"><a href="/news.html" title="Новости" >Новости</a></li>
+<li class="level1"><a href="/services.html" title="Услуги" >Услуги</a></li>
+<li class="level1"><a href="/portfolio.html" title="Портфолио" >Портфолио</a></li>
+<li class="level1"><a href="/contacts.html" title="Контактная информация" >Контактная информация</a></li>
+<li class="last level1 active"><a href="/documentation.html" title="Документация" >Документация</a><ul><li class="level2"><a href="/documentation/extjs.html" title="ExtJS" >ExtJS</a></li>
+<li class="last level2 active"><a href="/documentation/modx.html" title="CMS/CMF MODX" >CMS/CMF MODX</a><ul><li class="level3 active"><a href="/documentation/modx/modx-revolution.html" title="MODx Revolution" >MODx Revolution</a><ul><li class="level4"><a href="/documentation/modx/modx-revolution/modx-revolution-po-shagam.html" title="MODx Revolution по шагам" >MODx Revolution по шагам</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/modx-revolution-ustanovka.html" title="MODx Revolution Установка " >MODx Revolution Установка </a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/modx-revolution-fajlovaya-model.html" title="MODx Revolution файловая модель" >MODx Revolution файловая модель</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/ustanovka-dopolnitelnyh-paketov-na-modx-revolution.html" title="Установка дополнительных пакетов на MODx Revolution" >Установка дополнительных пакетов на MODx Revolution</a></li>
+<li class="level4 active self"><a href="/documentation/modx/modx-revolution/modx-revolution-optimizatsiya-kesh.html" title="MODx Revolution Оптимизация КЭШ" >MODx Revolution Оптимизация КЭШ</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/modx-revolution-nastrojki-bezopasnosti.html" title="MODx Revolution настройки безопасности" >MODx Revolution настройки безопасности</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/xpdo.html" title="xPDO" >xPDO</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/xpdo-urok-1.-getobject.html" title="xPDO Урок 1. GetObject()" >xPDO Урок 1. GetObject()</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/xpdo-urok-2.-getcollection.html" title="xPDO Урок 2. GetCollection()" >xPDO Урок 2. GetCollection()</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/xpdo-urok-3.-newquery.html" title="xPDO Урок 3. newQuery()" >xPDO Урок 3. newQuery()</a></li>
+<li class="last level4"><a href="/documentation/modx/modx-revolution/xpdo-urok-4.-select.html" title="xPDO Урок 4. Select()" >xPDO Урок 4. Select()</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+	</div> 
+       
+</div>
+    <div class="rightBlock">
+
+<div class="newsBlock">
+<h2 class="blockTitle">ПОДЕЛИТЬСЯ</h2>
+<div  class="share"></div>
+<div id="ya_share1"></div>
+
+
+
+<script type="text/javascript">
+var els = ['yaru', 'twitter', 'vkontakte', 'facebook', 'odnoklassniki','lj','liveinternet',  'yazakladki',  'moikrug', 'moimir', 'myspace', 'blogger', 'digg', 'evernote', 'delicious', 'friendfeed', 'gbuzz', 'greader'];
+
+var Share = new Ya.share({
+            element: 'ya_share1',
+            elementStyle: {
+                'type': 'none',
+                'border': false,
+                'quickServices': els
+            }
+            // link: 'http://www.yandex.com/',
+            // title: 'Yandex — the best search engine in the universe!',
+            /*,popupStyle: {
+                blocks: {
+                    'Поделись-ка!': ['yaru', 'twitter', '', 'vkontakte'],
+                    'Поделись-ка по-другому!': ['yaru', 'twitter', 'vkontakte']
+                },
+                copyPasteField: true
+            },
+            serviceSpecific: {
+                twitter: {
+                    title: '#Yandex — the best search engine in the universe!'
+               }
+            }*/
+            //  ,l10n:  'en'
+            ,onready: function(){
+               /*var els = [  'b-share-icon_yaru', 'b-share-icon_twitter','b-share-icon_vkontakte', 'b-share-icon_facebook', 'b-share-icon_blogger', 'b-share-icon_digg', 'b-share-icon_evernote', 'b-share-icon_delicious', 'b-share-icon_friendfeed', 'b-share-icon_friendfeed', 'b-share-icon_gbuzz', 'b-share-icon_gbuzz', 'b-share-icon_greader', 'b-share-icon_juick', 'b-share-icon_liveinternet', 'b-share-icon_linkedin', 'b-share-icon_lj', 'b-share-icon_moikrug', 'b-share-icon_moimir'];*/
+			   //var text = '';
+			   
+			   // Удаляем все классы ссылок
+			   //$('.b-share__handle').each(function(el){alert($(el)[0]);})
+			   jQuery('.b-share__handle').each(function(el){
+				   		jQuery(this).removeClass('b-share__handle');
+			   		}
+				)
+			   
+			   
+			   
+               for(i in  els){
+                   // Находим нужную нам иконку
+				   var oldClass  = 'b-share-icon_' + els[i];
+				   var newClass = oldClass+'_new shareIcon';
+				   var icon = jQuery( "."+oldClass);
+				   //alert(icon[0]);
+				   
+				   // Удаляем класс
+				   icon.removeClass('b-share-icon' );
+				   icon.removeClass(oldClass );
+				   
+				   // Устанавливаем новый  класс
+				   icon.addClass('shareIcon');  
+				   icon.addClass( newClass); 
+				   //text = text + '.' + newClass + "{background-position:0;}\n";
+               }
+			   //alert(text);
+            }
+            ,image: 'http://newpg.ru/images/newpg.ru.png'
+});
+</script>
+
+</div>
+
+<div class="newsBlock">
+<h2 class="blockTitle"><a href="news.html" title="Новости">НОВОСТИ</a></h2>
+<div class="news">
+      <div class="title"><span class="date">2011-05-30</span> <a href="news/2011/05/30/razrabotan-sajt-dlya-instituta-sotsialno-ekonomicheskih-i-politicheskih-issledovanij.html" title="Разработан сайт для Фонда ИСЭПИ">Разработан сайт для Фонда ИСЭПИ</a></div>
+      <div class="intro">Веб-студией "Новая парадигма" разработан сайт для Фонда "Институт социально-экономических и политических исследований"  <a href="news/2011/05/30/razrabotan-sajt-dlya-instituta-sotsialno-ekonomicheskih-i-politicheskih-issledovanij.html" title="Разработан сайт для Фонда ИСЭПИ">Подробнее...</a><div class="nextLink"></div></div>
+</div><div class="news">
+      <div class="title"><span class="date">2011-05-17</span> <a href="news/2011/05/17/csmcmf-modx-zanyala-4-oe-mesto-sredi-besplatnyh-cms.html" title="CMS/CMF MODx заняла 4-ое место среди бесплатных CMS">CMS/CMF MODx заняла 4-ое место среди бесплатных CMS</a></div>
+      <div class="intro">По данным авторитетного портала <a href="http://www.ratingruneta.ru/" target="_blank">Рейтинг Рунета</a> Система Управления Контентом <a title="Бесплатная Система Управления Контентом CMS/CMF MODx" href="documentation/modx.html">CMS/CMF MODx</a> в России занимает <a href="http://www.ratingruneta.ru/cms/opensource/" target="_blank">4-ое место</a> по популярности.  <a href="news/2011/05/17/csmcmf-modx-zanyala-4-oe-mesto-sredi-besplatnyh-cms.html" title="CMS/CMF MODx заняла 4-ое место среди бесплатных CMS">Подробнее...</a><div class="nextLink"></div></div>
+</div><div class="news">
+      <div class="title"><span class="date">2011-04-25</span> <a href="news/2011/04/25/razgon-modx-revolution.html" title="Разгон MODx Revolution">Разгон MODx Revolution</a></div>
+      <div class="intro">Исследовательским отделом веб-студии "Новая парадигма" были произведены исследования, насколько хорошо фреймворк MODx Revolution работает при значительном увеличении числа документов.  <a href="news/2011/04/25/razgon-modx-revolution.html" title="Разгон MODx Revolution">Подробнее...</a><div class="nextLink"></div></div>
+</div>
+</div>
+
+</div>
+    <div class="center_block">
+        <div class="breadcrumbs"><span class="B_crumbBox"><span class="B_firstCrumb"><a href="/">Главная</a></span> &raquo; <a class="B_crumb" href="/documentation.html" title="Документация по ExtJS">Документация</a> &raquo; <a class="B_crumb" href="/documentation/modx.html" title="CMS/CMF MODX">CMS/CMF MODX</a> &raquo; <a class="B_crumb" href="/documentation/modx/modx-revolution.html" title="MODx Revolution">MODx Revolution</a> &raquo; <h1 class="B_lastCrumb"><span class="B_currentCrumb">MODx Revolution Оптимизация КЭШ</span></h1></span></div>
+        <div id="content"><p><strong>Проблема:</strong>
+ при увеличении кол-ва страниц на сайте, значительно разрастается кэш 
+сайта. Это связано с тем, что MODx Revolution кэширует все варианты ЧПУ:</p>
+<ol>
+<li>ID-документа - ЧПУ</li>
+<li>ЧПУ - ID-документа</li>
+<li>Родители и дочерние записи и т.п.</li>
+</ol>
+<p>В
+ результате на 20 000 страниц мы имеем почти 20 Мб кэш. Мало того, что 
+это просто извращение, подгружать 20 метров кэша для того, чтобы выдать 
+20 кило конечного HTML, так дело еще в том, что это почти что лимит для 
+MODx Revolution, и 50 000 страниц нам просто &nbsp;никогда не создать.<br />Но
+ это в базовой комплектации. &nbsp;Слава &nbsp;Богу MODx Revolution имеет очень 
+мощное API, и при желании платформу можно адаптировать практически под 
+любые нужды.<br />В нашем случае мы поставили для себя задачу - прокачать MODx Revolution &nbsp;так, чтобы он легко работал с 200 000 документами.<br />Хотя
+ я &nbsp;буду максимально подробно все расписывать, все же сразу оговорюсь о 
+необходимых минимальных знаниях, чтобы без труда все это сделать:</p>
+<ol>
+<li>PHP ООП</li>
+<li>PDO/xPDO</li>
+<li>Javascript + ExtJS/Sencha</li>
+<li>MySQL</li>
+<li>Синтаксис JSON</li>
+<li>Средства отладки Ajax-запросов, к примеру Firefox &nbsp;+ Firebug</li>
+<li>Синтаксис XML</li>
+</ol>
+<p><strong>Краткий отчет о результатах краш-тестов в цифрах:</strong></p>
+<p><img src="assets/images/modx/cache/crashTest.jpg" alt="" width="450" height="275" /></p>
+<p><br /><strong>Наши исходные данные:</strong></p>
+<ol>
+<li>MODx Revolution 2.0.8</li>
+<li>Кол-во документов: 20793</li>
+<li>Размер кэш: 18 769 995 байт</li>
+<li>1-ая загрузка страницы (с генерацией кэш-файла): 8,97 сек.</li>
+<li>2-ая загрузка частично кэшированной страницы с уже сгенерированным кэшем: 0,5 - 1,32 сек.</li>
+</ol>
+<p><br /><strong>При тюнинге MODx Revolution мы должны &nbsp;учесть следующие обязательные моменты:</strong></p>
+<ol>
+<li>Обязательно ЧПУ для всех страниц</li>
+<li>Для
+ вывода главного меню использовать стандартные модули Ditto, Wayfinder, 
+Breadcrumbs и чтобы их не пришлось модифицировать для этого.</li>
+</ol>
+<p><br /><strong>Для начала разберемся, что же нам необходимо сделать, и к чему это приведет.</strong><br />У нас есть несколько &nbsp;вариантов:</p>
+<ol>
+<li>Немного
+ подправить код класса modCacheManager и отключить кэширование карты 
+ресурсов. Таким образом мы предотвратим разрастание кэша и на 20000 
+документов мы будем &nbsp;иметь кэш всего в 40 кило. Но:<ol>
+<li>У нас перестанут работать все стандартные навигационные модули типа Ditto, Wayfinder и т.п.</li>
+<li>У нас в принципе не будет работать ЧПУ, потому что MODx Revolution всю работу с навигацией проводит через этот раздел кэша.</li>
+</ol></li>
+</ol>
+<p><br />Какой же оптимальный вариант мы видим? Частичное кэширование 
+документов, только тех, которые нужны для модулей навигации, типа 
+Wayfinder и т.п.<br />Для этого нам надо:</p>
+<ol>
+<li>Добавить возможность указывать в настройках каждой отдельной страницы, включать ее в кэш или нет.</li>
+<li>Скорректировать
+ класс modCacheManager таким образом, чтобы он включал в кэш только те 
+страницы, которые отмечены как включаемые в кэш карты ресурсов</li>
+<li>Добавить
+ плагин, который будет налету, в случае не нахождения страницы (в 
+случае, если запрашиваемая страница не оказалась кэшированной карте 
+ресурсов), дополнительно производить поиск ресурсов по запрашиваемому 
+УРЛ, и в случае нахождения, вывод контента страницы.</li>
+<li>Добавить
+ пользовательский кэш каждой отдельной страницы с кэшированием УРЛ-ов 
+дочерних ресурсов до 3-го уровня, или только тех ресурсов, УРЛы которых 
+присутствуют на запрашиваемой страницы</li>
+</ol>
+<p><br /><strong>Итак, приступим по порядку:</strong></p>
+<p><strong>1. Добавить возможность указывать в настройках каждой отдельной страницы, включать ее в кэш или нет. </strong><br /><strong>1.1</strong>
+ Добавляем дополнительный чекбокс в панель редактирования документов. 
+Для этого открывает файл 
+/manager/assets/modext/widgets/resource/modx.panel.resource.js<br />На строке 285 начинается перечисление полей формы настроек 
+</p>
+<pre class="prettyprint lang-json">{
+    xtype: 'checkbox'
+   ,fieldLabel: _('resource_searchable')
+   ,description: _('resource_searchable_help')
+   ,name: 'searchable'
+   ,id: 'modx-resource-searchable'
+   ,inputValue: 1
+   ,checked: config.record.searchable       
+}
+</pre>
+<p>
+<br />Здесь
+ xtype: 'checkbox' &nbsp;- это и есть тип элемента &lt;input type=&rdquo;checkbox&rdquo; ,
+ нам подобный и нужен, по-этому где-нибудь сразу за блоком чекбокса 
+&ldquo;кэшируемый&rdquo; мы и вставляем через запятую свой блок.</p>
+<pre class="prettyprint lang-js">{
+	xtype: 'checkbox'
+	,fieldLabel: 'Включать в кеш Карты ресурсов'
+	,description: 'Если отмечено, то документ будет включен '+
+        'в карту ресурсов в кеше контекста и будет доступен для '+
+        'стандартных средств навигации типа Wayfinder и Ditto'
+	,name: 'inResourceMapCache'
+	,id: 'modx-resource-inResourceMapCache'
+	,inputValue: 1
+	,checked: config.record.inResourceMapCache
+}
+</pre>
+<p>
+<br />Обратите внимание на строку типа <br />,fieldLabel: _('resource_searchable')<br />Это
+ перечисление различных заголовков и т.п. _(text) - это функция, для 
+работы со словорями MODx, то есть если хотите, чтобы ваши доработки еще 
+имели мультиязычную основу или возможность управления через редактор 
+словарей, то копайте глубже. Направление я показал, а самому лень, ибо 
+это не критично для нашей задачи.<br />Но
+ в любом случае пропишите свои названия полей, ID-шник и т.п. Можете 
+просто скопировать мой блок, что в данном случае будет правильней, чтобы
+ нигде не было в дальнейшем конфликтов имен <br /><br />Всё.
+ Вставив этот код и сохранив файл на сервере, обновите страницу 
+редактора. Вы увидите, что во вкладке &ldquo;Настройки страницы&rdquo; появился 
+дополнительный чекбокс.<br />Самое
+ интересное, что для того, чтобы данные этого чекбокса отправлялись &nbsp;на 
+сервер, ничего делать не надо! Скрипты MODx-а написаны так, что они 
+автоматом подхватывают добавляемые поля, и обрабатывают их значения.<br />Только
+ обратите внимание, что параметр &lsquo;includeInResourceMapCache&rsquo; &nbsp;будет передаваться 
+только в том случае, если чекбокс будет отмечен. Это важно, если на 
+стороне сервера вы &nbsp;вздумаете проверять 
+isset($_POST[&lsquo;includeInResourceMapCache&rsquo;]). В данном случае isset будет 
+false, потому что этого элемента не будет в передаваемых данных.</p>
+<p>&nbsp;</p>
+<p><img src="assets/images/modx/cache/newCheckbox.jpg" alt="" width="450" height="374" /><br /><br /><strong>1.2</strong>
+ Забегая вперед, предлагаю сразу создать настраиваемый параметр, который
+ будет указывать, включать по умолчанию в карту ресурсов создаваемый 
+документ, если не отмечено данное поле, или нет. Ведь платформа у нас 
+мультисайтовая, и на одной и той же платформе может лежать и 
+высоконагруженные &nbsp;сайты, и нет. И поверьте мне на слово, что при 
+желании с MODx Revolution можно так извратиться, что файлы разных сайтов
+ и даже их таблицы будут лежать на разных физических серверах, а 
+платформа будет одна, и все будет летать. <br />Для этого откроем через админку страницу &ldquo;Настройки системы&rdquo; и добавим в core.Кэширование нашу пользовательскую настройку.</p>
+<p><img src="assets/images/modx/cache/addNewOption_1.jpg" alt="" width="450" height="176" />&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="assets/images/modx/cache/addNewOption_2.jpg" alt="" width="450" height="189" /></p>
+<p>&nbsp;</p>
+<p><img src="assets/images/modx/cache/addNewOption_3.jpg" alt="" width="450" height="301" /></p>
+<p>&nbsp;</p>
+<p><img src="assets/images/modx/cache/addNewOption_4.jpg" alt="" width="450" height="325" /></p>
+<p>&nbsp;</p>
+<p><img src="assets/images/modx/cache/addNewOption_5.jpg" alt="" width="450" height="252" />&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>1.3</strong>
+ Итак, элемент управления мы добавили. Теперь надо это значение где-то 
+хранить. Разумно добавить колонку в саму таблицу site_content (не 
+забывайте про префикс таблиц. По умолчанию он modx_, но мог быть указан и
+ другой префикс при установке. То есть скорее всего полное название 
+таблицы modx_site_content).</p>
+<p>Добавляем
+ в конец таблицы колонку inResourceMapCache с атрибутами: tinyint(1) 
+unsigned &nbsp;default 0 . Лучше для этих целей воспользоваться PHP-клиентом 
+phpMyAdmin.<br /><br /><strong>1.4</strong> Все, колонка у нас есть. Теперь надо добавить логику в обработку создаваемых и обновляемых документов.<br />Для этого подредактируем два документа:<br /><strong>1.4.1</strong> /core/model/modx/processors/resource/create.php &nbsp;&nbsp;(отвечает за создание документов)<br />У меня это строка 89. После строки </p>
+<pre class="prettyprint lang-php">$scriptProperties['deleted'] = empty($scriptProperties['deleted']) ? 0 : 1;
+</pre>
+<p>
+<br />Добавляем </p>
+<pre class="prettyprint lang-php">$scriptProperties['inResourceMapCache'] = 
+	!isset($scriptProperties['inResourceMapCache']) ? 
+    (integer) $workingContext-&gt;getOption('inResourceMapCache_default', 1) : 
+    (empty($scriptProperties['inResourceMapCache']) ? 0 : 1);
+</pre>
+<p>
+<br />В
+ данном случае мы указали, что если в Пост-данных нет элемента 
+inResourceMapCache, то в качестве значения используем значение настройки
+ системы inResourceMapCache_default, которую мы создали в пункте 1.2 
+данной мануалы, или, если нет такой переменной, то 1.<br /><br /><strong>1.4.2</strong> /core/model/modx/processors/resource/update.php &nbsp;(отвечает за обновление документов)<br />Где-то в районе 100-ой строки находим блок /* setup default values */<br />Там перечислено штук 10 параметров, типа</p>
+<pre class="prettyprint lang-php">$scriptProperties['parent'] = 
+	empty($scriptProperties['parent']) ? 0 : intval($scriptProperties['parent']);
+</pre>
+<p>
+<br />Вот после последнего параметра вставляем свою строку:</p>
+<pre class="prettyprint lang-php">$scriptProperties['inResourceMapCache'] = 
+	empty($scriptProperties['inResourceMapCache']) ? 0 : 1;
+</pre>
+<p>
+<br />В данном случае мы перехватываем передаваемые Пост-данные, и если указано 1, соответственно значение ставится 1<br /><br /><strong>1.5</strong>
+ Всё, с редактированием исполняемых скриптом &nbsp;и оформлением интерфейса 
+закончено. Но для того, чтобы заработало обновление информации в базе 
+данных, необходимо отредактировать еще один важный файл (плюс один файл 
+на будущее).<br />Дело
+ в том, что MODx Revolution полностью основан на расширении PDO - xPDO. 
+Это сторонний класс для работы с &nbsp;различными базами данных, типа тонкого
+ клиента. Так вот, для работы с БД он использует файлы, в которых 
+описана структура базы данных и ее таблиц, и если не внести информацию о
+ новой колонке в таблице site_content, то он и не будет о ней знать, и 
+обновлять ее упорно не будет.<br />Итак, нам придется отредактировать два файла:<br /><strong>1.5.1</strong> /core/model/schema/modx.mysql.schema.xml<br />В
+ этом файле в формате XML описана струтура базы данных. Именно на основе
+ таких XML-файлов генерируются PHP-файлы классов и карт для работы xPDO с
+ базой данных. Но нам легче будет отредактировать эти PHP-файлы вручную,
+ чем пересобрать эту базу, и хотя сейчас информация в этом файле не 
+будет напрямую влиять на работу наших скриптов, она понадобится в 
+будущем, если вы все таки решите пересобрать всю базу xPDO на основе 
+этого файла<br />Итак, открываем этот файл и находим строку </p>
+<pre class="prettyprint lang-xml">&lt;object class="modResource" table="site_content" extends="modAccessibleSimpleObject"&gt;
+</pre>
+<p>
+<br />Внутри этого блока перечислены все поля этой таблицы типа</p>
+<pre class="prettyprint lang-xml">&lt;field key="type" dbtype="varchar" precision="20" phptype="string" null="false" default="document" /&gt; 
+</pre>
+<p>
+<br />Вот сразу после перечисления всех колонок, перед блоком индексов вставляем строку</p>
+<pre class="prettyprint lang-xml">&lt;field key="inResourceMapCache" dbtype="tinyint" precision="1" 
+attributes="unsigned" phptype="boolean" null="false" default="0" index="index" /&gt;
+</pre>
+<p>
+<br /><br />Для наглядности привожу последние 3 строки:</p>
+<pre class="prettyprint lang-xml">&lt;field key="context_key" dbtype="varchar" precision="100" 
+	phptype="string" null="false" default="web" index="index" /&gt;
+&lt;field key="content_type" dbtype="int" precision="11" 
+	attributes="unsigned" phptype="integer" null="false" default="1" /&gt;
+&lt;field key="inResourceMapCache" dbtype="tinyint" precision="1" attributes="unsigned" 
+phptype="boolean" null="false" default="0" index="index" /&gt;
+</pre>
+<p>
+<br /><br />Сохраняем
+ этот файл и закрываем. Напомню, что это не критичный файл, и если у вас
+ работать не будет, то на него не пеняйте, ищите проблему в другом 
+месте.<br /><br /><strong>1.5.2</strong> /core/model/modx/mysql/modresource.map.inc.php<br />Вот это уже очень важный файл! Если в нем не описать правильно информацию по таблице, обновление информации в БД не будет.<br />Открываем его для редактирования. В нем информация представлена в виде массива.<br />Находим самый первый блок</p>
+<pre class="prettyprint lang-php">$xpdo_meta_map['modResource']= array (
+	'package' =&gt; 'modx',
+	'version' =&gt; '1.1',
+	'table' =&gt; 'site_content',
+	'fields' =&gt;
+		array (
+   			'type' =&gt; 'document',
+   			'contentType' =&gt; 'text/html',
+</pre>
+<p>
+<br />Тут идет перечисление колонок в таблице site_content &nbsp;&nbsp;&nbsp;&nbsp;type, contentType и т.п.<br />В конец блока </p>
+<pre class="prettyprint lang-php">'fields' =&gt;
+ 	array (
+</pre>
+<p>
+<br />добавляем новый элемент</p>
+<pre class="prettyprint lang-php">'inResourceMapCache' =&gt; 0,
+</pre>
+<p>
+<br /><br />Сразу за этим блоком идет следующий важный блок:<br />
+</p>
+<pre class="prettyprint lang-php">,
+	'fieldMeta' =&gt;
+	array (
+</pre>
+<p>
+<br />В нем представлена более развернутая информация по этим полям, включая 
+названия &nbsp;индексов и т.п. &nbsp;типа (Название колонки =&gt; ее атрибуты)</p>
+<pre class="prettyprint lang-php">'type' =&gt;
+	array (
+    	'dbtype' =&gt; 'varchar',
+    	'precision' =&gt; '20',
+    	'phptype' =&gt; 'string',
+    	'null' =&gt; false,
+    	'default' =&gt; 'document',
+   ),
+</pre>
+<p>
+<br />Добавляем последним элементом наш:</p>
+<pre class="prettyprint lang-php">'inResourceMapCache' =&gt;
+	array (
+    	'dbtype' =&gt; 'tinyint',
+    	'precision' =&gt; '1',
+    	'attributes' =&gt; 'unsigned',
+    	'phptype' =&gt; 'boolean',
+    	'null' =&gt; false,
+    	'default' =&gt; 1
+ )
+</pre>
+<p>
+<br />Все, сохраняем этот файл на сервере.<br /><br />После всего этого на всякий случай обновляем кеш сайта и проверяем 
+работоспособность, создав новый документ и несколько раз обновить 
+значение Включать в кеш Карты ресурсов: в настройках страницы. При этом 
+проверьте изменения значения &nbsp;inResourceMapCache непосредственно в 
+таблице в Базе Данных.<br />Учтите,
+ что разные файлы работают в момент создания новой страницы и обновления
+ уже существующей, потому проверьте и сразу после создания страницы, и 
+отдельно после обновления страницы.<br /><br />У меня все работает.<br /><strong>1.6</strong> Теперь надо подредактировать файл /core/model/modx/modcachemanager.class.php<br />Именно этот класс генерирует кеш Контекста сайта, карту ресурсов и т.п.<br /><strong>1.6.1</strong> Строка 79</p>
+<pre class="prettyprint lang-php">$resourceFields= 'id,parent,alias,isfolder,content_type';
+</pre>
+<p>
+<br />Это перечислены колонки, получаемые из таблицы &nbsp;site_content<br />Нам надо добавить и свою колонку, чтобы мы могли различить кэшируемые и некэшируемые документы.<br />Далее примерно на 110-ой строке после</p>
+<pre class="prettyprint lang-php">while ($r = $collResources-&gt;fetch(PDO::FETCH_OBJ)) {
+</pre>
+<p>
+<br />добавляем</p>
+<pre class="prettyprint lang-php">if(!$r-&gt;inResourceMapCache) continue;
+</pre>
+<p>
+<br />Получаем </p>
+<pre class="prettyprint lang-php">while ($r = $collResources-&gt;fetch(PDO::FETCH_OBJ)) {
+	if(!$r-&gt;inResourceMapCache) continue;
+</pre>
+<p>
+ 
+<br />Таким образом мы пропускаем все документы, не включаемые в кеш.<br /><br />P.S. Оказывается, есть еще момент, который я сразу не заметил. Надо подправить этот запрос:</p>
+<pre class="prettyprint lang-php">$criteria= new xPDOCriteria($this-&gt;modx, 
+	"SELECT {$resourceCols} FROM {$tblResource} `r` LEFT JOIN {$tblContextResource} `cr` 
+    	ON `cr`.`context_key` = :context_key1 AND `r`.`id` = `cr`.`resource` 
+        WHERE `r`.`id` != `r`.`parent` 
+        	AND (
+        		`r`.`context_key` = :context_key2 OR `cr`.`context_key` IS NOT NULL) 
+          	AND `r`.`deleted` = 0 GROUP BY `r`.`id` 
+            ORDER BY `r`.`parent` ASC, `r`.`menuindex` ASC", $bindings, false);
+</pre>
+<p> 
+<br />потому
+ что в данном &nbsp;случае он на уровне PHP пропускает все не кэшируемые 
+элементы, но все равно с Базы Данных запрашивает все строки. В 
+результате при &nbsp;&gt;1 000 000 документов первый запрос выполняется более
+ трех секунд. &nbsp;<br />Да-да, вы правильно заметили))) 1 000 000 документов. И это еще не предел.<br />Подставляем в запрос еще один критерий</p>
+<pre class="prettyprint lang-sql">AND `r`.`inResourceMapCache` = 1
+</pre>
+<p>
+<br />И &nbsp;получаем вот такой запрос:</p>
+<pre class="prettyprint lang-php">$criteria= new xPDOCriteria($this-&gt;modx, 
+	"SELECT {$resourceCols} FROM {$tblResource} `r` LEFT JOIN {$tblContextResource} `cr` 
+    	ON `cr`.`context_key` = :context_key1 AND `r`.`id` = `cr`.`resource` 
+        WHERE `r`.`id` != `r`.`parent` 
+        	AND (
+        		`r`.`context_key` = :context_key2 OR `cr`.`context_key` IS NOT NULL) 
+          	AND `r`.`deleted` = 0 AND `r`.`inResourceMapCache` = 1 GROUP BY `r`.`id` 
+            ORDER BY `r`.`parent` ASC, `r`.`menuindex` ASC", $bindings, false);
+</pre>
+<p>&nbsp;</p>
+<p>И теперь при более 1 000 000 документов любой запрос к сайту - менее 0,35 секунд!)))</p>
+<p>По результатам тестирования одновременно 50-ти посетителей, загрузка страницы не превышает 0,8 секунд.</p>
+<p>Результаты тестирования: <a title="Результаты тестирования MODx Revolution" href="http://loadimpact.com/result/modxforum.ru-0620c6997a541f794293b84714671c3d" target="_blank">http://loadimpact.com/result/modxforum.ru-0620c6997a541f794293b84714671c3d</a></p>
+<p>Итак,
+ подытожим: мы добились загрузки страниц менее чем за 0,4 сек. при 1 000
+ 000 докунтов. Очень неплохой разгон для MODx Revolution)))<br />Это
+ еще при том, что страницы не были до конца закэшированы и выполняли для
+ своих нужд несколько запросов к таблице site_content, то есть если 
+полностью кешировать страницы, сайт будет грузиться менее чем за 0,2 
+сек., и я это обязательно докажу!<br /><br />Есть
+ еще момент: мы частично отключили кеширование карты ресурсов. А это 
+значит, что при использовании ЧПУ, то есть запрашивая страницу не по ее 
+ID, кроме корневой страницы вы не получите ни одной страницы, не 
+включенной в эту карту сайта.<br />Но это лечится. Вот маленькое решение, которое вы должны уже будете само развить дальше:<br />1. Создаем плагин, выполняемый по событию OnWebPageInit.<br />2. Прописываем в нем:</p>
+<pre class="prettyprint lang-php">if($modx-&gt;checkSiteStatus() &amp;&amp; !is_object($modx-&gt;resource)) 
+	$modx-&gt;resource = $modx-&gt;request-&gt;getResource('id', $docID);
+</pre>
+<p>
+<br />Все,
+ теперь можно в этот код в качестве параметра $docID передавать ID 
+нужного нам документа, и вы получите код нужной вам страницы.<br />Правда
+ вам самим нужно будет думать, как получить ID документа. Очевидно, что 
+надо будет раскладывать адрес запрашиваемой страницы и проходиться по 
+таблице site_content и получать ID конечного документа, но надо еще и 
+кэширование этого результата тоже сохранять, чтобы потом при повторном 
+обращении не дергать каждый раз базу.<br />Я обязательно это доделаю в следующий раз и выложу готовое решение. </p>
+<p>&nbsp;</p>
+<div id="_mcePaste" class="mcePaste" style="position: absolute; left: -10000px; top: 309px; width: 1px; height: 1px; overflow: hidden;">
+ 
+<table border="0" cellspacing="0" cellpadding="0" width="1271">
+<colgroup><col style="mso-width-source: userset; mso-width-alt: 6875; width: 141pt;" width="188"></col>
+ <col style="mso-width-source: userset; mso-width-alt: 17078; width: 350pt;" width="467"></col>
+ <col style="mso-width-source: userset; mso-width-alt: 4388; width: 90pt;" width="120"></col>
+ <col style="mso-width-source: userset; mso-width-alt: 4973; width: 102pt;" width="136"></col>
+ <col style="mso-width-source: userset; mso-width-alt: 4388; width: 90pt;" span="3" width="120"></col>
+ </colgroup>
+<tbody>
+<tr style="height: 51.0pt;" height="68">
+<td class="xl63" style="height: 51.0pt; width: 141pt;" width="188" height="68">Кол-во
+  ресурсов</td>
+<td class="xl63" style="border-left: none; width: 350pt;" width="467">Симптомы</td>
+<td class="xl63" style="border-left: none; width: 90pt;" width="120">Первая загрузка
+  (с генерацией кеша). Секунд</td>
+<td class="xl63" style="border-left: none; width: 102pt;" width="136">Вторая загрузка
+  (закешированный раздел). Секунд</td>
+<td class="xl63" style="border-left: none; width: 90pt;" width="120">Размер кеш-файла</td>
+<td class="xl63" style="border-left: none; width: 90pt;" width="120">Размер таблицы
+  site_content</td>
+<td class="xl63" style="border-left: none; width: 90pt;" width="120">Размер индексов
+  таблицы site_content</td>
+</tr>
+<tr style="height: 25.5pt;" height="34">
+<td class="xl64" style="height: 25.5pt; border-top: none; width: 141pt;" width="188" height="34">2363</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467"><span style="mso-spacerun: yes;">&nbsp;</span>Не получилось клонировать раздел, не хватило
+  на исполнение 30 секунд лимита.</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">2,18</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">0,453<br />
+    0,328</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">4
+  087 000</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+</tr>
+<tr style="height: 25.5pt;" height="34">
+<td class="xl64" style="height: 25.5pt; border-top: none; width: 141pt;" width="188" height="34">7035</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">4,42</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">0,594<br />
+    0,360</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">6
+  112 295</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+</tr>
+<tr style="height: 25.5pt;" height="34">
+<td class="xl64" style="height: 25.5pt; border-top: none; width: 141pt;" width="188" height="34">9371</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">Не
+  получается в дереве документов перенести раздел в другой раздел.<br />
+    Помог выход из админки и опять вход, но все равно<span style="mso-spacerun: yes;">&nbsp; </span>тормозит</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">9,94</td>
+<td class="xl65" style="border-top: none; border-left: none; width: 102pt;" width="136">???</td>
+<td class="xl65" style="border-top: none; border-left: none; width: 90pt;" width="120">???</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+</tr>
+<tr style="height: 38.25pt;" height="51">
+<td class="xl64" style="height: 38.25pt; border-top: none; width: 141pt;" width="188" height="51">18715</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">Сильно
+  тормозит клонирование раздела (2-4 документа в сек)<br />
+    Так и не смог проклонировать раздел. Только примерно 3000 документов создал</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">1,03<br />
+    1,24<br />
+    0,438</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">16
+  769 994</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">43.5
+  Mb</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">5.2
+  Mb</td>
+</tr>
+<tr style="height: 25.5pt;" height="34">
+<td class="xl64" style="height: 25.5pt; border-top: none; width: 141pt;" width="188" height="34">20793</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">Невозможно
+  произвести удаление ветки с более чем 1000 ресурсов</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">7,09</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">1,09<br />
+    1,33</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">18
+  769 995</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">50,5
+  Мб</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">6,6
+  Мб</td>
+</tr>
+<tr style="height: 51.0pt;" height="68">
+<td class="xl64" style="height: 51.0pt; border-top: none; width: 141pt;" width="188" height="68">220449</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">Не
+  смог создать полный файл-кэш.</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">5,8</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">Ошибка
+  502, то есть сайт умер)))</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">71
+  598 896 (не полный. должен был быть минимум 200 Мб)</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+</tr>
+<tr style="mso-height-source: userset; height: 12.75pt;" height="17">
+<td class="xl64" style="height: 12.75pt; border-top: none; width: 141pt;" width="188" height="17">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+</tr>
+<tr style="mso-height-source: userset; height: 12.75pt;" height="17">
+<td class="xl64" style="height: 12.75pt; border-top: none; width: 141pt;" width="188" height="17">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+</tr>
+<tr style="mso-height-source: userset; height: 12.75pt;" height="17">
+<td class="xl64" style="height: 12.75pt; border-top: none; width: 141pt;" width="188" height="17">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+</tr>
+<tr style="mso-height-source: userset; height: 12.75pt;" height="17">
+<td class="xl63" style="height: 12.75pt; width: 683pt;" colspan="4" width="911" height="17">После тюнинга</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+</tr>
+<tr style="mso-height-source: userset; height: 12.75pt;" height="17">
+<td class="xl64" style="height: 12.75pt; border-top: none; width: 141pt;" width="188" height="17">220449</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">2</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">0,28-0,39</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">47
+  473 байт</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">520
+  Мб</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">54,7
+  Мб</td>
+</tr>
+<tr style="mso-height-source: userset; height: 12.75pt;" height="17">
+<td class="xl64" style="height: 12.75pt; border-top: none; width: 141pt;" width="188" height="17">439608</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">3,91
+  - 5,31</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">0,25-0,3</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">46
+  782<span style="mso-spacerun: yes;">&nbsp; </span>байт</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">1
+  Gb</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">102.7
+  Mb</td>
+</tr>
+<tr style="mso-height-source: userset; height: 12.75pt;" height="17">
+<td class="xl64" style="height: 12.75pt; border-top: none; width: 141pt;" width="188" height="17">878632</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">55.14</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">2
+  Gb</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">191.9
+  Mb</td>
+</tr>
+<tr style="mso-height-source: userset; height: 12.75pt;" height="17">
+<td class="xl64" style="height: 12.75pt; border-top: none; width: 141pt;" width="188" height="17">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+<td class="xl63" style="height: 12.75pt; width: 683pt;" colspan="4" width="911" height="17">После тюнинга 2. Добавления еще одного параметра в запрос</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+</tr>
+<tr style="mso-height-source: userset; height: 67.5pt;" height="90">
+<td class="xl64" style="height: 67.5pt; width: 683pt;" colspan="4" width="911" height="90" align="center">#################################################################################################################################</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+</tr>
+<tr style="mso-height-source: userset; height: 12.75pt;" height="17">
+<td class="xl64" style="height: 12.75pt; border-top: none; width: 141pt;" width="188" height="17">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+</tr>
+<tr style="mso-height-source: userset; height: 12.75pt;" height="17">
+<td class="xl64" style="height: 12.75pt; border-top: none; width: 141pt;" width="188" height="17">878632</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">0,25-0,6</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl65" style="border-top: none; border-left: none; width: 90pt;" width="120">2
+  Gb</td>
+<td class="xl65" style="border-top: none; border-left: none; width: 90pt;" width="120">200
+  Mb</td>
+</tr>
+<tr style="mso-height-source: userset; height: 12.75pt;" height="17">
+<td class="xl64" style="height: 12.75pt; border-top: none; width: 141pt;" width="188" height="17">1008904</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 350pt;" width="467">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">~0.3</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 102pt;" width="136">0.25-0.29</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">&nbsp;</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">2.3
+  Gb</td>
+<td class="xl64" style="border-top: none; border-left: none; width: 90pt;" width="120">220.9
+  Mb</td>
+</tr>
+</tbody>
+</table>
+</div>
+        <div  class="clear"></div>
+        <p>&nbsp; </p>
+        <div class="meOnHabr">Если вам помог мой материал и вы есть на Хабрахабре, <a href="http://fi1osof.habrahabr.ru/" title="я на Хабре" target="_blank">плюсание карму в дар</a> :-)</div><div id="rang" class="center">&nbsp;</div><div id="navigator"></div>
+    </div>
+</div>
+<div class="clear"></div>
+
+
+
+
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer_content"> 
+	<div class="footer_wrapper">
+		<div class="footer_menu">
+			<ul class="footer_menu"><li class="first"><a href="http://newpg.ru/" title="Главная страница" >Главная</a></li>
+<li><a href="/about.html" title="О компании" >О компании</a></li>
+<li><a href="/nashi-proekty.html" title="Наши проекты" >Наши проекты</a></li>
+<li><a href="/news.html" title="Новости" >Новости</a></li>
+<li><a href="/services.html" title="Услуги" >Услуги</a></li>
+<li><a href="/portfolio.html" title="Портфолио" >Портфолио</a></li>
+<li><a href="/contacts.html" title="Контактная информация" >Контактная информация</a></li>
+<li class="last active"><a href="/documentation.html" title="Документация" >Документация</a></li>
+</ul>
+		</div>
+		<div class="hr"></div>
+		<div class="bottom_menu">
+			<ul class="bottom_menu"><li class="first level1"><ul><li class="first level2"><a href="/services/sozdanie-saitov/obnovlenie-saitov.html" title="Обновление сайтов" >Обновление сайтов</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/sait-kak-samovyragenie.html" title="Самовыражение" >Самовыражение</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/kak-sostavit-tehzadanie.html" title="Как составить техзадание?" >Как составить техзадание?</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/primer-audita-sayta.html" title="Пример аудита сайта. Редирект" >Аудит и анализ сайта</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/statistika-poseschaemosti.html" title="Статистика посещений сайта" >Статистика посещений</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/skolko-stoit-site.html" title="Сколько стоит сайт?" >Сколько стоит сайт?</a></li>
+<li class="last level2"><a href="/services/sozdanie-saitov/tipy-saitov.html" title="Типы сайтов" >Типы сайтов</a></li>
+</ul></li>
+<li class="level1"><ul><li class="first level2"><a href="/services/poiskovoe-prodvigenie/301_redirect.html" title="Как правильно перенести сайт" >Как правильно перенести сайт</a></li>
+<li class="level2"><a href="/services/poiskovoe-prodvigenie/geograficheskaya-prinadlegnost.html" title="Географическая принадлежность" >Географическая принадлежность</a></li>
+<li class="last level2"><a href="/services/poiskovoe-prodvigenie/slogno-li-byt-pervym-v-rossii.html" title="Сложно ли быть первым в России?" >Сложно ли быть первым в России?</a></li>
+</ul></li>
+<li class="last level1"><ul><li class="first level2"><a href="portfolio/obnovlenie-saitov/obnovlenie-sajta-advokata-koronnogo-e.b.html" title="Пример обновления сайта" >Пример обновления сайта</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/polnaya-poddergka-saytov.html" title="Полная поддержка сайтов" >Полная поддержка сайтов</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/kak-samomu-obnovliat-site.html" title="Как самому обновлять сайт?" >Как самому обновлять сайт?</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/kak-obnovlyat-sait-samomu.html" title="Как обновлять сайт самому?" >Как обновлять сайт самому?</a></li>
+<li class="last level2"><a href="/services/poddergka-prodvigenie/obzor-populyarnyh-cms.html" title="Краткий обзор популярных Систем Управления Контентом" >Обзор популярных CMS</a></li>
+</ul></li>
+</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="hr"></div>
+		<div class="footer_contacts">
+			<div class="copy">
+				<p>&copy; 2010 Компания Новая Парадигма</p>
+				<p>Все права защищены.</p>
+			</div>
+			<!-- div class="phone">
+				<img src="/template/images/tel10.png" /> 		
+			</div -->
+			<div id="statistics">
+				<div class="counter"><a href="http://yandex.ru/cy?base=0&amp;host=newpg.ru"><img src="http://www.yandex.ru/cycounter?newpg.ru" width="88" height="31" alt="Яндекс цитирования" border="0" /></a></div><div class="counter">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t13.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+</div><div class="counter">
+
+<!--Rating@Mail.ru counter-->
+<script language="javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+<script language="javascript1.1"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1910053" target="_blank">'+
+'<img src="http://d5.c2.bd.a1.top.mail.ru/counter?id=1910053;t=130;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
+'height="40" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
+<noscript><a target="_blank" href="http://top.mail.ru/jump?from=1910053">
+<img src="http://d5.c2.bd.a1.top.mail.ru/counter?js=na;id=1910053;t=130" 
+height="40" width="88" border="0" alt="Рейтинг@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//--></script>
+<!--// Rating@Mail.ru counter-->
+
+</div>
+			</div>
+			<div  class="clear"></div>
+		</div>
+	</div>
+</div>
+	</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17101674-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><!-- Yandex.Metrika -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter1446525 = new Ya.Metrika(1446525);
+             yaCounter1446525.clickmap(true);
+             yaCounter1446525.trackLinks(true);
+        
+        } catch(e) {}
+    });
+})(window, 'yandex_metrika_callbacks');
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1446525" alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->
+</body>
+</html>
+

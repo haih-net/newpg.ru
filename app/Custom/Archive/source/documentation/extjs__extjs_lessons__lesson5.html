@@ -1,0 +1,540 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+<meta name="keywords" content="веб-студия, extjs уроки, extjs примеры, extjs для начинающих, extjs store, extjs proxy, extjs load, extjs json, extjs grid, extjs, Ext.Window, Ext.grid.GridPanel, Ext.grid, Ext.data.Store" />
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<title>Веб-студия «Новая Парадигма» | ExtJS. Урок 5. Хранилища и таблицы. Ext.grid, Ext.data.Store</title>
+
+<meta name="Description" content='ExtJS. Урок 5. Хранилища и таблицы. Ext.grid, Ext.data.Store'>
+
+<base href="http://newpg.ru/" />
+
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+<link type="text/css" rel="stylesheet" href="diz/css/style_new.css" />
+
+
+
+<!-- Header -->
+
+
+
+<!-- End of Header -->
+<link type="text/css" rel="stylesheet" href="diz/css/index.css" />
+
+<!-- <script type='text/javascript' src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>-->
+
+
+
+<link type="text/css" rel="stylesheet" href="css/jsLessons.css" />
+
+<link rel="stylesheet" href="ExtJS/resources/css/ext-all.css" type="text/css" media="screen" />
+<script type="text/javascript" src="ExtJS/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="ExtJS/ext-all.js"></script>
+<script type="text/javascript" src="ExtJS/bugFix/fix.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<link type="text/css"  rel="stylesheet" href="js/google/prettify/prettify.css" />
+
+<script type="text/javascript" src="js/google/prettify/prettify.js"></script>
+<script type="text/javascript" src="js/ExtJS/lessons/lesson5.js"></script>
+
+<script  type="text/javascript">
+
+Ext.onReady(function(){
+    prettyPrint();
+})
+</script>
+
+</head>
+
+<body>
+
+
+
+<div class="wrap">
+
+	<div class="body">
+
+		<div class="header">
+
+			<div class="contacts"><span class="text middle"><img style="padding-top:5px;" src=/template/images/tel_top.png border=0></span>
+</div>
+
+<!-- 
+<div class="contacts"><span class="contacts">Для срочных вопросов: <span class="tel"><span class="code green">8 (495)</span> 772-67-02</span> <span class="mail">Почта: <a href="mailto:info@newpg.ru" class="mail green">info@newpg.ru</a></span></span>
+</div>
+-->
+
+<div class="main_menu">
+	<div class="menu">
+	<ul class="menu"><li><span  class="l_corner"></span><span class="row"><a href="/about.html" title="О компании"><img class="white" alt="О компании" src="images/menu/about.png" /><img class="black" alt="О компании" src="images/menu/black_about.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/services.html" title="Услуги"><img class="white" alt="Услуги" src="images/menu/service.png" /><img class="black" alt="Услуги" src="images/menu/black_service.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/portfolio.html" title="Портфолио"><img class="white" alt="Портфолио" src="images/menu/portfolio.png" /><img class="black" alt="Портфолио" src="images/menu/black_portfolio.png" /></a></span><span class="r_corner"></span></li>
+<li class="active"><span  class="l_corner"></span><span class="row"><a href="/documentation.html" title="Документация"><img class="white" alt="Документация" src="images/menu/documentation.png" /><img class="black" alt="Документация" src="images/menu/black_documentation.png" /></a></span><span class="r_corner"></span></li class="active">
+<li class="last"><span  class="l_corner"></span><span class="row"><a href="/contacts.html" title="Контактная  информация"><img class="white" alt="Контактная  информация" src="images/menu/contact.png" /><img class="black" alt="Контактная  информация" src="images/menu/black_contact.png" /></a></span><span class="r_corner"></span></li class="last">
+</ul>	</div> 
+	<div class="logo"><a href="http://newpg.ru/" title="На главную"><img src="images/logo.png" alt="На главную" title="Студия Новая Парадигма"  /></a></div>
+	<div  class="clear"></div>
+	
+</div> 
+		</div>
+
+		<div class="middle">
+
+			 <div class="left_block">
+	<div class="menu">
+			<ul class="menu"><li class="level1"><a href="http://newpg.ru/" title="Главная страница" >Главная</a></li>
+<li class="level1"><a href="/about.html" title="О компании" >О компании</a></li>
+<li class="level1"><a href="/services.html" title="Услуги" >Услуги</a></li>
+<li class="level1"><a href="/portfolio.html" title="Портфолио" >Портфолио</a></li>
+<li class="level1 active"><a href="/documentation.html" title="Документация" >Документация</a><ul><li class="level2 active"><a href="/documentation/extjs.html" title="ExtJS" >ExtJS</a><ul><li class="level3 active"><a href="/documentation/extjs/extjs_lessons.html" title="Уроки ExtJS" >Уроки ExtJS</a><ul><li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson1.html" title="ExtJS. Урок 1. Hello, world!" >Урок 1. Hello, world!</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson2.html" title="ExtJS. Урок 2. Окна. Ext.Window" >Урок 2. Окна</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson3.html" title="ExtJS. Урок 3. Окна, часть вторая. Ext.Window, Ext.Toolbar" >Урок 3. Окна, часть вторая</a></li>
+<li class="level4"><a href="/documentation/extjs/extjs_lessons/lesson4.html" title="ExtJS. Урок 4. Окна, часть третья, Ext.Window properties" >Урок 4. Окна, часть третья</a></li>
+<li class="level4 active self"><a href="/documentation/extjs/extjs_lessons/lesson5.html" title="ExtJS. Урок 5. Хранилища и таблицы. Ext.grid, Ext.data.Store" >Урок 5. Хранилища и таблицы</a></li>
+<li class="last level4"><a href="/documentation/extjs/extjs_lessons/lesson6.html" title="ExtJS. Урок 6. Шаблоны элементов. Ext.Template" >Урок 6. Шаблоны элементов</a></li>
+</ul></li>
+<li class="level3"><a href="ExtJS/docs" title="Документация по ExtJS" target="_blank">Документация по ExtJS</a></li>
+<li class="last level3"><a href="ExtJS/examples" title="Примеры ExtJS" target="_blank">Примеры ExtJS</a></li>
+</ul></li>
+</ul></li>
+<li class="last level1"><a href="/contacts.html" title="Контактная  информация" >Контактная  информация</a></li>
+</ul>	</div> 
+	
+</div>
+
+<div class="center_block">
+	<div class="breadcrumbs"><span class="B_crumbBox"><span class="B_firstCrumb"><a href="/">Главная</a></span> &raquo; <a class="B_crumb" href="/documentation.html" title="Документация по ExtJS">Документация</a> &raquo; <a class="B_crumb" href="/documentation/extjs.html" title="ExtJS">ExtJS</a> &raquo; <a class="B_crumb" href="/documentation/extjs/extjs_lessons.html" title="Уроки ExtJS">Уроки ExtJS</a> &raquo; <h1 class="B_lastCrumb"><span class="B_currentCrumb">Урок 5. Хранилища и таблицы</span></h1></span></div>
+	<div id="content"><p>Итак перейдем наверно к самому интересному инструментарию в Эксте (после драг`н`дропов ИМХО). Сразу определимся с терминами, которые я тут буду использовать (терминология расшифрована мной по моему разумению, потому не претендует на звание официальной документации):</p>
+<p>&nbsp;</p>
+<p>1) Хранилище (Store). Объект Ext.data.Store. Хранит в себе структурированные данные. Некоторые разновидности: Ext.data.JsonStore , Ext.data.ArrayStore . По сути это производные от своего старшего брата, просто с соответствующими Ридерами в комплекте.</p>
+<p>&nbsp;</p>
+<p>2) Grid. Объект Ext.grid.GridPanel. Таблица для отображения данных из Хранилища. Grid плотно связан с объектом Store и без него существовать не может. Grid отображает данные из Store и чтобы в нем что-то изменилось, надо на самом деле изменять данные в Store. Это может и несколько запутано, но на самом деле очень продуманно и правильно! Такого я больше нигде не видел. Дальше в примерах я постараюсь раскрыть ключевые моменты и съакцентировать на них внимание.</p>
+<p>&nbsp;</p>
+<p>3) Запись (Record). Объект Ext.data.Record . Все данные в Store - табличные, хранятся построчно (Это если образно выражаться). То есть чтобы изменить какой-то элемент, нужно обратиться к соответствующей записи (Record), а в ней уже к соответственной колонке (к соответственному элементу ). </p>
+<p>&nbsp;</p>
+<p>4) Reader. Объект Ext.data.ArrayReader || Ext.data.JsonReader || Ext.data.DataReader . Используется для чтения данных в Store. Необходимо указывать в случае использование "чистого" Хранилища (Ext.data.Store) и зависит от типа входных данных (массив, Объект или уже подготовленные данные через Ext.data.Record.create()). В случае использование специфичных хранилищ (Ext.data.ArrayStore, Ext.data.JsonStore или Ext.data.DirectStore), соответствующие Reader будут инициализированы автоматически.</p>
+<p>&nbsp;</p>
+<p>5) ColumnModel. Объект Ext.grid.ColumnModel. Обязательный для Grid. Описывает структуру колонок Grid. Как уже ранее говорилось, все данные в Store хранятся в виде записей (Records). Так вот эта модель Колонок связана со структурой этих Рекордов, точнее с элементами этих Рекордов. В данной модели прописываются отношения колонок к этим элементам. Вся красота заключается в том, что вы, используя единое хранилище, можете использовать в качестве источника данных для нескольких клиентов, все они будут работать синхронно и правильно. Колонок может быть меньше чем элементов в Рекорде, то есть если мы не хотим чтобы через UI можно было работать с определенными элементами Рекорда, значит не прописываем эти элементы в ColumnModel. Мы можем указать такие свойства, как видимость по умолчанию или нет (то есть при инициализации колонка будет скрыта, и чтобы ее увидеть, нужно будет через меню управления колонками сделать ее видимой), можем указать тип данных, указать можно ли сортировать данные в Grid по данной колонке или нет, навешать колонке функцию-рендерер для обработки вводимых в нее данных на лету (к примеру если мы хотим чтобы вводимые числа с запятой округлялись до целого или более сложные операции, такие как взаимодействие с другими объектами в зависимости от вводимых данных). В общем это действительно очень мощный инструмент и мы постараемся как можно больше моментов разобрать в следующем примере.</p>
+<p>&nbsp;</p>
+<p>На самом деле это не все участники этой сложной системы (не говоря уже про Прокси Ext.data.HttpProxy, позволяющий сконфигурить взаимодействие с сервером в автоматическом режиме до 4-ех событий (Получение первичных данных, сохранение, обновление, удаление)). Но этого материала достаточно для понимания на достаточном уровне. Вообще по-моему Grid - одна из сложнейших областей ExtJS в плане понимания. Сам я потратил двое суток прежде чем начал боле менее свободно ориентироваться в этой области. Слишком уж тут много завязанного друг на друге, а как я не искал, в инете не нашел реально подробного и понятного примера. Надеюсь у меня тут получилось заполнить этот пробел и вам будет легко освоить этот раздел. </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">Grid  = {
+	// Базовые параметры нашего окна
+	getWinParams: function(){
+		return {
+			width: 550,
+			height: 300,
+			title: 'Хранилища и таблицы',
+			buttons:[{
+				text: 'ОК',
+				handler:function(){
+					Grid.win.close();	
+				}
+			}],
+			listeners: {
+				close: function(){
+					Grid.win = false;	
+				}	
+			},
+			layout: 'fit',
+			bodyStyle: {
+				'background-color': '#FFFFFF'	
+			}
+		}	
+	},
+	
+	// Функция инициализации окна
+	getWindow: function(params){
+		!params ? params = this.getWinParams() : "";
+		if(!this.win){
+			this.win = new Ext.Window(params);
+		}
+		return this.win;
+	},
+	
+	// Ридер данных из объекта
+	getJsonReader: function(){
+		this.JsonReader = new Ext.data.JsonReader({
+			root: 'data',		// Элемент объекта, содержащий данные
+			idProperty: 'id',	// Коланка, содержащая Уникальные данные ID
+			fields: [			// Описание колонок, выводимых в Grid
+				{name:'id', type: 'int', allowBlank: false},	 
+				{name: 'firstName', allowBlank: false}, 
+				{name: 'middleName'}, 
+				{name: 'lastName', allowBlank: false},
+				{name: 'age', type: 'int'},
+				{name: 'weight', type: 'float'}
+			]
+
+		});
+		return this.JsonReader;
+	},
+	
+	// Данные для Хранилища
+	getInputData:function(){
+		return { 
+				data:[{
+					id: 0,
+					firstName: 'Михаил',
+					lastName: 'Попов',
+					middleName: 'Алефтинович',
+					age: 43,
+					weight: 65.23
+				},{
+					id: 1,
+					firstName: 'Алексей',
+					lastName: 'Пупкин',
+					age: 25, 
+					middleName: 'Петрович' 
+				},{
+					id: 2,
+					firstName: 'Анна',
+					middleName: 'Олеговна',
+					lastName: 'Иванова',
+					age: 31,
+					weight: 55.14
+				},{
+					id: 3,
+					firstName: 'Николай',
+					lastName: 'Соснов',
+					age: 27, 
+					middleName: 'Владимирович',
+					weight: 78.32
+				},{
+					id: 4,
+					firstName: 'Елена',
+					middleName: 'Георгиевна',
+					lastName: 'Седова',
+					age: 26,
+					weight: 57.00 
+				}]	
+			}
+	},
+	
+	// Получаем хранилище данных
+	getStore: function(){
+		reader = this.getJsonReader();
+		this.store = new Ext.data.Store({
+			id: 'store',
+			reader: reader,
+			// Получаем входные данные для работы
+			data: this.getInputData()
+		});
+		return this.store;
+	},
+	
+	// Получаем Таблицу для отображения данных
+	getGrid: function(){
+		store = this.getStore();
+		this.grid = new Ext.grid.GridPanel({
+			store: store,		// хранилище. Важно! Required!
+			cm: new Ext.grid.ColumnModel({	// Модель колонок
+				columns: [		// Колонки
+					{header: 'Фамилия', dataIndex: 'lastName' },
+					{header: 'Имя', dataIndex: 'firstName', sortable: false },
+					{header: 'Отчество', dataIndex: 'middleName', hidden: true },
+					{header: 'Возраст', dataIndex: 'age' },
+					{header: 'Вес', dataIndex: 'weight' }						  
+				],
+				// Флаг что по умолчанию колонки Sortable. по умолчанию false
+				defaultSortable: true	
+			})
+		})
+		return this.grid;
+	},
+	
+	showGrid: function(){
+		if(this.win) return false;
+		
+		// Инициализируем окно
+		this.getWindow();
+		
+		// Инициализируем Грид
+		this.getGrid();
+		
+		// Добавляем Грид к Окну
+		this.win.add(this.grid);
+		
+		// Выводим окно
+		this.win.show();
+	}
+}</pre>
+<p>&nbsp;</p>
+<p>
+  <input onclick="Grid.showGrid();" name="button" type="button" value="Показать Grid" />
+</p>
+<p>&nbsp;</p>
+<p>Итак разберем все по порядку и подробно.</p>
+<p>&nbsp;</p>
+<p>В первую очередь для существования Grid необходим Store, то есть Хранилище. Вообще можно конечно использовать и чистый Стор (как мы сделали и в нашем примере), но лучше изначально определиться с типом входящих данных и выбрать соответствующий Стор изначально, к примеру Ext.data.JsonStore. Во-первых, будет проще сконфигурить, ибо соответствующий Ридер будет автоматически использован и конечный код окажется компактней и менее запутанный. Во-вторых, проще работать с таким кодом, ибо только глянув на используемые объекты сразу становится понятно с каким типом данных мы будем работать (Объект или Массив) и легче будет разобраться с кодом и спланировать изначально план работы. Повторюсь что в нашем примере мы использоватли чистый Store.</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">// Получаем хранилище данных<br />&nbsp; getStore: function(){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; reader = this.getJsonReader();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.store = new Ext.data.Store({<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: 'store',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; reader: reader,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Получаем входные данные для работы<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data: this.getInputData()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return this.store;<br />&nbsp; }</pre>
+<p>&nbsp;</p>
+<p>Рассмотрим внимательно данную функцию. В ней мы инициализируем Хранилище</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">this.store = new Ext.data.Store()</pre>
+<p><br />
+Но для Хранилища как минимум требуется Reader, если это чистый Store (если производный, соответствующий Reader будет автоматически создан, о чем я уже говорил ранее), и данные. Данные мы можем передать сразу в переменную data в подходящем виде (как мы это сделали в нашем случае), либо загрузить через метод loadData(data) объекта Store опять таки в подходящем виде, либо через его же метод load(), если у нас опрделен для Store url, либо сконфигурин для него же proxy. В нашем случае мы получаем Reader через функцию reader = this.getJsonReader(); Изучим и эту функцию.</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">// Ридер данных из объекта<br />&nbsp; getJsonReader: function(){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.JsonReader = new Ext.data.JsonReader({<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; root: 'data',&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// Элемент объекта, содержащий данные<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; idProperty: 'id',&nbsp;&nbsp; &nbsp;// Коланка, содержащая Уникальные данные ID<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fields: [&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// Описание колонок, выводимых в Grid<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name:'id', type: 'int', allowBlank: false},&nbsp;&nbsp; &nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name: 'firstName', allowBlank: false}, <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name: 'middleName'}, <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name: 'lastName', allowBlank: false},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name: 'age', type: 'int'},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name: 'weight', type: 'float'}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return this.JsonReader;<br />&nbsp; }</pre>
+<p>&nbsp;</p>
+<p>Рассмотрим каждый параметр конфига объекта Reader.</p>
+<p>&nbsp;</p>
+<p>1) root: 'data'. В данном случае мы указываем какой из элементов объекта входящих данных будет использоваться в качестве источника данных. В нашем случае в объекте есть такое элемент 'data', вот его и будет читать Reader. Если весь входящий объект - источник данных, этот параметр следует опустить.</p>
+<p>&nbsp;</p>
+<p>2) idProperty: 'id'. Так же не обязательный параметр. Указывает какая колонка в данных будет считаться индексом. Совпадения не допустимы, то есть если у нас во входящих данных уже была какая-то запись с id: 5, то если будет еще строка с id: 5 , такая строка будет проигнорирована и не будет добавлена в Store, и в Grid соответственно.</p>
+<p>&nbsp;</p>
+<p>3) fields. Описание колонок, которые следует сформировать при чтении входящих данных. То есть не обязательно использовать все входящие данные, если нам нужна только часть их. Тут мы для каждой колонки можем определить тип данных, заголовок, можно/нельзя оставлять пустым и другие свойства. В нашем случае мы определили для всех полей имена, для некоторых определили тип данных (type: int, float), можно/нельзя оставить пустыми (allowBlank). Обратите внимание что это модель описывается именно для Store, и в этом виде данные будут храниться в нем, а не в Grid. Для Грида нужно будет прописать ColumnModel, которая будет использовать эти поля. </p>
+<p>&nbsp;</p>
+<p>В общем Reader для Store у нас создан и передан объекту Store в качестве параметра reader. <br />
+  Параметр id мы припустим, тут комментарии излишни. Параметр не обязательный.<br />
+  data: this.getInputData() Собственно наши данные для Store. Структура - Json. Прелесть использования данной модели в том, что нам во-первых не нужно следить за последовательностью необходимых нам элементов в объекте данных, а во-вторых у нас вообще могут быть не все входящие элементы, Reader прочтет то, что есть. Вот рассмотрим структуру Данных.</p>
+<p>&nbsp;</p>
+<pre class="prettyprint"> &nbsp; getInputData:function(){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return { <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data:[{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; firstName: 'Михаил',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lastName: 'Попов',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; middleName: 'Алефтинович',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; age: 43,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; weight: 65.23<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: 1,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; firstName: 'Алексей',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lastName: 'Пупкин',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; age: 25, <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; middleName: 'Петрович' <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: 2,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; firstName: 'Анна',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; middleName: 'Олеговна',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lastName: 'Иванова',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; age: 31,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; weight: 55.14<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: 3,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; firstName: 'Николай',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lastName: 'Соснов',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; age: 27, <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; middleName: 'Владимирович',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; weight: 78.32<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: 4,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; firstName: 'Елена',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; middleName: 'Георгиевна',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lastName: 'Седова',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; age: 26,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; weight: 57.00 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }]&nbsp;&nbsp; &nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp; }</pre>
+<p>&nbsp;</p>
+<p>Как вы видите, последовательность элементов типа firstName, lastName и других не всегда совпадает, а в некоторых случиях и вовсе отсутствуют. </p>
+<p>&nbsp;</p>
+<p>В общем Store у нас есть. И данные в нем уже. Теперь Store можно использовать для Grid. Инициализируем Grid.</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">getGrid: function(){
+	store = this.getStore();
+	this.grid = new Ext.grid.GridPanel({
+		store: store,		// хранилище. Важно! Required!
+		cm: new Ext.grid.ColumnModel({	// Модель колонок
+			columns: [		// Колонки
+				{header: 'Фамилия', dataIndex: 'lastName' },
+				{header: 'Имя', dataIndex: 'firstName', sortable: false },
+				{header: 'Отчество', dataIndex: 'middleName', hidden: true },
+				{header: 'Возраст', dataIndex: 'age' },
+				{header: 'Вес', dataIndex: 'weight' }						  
+			],
+			// Флаг что по умолчанию колонки Sortable. по умолчанию false
+			defaultSortable: true	
+		})
+	})
+	return this.grid;
+}</pre>
+<p><br />
+Что мы тут имеем? В качестве обязательного параметра передаем Гриду Store (store: store). Таким образом мы установили связь Грида со Стором и все изменения в Хранилище будут отражаться на Гриде.<br />
+cm: new Ext.grid.ColumnModel . cm (сокращенное название параметра Грида colModel). Обязательный параметр. Ну не может таблица существовать без колонок! Описывается структура колонок таблицы. Я выше уже описывал подробно эту модель в пункте 5 нашего словоря. Обязательно прочтите еще раз. <br />
+defaultSortable: true Указывает на то, что по умолчанию все колонки sortable: true . ( По умолчанию false ) </p>
+<p>&nbsp;</p>
+<p>Остается только собрать это все в кучу</p>
+<p>&nbsp;</p>
+<pre class="prettyprint">showGrid: function(){
+	if(this.win) return false;
+	
+	// Инициализируем окно
+	this.getWindow();
+	
+	// Инициализируем Грид
+	this.getGrid();
+	
+	// Добавляем Грид к Окну
+	this.win.add(this.grid);
+	
+	// Выводим окно
+	this.win.show();
+}</pre>
+<p>&nbsp;</p>
+<p>Вот и все! Мы имеем Хранилище с данными и интерфейс для отображения их (Grid). Но на самом деле это еще не все. Давайте посмотрим внимательно что же именно мы получили? А получили мы следующее:</p>
+<p>&nbsp;</p>
+<p>1) Хранилище для данных, которые могут использоваться как единый актуальный обменник данными с разграничением видимости и прочими полезными хитростями. Особенно вдохнавляют упомянутые уже выше Proxy, а главное методы commitChanges() и rejectChanges() (аналог commit и rollback в СУБД). Согласитесь это уже достойно уважения и внимания!</p>
+<p>&nbsp;</p>
+<p>2) Мощный инструмент для UI - Ext.data.Grid. На самом деле мощный! Внимательно его прокликайте и перекликайте. Вы найдете много полезных фишек в нем, типа Ресортинг данных в таблице, скрытие/показ отдельных колонок и т.п. А еще мы создали пока что базовый Grid, который выглядит как инструмент для просмотра данных в Storee. На самом деле если расширить функционал нашего Грида, получится мощный инструмент для UI, с помощью которого очень удобно работать с данными, редактировать их, добавлять новые, удалять не нужные, работать сразу с группой строк и т.п., а еще навешать контекстное меню, рендеры для отдельных колонок, указать типы данных и вообще сказка получается! Обязательно посмотрите примеры с Гридами в <a title="Примеры ExtJS" href="ExtJS/examples" target="_blank">Примерах</a>, там есть что глянуть :-)</p>
+	  
+	  <div  class="clear"></div>
+	  <p>&nbsp; </p>
+      <div class="meOnHabr">Если вам помог мой материал и вы есть на Хабрахабре, <a href="http://fi1osof.habrahabr.ru/" title="я на Хабре" target="_blank">плюсание карму в дар</a> :-)</div><div id="rang" class="center">&nbsp;</div><div id="navigator"><a href="/documentation/extjs/extjs_lessons/lesson4.html"><< Урок 4. Окна, часть третья</a> --- <a href="/documentation/extjs/extjs_lessons/lesson6.html">Урок 6. Шаблоны элементов >></a></div>
+	</div>
+	
+                              
+</div>
+
+<div class="clear"></div>
+
+		</div>
+
+	</div>
+
+	<div class="footer">
+
+	
+
+
+
+			<div class="footer_content">
+
+	<div class="footer_wrapper">
+
+		<div class="footer_menu">
+
+		<ul class="footer_menu"><li class="first"><a href="http://newpg.ru/" title="Главная страница" >Главная</a></li>
+<li><a href="/about.html" title="О компании" >О компании</a></li>
+<li><a href="/services.html" title="Услуги" >Услуги</a></li>
+<li><a href="/portfolio.html" title="Портфолио" >Портфолио</a></li>
+<li class="active"><a href="/documentation.html" title="Документация" >Документация</a></li>
+<li class="last"><a href="/contacts.html" title="Контактная  информация" >Контактная  информация</a></li>
+</ul>
+		</div>
+
+		<div class="hr"></div>
+
+		
+
+		<div class="bottom_menu">
+
+		<ul class="bottom_menu"><li class="first level1"><ul><li class="first level2"><a href="/services/sozdanie-saitov/obnovlenie-saitov.html" title="Обновление сайтов" >Обновление сайтов</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/sait-kak-samovyragenie.html" title="Самовыражение" >Самовыражение</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/kak-sostavit-tehzadanie.html" title="Как составить техзадание?" >Как составить техзадание?</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/primer-audita-sayta.html" title="Аудит и анализ сайта" >Аудит и анализ сайта</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/statistika-poseschaemosti.html" title="Статистика посещений сайта" >Статистика посещений</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/skolko-stoit-site.html" title="Сколько стоит сайт?" >Сколько стоит сайт?</a></li>
+<li class="last level2"><a href="/services/sozdanie-saitov/tipy-saitov.html" title="Типы сайтов" >Типы сайтов</a></li>
+</ul></li>
+<li class="level1"><ul><li class="first level2"><a href="/services/poiskovoe-prodvigenie/301_redirect.html" title="Как правильно перенести сайт" >Как правильно перенести сайт</a></li>
+<li class="level2"><a href="/services/poiskovoe-prodvigenie/geograficheskaya-prinadlegnost.html" title="Географическая принадлежность" >Географическая принадлежность</a></li>
+<li class="last level2"><a href="/services/poiskovoe-prodvigenie/slogno-li-byt-pervym-v-rossii.html" title="Сложно ли быть первым в России?" >Сложно ли быть первым в России?</a></li>
+</ul></li>
+<li class="last level1"><ul><li class="first level2"><a href="/services/poddergka-prodvigenie/polnaya-poddergka-saytov.html" title="Полная поддержка сайтов" >Полная поддержка сайтов</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/kak-samomu-obnovliat-site.html" title="Как самому обновлять сайт?" >Как самому обновлять сайт?</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/kak-obnovlyat-sait-samomu.html" title="Как обновлять сайт самому?" >Как обновлять сайт самому?</a></li>
+<li class="last level2"><a href="/services/poddergka-prodvigenie/obzor-populyarnyh-cms.html" title="Краткий обзор популярных Систем Управления Контентом" >Обзор популярных CMS</a></li>
+</ul></li>
+</ul>
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="hr"></div>
+
+		
+
+		<div class="footer_contacts">
+
+			<div class="copy">
+
+				<p>&copy; 2010 Компания Новая Парадигма</p>
+				<p>Все права защищены.</p>
+
+			</div>
+
+			<div class="phone">
+				<img src="/template/images/tel10.png" /> 		
+			</div>
+			
+			<div id="statistics">
+								                <div class="counter">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t13.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+</div><div class="counter">
+
+<!--Rating@Mail.ru counter-->
+<script language="javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+<script language="javascript1.1"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1910053" target="_blank">'+
+'<img src="http://d5.c2.bd.a1.top.mail.ru/counter?id=1910053;t=130;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
+'height="40" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
+<noscript><a target="_blank" href="http://top.mail.ru/jump?from=1910053">
+<img src="http://d5.c2.bd.a1.top.mail.ru/counter?js=na;id=1910053;t=130" 
+height="40" width="88" border="0" alt="Рейтинг@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//--></script>
+<!--// Rating@Mail.ru counter-->
+
+</div>
+			</div>
+
+			<div  class="clear"></div>
+
+		</div>
+
+	</div>
+
+</div>
+	</div>
+
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17101674-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter1446525 = new Ya.Metrika(1446525); } catch(e){}
+</script></div>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1446525" alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->
+
+
+
+
+</body>
+
+</html>
+

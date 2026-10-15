@@ -1,0 +1,172 @@
+[
+  {
+    "path": "ExtJS/resources/css/ext-all.css",
+    "url": "https://web.archive.org/web/20120506175614id_/http://newpg.ru/ExtJS/resources/css/ext-all.css",
+    "status": 200,
+    "bytes": 140615
+  },
+  {
+    "path": "ExtJS/adapter/ext/ext-base.js",
+    "url": "https://web.archive.org/web/20130807054434id_/http://newpg.ru/ExtJS/adapter/ext/ext-base.js",
+    "status": 200,
+    "bytes": 32704
+  },
+  {
+    "path": "ExtJS/ext-all.js",
+    "url": "https://web.archive.org/web/20130806191542id_/http://newpg.ru/ExtJS/ext-all.js",
+    "status": 200,
+    "bytes": 635104
+  },
+  {
+    "path": "ExtJS/bugFix/fix.js",
+    "url": "https://web.archive.org/web/20120506180239id_/http://newpg.ru/ExtJS/bugFix/fix.js",
+    "status": 200,
+    "bytes": 1035
+  },
+  {
+    "path": "js/main.js",
+    "url": "https://web.archive.org/web/20120506174514id_/http://newpg.ru/js/main.js",
+    "status": 200,
+    "bytes": 8339
+  },
+  {
+    "path": "css/jsLessons.css",
+    "url": "https://web.archive.org/web/20120506172349id_/http://newpg.ru/css/jsLessons.css",
+    "status": 200,
+    "bytes": 1017
+  },
+  {
+    "path": "js/google/prettify/prettify.css",
+    "url": "https://web.archive.org/web/20120125180821id_/http://newpg.ru/js/google/prettify/prettify.css",
+    "status": 200,
+    "bytes": 1000
+  },
+  {
+    "path": "js/google/prettify/prettify.js",
+    "url": "https://web.archive.org/web/20110819134950id_/http://newpg.ru/js/google/prettify/prettify.js",
+    "status": 200,
+    "bytes": 58968
+  },
+  {
+    "path": "js/ExtJS/lessons/lesson1.js",
+    "url": "https://web.archive.org/web/20120519030814id_/http://newpg.ru/js/ExtJS/lessons/lesson1.js",
+    "status": 200,
+    "bytes": 3013
+  },
+  {
+    "path": "images/extjs/lesson1/hello1.jpg",
+    "url": "https://web.archive.org/web/20120519030522id_/http://newpg.ru/images/extjs/lesson1/hello1.jpg",
+    "status": 200,
+    "bytes": 8635
+  },
+  {
+    "path": "images/extjs/lesson1/docmenu.jpg",
+    "url": "https://web.archive.org/web/20120519031107id_/http://newpg.ru/images/extjs/lesson1/docmenu.jpg",
+    "status": 200,
+    "bytes": 11731
+  },
+  {
+    "path": "images/extjs/lesson1/msg.jpg",
+    "error": "HTTP Error 404: NOT FOUND"
+  },
+  {
+    "path": "images/extjs/lesson1/alert.jpg",
+    "error": "HTTP Error 404: NOT FOUND"
+  },
+  {
+    "path": "ExtJS/resources/images/default/s.gif",
+    "url": "https://web.archive.org/web/20120517104756id_/http://newpg.ru/ExtJS/resources/images/default/s.gif",
+    "status": 200,
+    "bytes": 43
+  },
+  {
+    "path": "ExtJS/adapter/ext/ext-base-debug.js",
+    "error": "HTTP Error 404: NOT FOUND"
+  },
+  {
+    "path": "ExtJS/resources/images/default/panel/white-top-bottom.gif",
+    "url": "https://web.archive.org/web/20120517093136id_/http://newpg.ru/ExtJS/resources/images/default/panel/white-top-bottom.gif",
+    "status": 200,
+    "bytes": 872
+  },
+  {
+    "path": "ExtJS/resources/images/default/window/left-corners.png",
+    "url": "https://web.archive.org/web/20120517105050id_/http://newpg.ru/ExtJS/resources/images/default/window/left-corners.png",
+    "status": 200,
+    "bytes": 200
+  },
+  {
+    "path": "ExtJS/resources/images/default/window/right-corners.png",
+    "url": "https://web.archive.org/web/20120517105613id_/http://newpg.ru/ExtJS/resources/images/default/window/right-corners.png",
+    "status": 200,
+    "bytes": 256
+  },
+  {
+    "path": "ExtJS/resources/images/default/window/top-bottom.png",
+    "url": "https://web.archive.org/web/20120517110052id_/http://newpg.ru/ExtJS/resources/images/default/window/top-bottom.png",
+    "status": 200,
+    "bytes": 180
+  },
+  {
+    "path": "ExtJS/resources/images/default/window/left-right.png",
+    "url": "https://web.archive.org/web/20120517105834id_/http://newpg.ru/ExtJS/resources/images/default/window/left-right.png",
+    "status": 200,
+    "bytes": 152
+  },
+  {
+    "path": "ExtJS/resources/images/default/panel/tool-sprites.gif",
+    "url": "https://web.archive.org/web/20120517105353id_/http://newpg.ru/ExtJS/resources/images/default/panel/tool-sprites.gif",
+    "status": 200,
+    "bytes": 4392
+  },
+  {
+    "path": "ExtJS/resources/images/default/progress/progress-bg.gif",
+    "url": "https://web.archive.org/web/20120517105436id_/http://newpg.ru/ExtJS/resources/images/default/progress/progress-bg.gif",
+    "status": 200,
+    "bytes": 834
+  },
+  {
+    "path": "ExtJS/resources/images/default/shadow-c.png",
+    "url": "https://web.archive.org/web/20120517105236id_/http://newpg.ru/ExtJS/resources/images/default/shadow-c.png",
+    "status": 200,
+    "bytes": 118
+  },
+  {
+    "path": "ExtJS/resources/images/default/shadow-lr.png",
+    "url": "https://web.archive.org/web/20120517105604id_/http://newpg.ru/ExtJS/resources/images/default/shadow-lr.png",
+    "status": 200,
+    "bytes": 135
+  },
+  {
+    "path": "ExtJS/resources/images/default/button/btn.gif",
+    "url": "https://web.archive.org/web/20120517104724id_/http://newpg.ru/ExtJS/resources/images/default/button/btn.gif",
+    "status": 200,
+    "bytes": 4298
+  },
+  {
+    "path": "ExtJS/resources/images/default/qtip/bg.gif",
+    "error": "<urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "path": "js/ExtJS/lessons/lesson2.js",
+    "url": "https://web.archive.org/web/20120519023104id_/http://newpg.ru/js/ExtJS/lessons/lesson2.js",
+    "status": 200,
+    "bytes": 3690
+  },
+  {
+    "path": "js/ExtJS/lessons/lesson3.js",
+    "url": "https://web.archive.org/web/20120519000149id_/http://newpg.ru/js/ExtJS/lessons/lesson3.js",
+    "status": 200,
+    "bytes": 4522
+  },
+  {
+    "path": "js/ExtJS/lessons/lesson5.js",
+    "url": "https://web.archive.org/web/20120519014743id_/http://newpg.ru/js/ExtJS/lessons/lesson5.js",
+    "status": 200,
+    "bytes": 3626
+  },
+  {
+    "path": "js/ExtJS/lessons/lesson6.js",
+    "error": "<urlopen error [Errno 111] Connection refused>"
+  }
+]

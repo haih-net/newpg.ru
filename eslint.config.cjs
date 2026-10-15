@@ -11,6 +11,9 @@ module.exports = [
   {
     ignores: [
       'project/**',
+      'public/ExtJS/**',
+      'public/js/**',
+      'app/Custom/**/source/**',
       '**/generated/**',
       'node_modules/**',
       'coverage/**',

@@ -1,0 +1,68 @@
+[
+  {
+    "path": "/documentation/extjs/extjs_lessons.html",
+    "requestedUrl": "https://web.archive.org/web/20101027085749id_/http://newpg.ru/documentation/extjs/extjs_lessons.html",
+    "url": "https://web.archive.org/web/20101026072638id_/http://newpg.ru/documentation/extjs/extjs_lessons.html",
+    "status": 200,
+    "bytes": 16732,
+    "file": "extjs__extjs_lessons.html"
+  },
+  {
+    "path": "/documentation/extjs/extjs_lessons/lesson3.html",
+    "requestedUrl": "https://web.archive.org/web/20101027085749id_/http://newpg.ru/documentation/extjs/extjs_lessons/lesson3.html",
+    "url": "https://web.archive.org/web/20101027085800id_/http://newpg.ru/documentation/extjs/extjs_lessons/lesson3.html",
+    "status": 200,
+    "bytes": 23483,
+    "file": "extjs__extjs_lessons__lesson3.html"
+  },
+  {
+    "path": "/documentation/extjs/extjs_lessons/lesson4.html",
+    "requestedUrl": "https://web.archive.org/web/20101027085749id_/http://newpg.ru/documentation/extjs/extjs_lessons/lesson4.html",
+    "url": "https://web.archive.org/web/20101027085822id_/http://newpg.ru/documentation/extjs/extjs_lessons/lesson4.html",
+    "status": 200,
+    "bytes": 26697,
+    "file": "extjs__extjs_lessons__lesson4.html"
+  },
+  {
+    "path": "/documentation/extjs/extjs_lessons/lesson5.html",
+    "requestedUrl": "https://web.archive.org/web/20101027085749id_/http://newpg.ru/documentation/extjs/extjs_lessons/lesson5.html",
+    "url": "https://web.archive.org/web/20101027085902id_/http://newpg.ru/documentation/extjs/extjs_lessons/lesson5.html",
+    "status": 200,
+    "bytes": 43253,
+    "file": "extjs__extjs_lessons__lesson5.html"
+  },
+  {
+    "path": "/documentation/extjs/extjs_lessons/lesson6.html",
+    "requestedUrl": "https://web.archive.org/web/20101027085749id_/http://newpg.ru/documentation/extjs/extjs_lessons/lesson6.html",
+    "url": "https://web.archive.org/web/20101027090133id_/http://newpg.ru/documentation/extjs/extjs_lessons/lesson6.html",
+    "status": 200,
+    "bytes": 31358,
+    "file": "extjs__extjs_lessons__lesson6.html"
+  },
+  {
+    "path": "/documentation/extjs/extjs_lessons/106.html",
+    "requestedUrl": "https://web.archive.org/web/20101027085749id_/http://newpg.ru/documentation/extjs/extjs_lessons/106.html",
+    "error": "HTTP Error 404: NOT FOUND"
+  },
+  {
+    "path": "/documentation/extjs/extjs_lessons/examples.html",
+    "requestedUrl": "https://web.archive.org/web/20101027085749id_/http://newpg.ru/documentation/extjs/extjs_lessons/examples.html",
+    "error": "HTTP Error 404: NOT FOUND"
+  },
+  {
+    "path": "/documentation/modx/modx-revolution.html",
+    "requestedUrl": "https://web.archive.org/web/20130101000000id_/http://newpg.ru/documentation/modx/modx-revolution.html",
+    "url": "https://web.archive.org/web/20121217091958id_/http://newpg.ru/documentation/modx/modx-revolution.html",
+    "status": 200,
+    "bytes": 26763,
+    "file": "modx__modx-revolution.html"
+  },
+  {
+    "path": "/documentation/modx/modx-revolution/modx-revolution-optimizatsiya-kesh.html",
+    "requestedUrl": "https://web.archive.org/web/20130101000000id_/http://newpg.ru/documentation/modx/modx-revolution/modx-revolution-optimizatsiya-kesh.html",
+    "url": "https://web.archive.org/web/20130108195512id_/http://newpg.ru/documentation/modx/modx-revolution/modx-revolution-optimizatsiya-kesh.html",
+    "status": 200,
+    "bytes": 69119,
+    "file": "modx__modx-revolution__modx-revolution-optimizatsiya-kesh.html"
+  }
+]

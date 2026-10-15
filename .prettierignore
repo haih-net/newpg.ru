@@ -9,3 +9,10 @@ package-lock.json
 coverage/
 playwright-report/
 test-results/
+
+public/ExtJS/
+public/js/
+public/css/
+app/Custom/pages/ExtJsLesson1Page/source/
+
+app/Custom/Archive/source/

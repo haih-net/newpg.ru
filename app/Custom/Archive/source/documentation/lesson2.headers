@@ -1,0 +1,59 @@
+HTTP/2 302 
+server: nginx
+date: Thu, 15 Oct 2026 11:01:00 GMT
+content-type: text/plain; charset=utf-8
+content-length: 0
+x-archive-redirect-reason: found capture at 20101207063310
+location: https://web.archive.org/web/20101207063310id_/http://newpg.ru/documentation/extjs/extjs_lessons/lesson2.html
+server-timing: captures_list;dur=0.403314, exclusion.robots;dur=0.042625, exclusion.robots.policy;dur=0.034176, esindex;dur=0.006702, cdx.remote;dur=13.508173, LoadShardBlock;dur=164.784081, PetaboxLoader3.datanode;dur=45.609649, PetaboxLoader3.resolve;dur=36.386311
+x-app-server: wwwb-app264-dc8
+x-ts: 302
+x-tr: 196
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=1
+set-cookie: wb-p-SERVER=wwwb-app264; path=/
+x-location: All
+x-as: 7552
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+server-timing: MISS
+x-nid: Viettel Group
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+
+HTTP/2 200 
+server: nginx
+date: Thu, 15 Oct 2026 11:01:01 GMT
+content-type: text/html; charset=UTF-8
+x-archive-orig-server: nginx/0.8.53
+x-archive-orig-date: Tue, 07 Dec 2010 06:33:10 GMT
+x-archive-orig-connection: close
+x-archive-orig-x-powered-by: PHP/5.2.12
+x-archive-orig-p3p: CP="NOI NID ADMa OUR IND UNI COM NAV"
+x-archive-orig-cache-control: private, must-revalidate
+x-archive-orig-set-cookie: SN4c4049852625b=d2edb5cbaacf8c31b1c5388989bcae3b; path=/
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Tue, 07 Dec 2010 06:33:10 GMT
+link: <http://newpg.ru:80/documentation/extjs/extjs_lessons/lesson2.html>; rel="original", <https://web.archive.org/web/timemap/link/http://newpg.ru:80/documentation/extjs/extjs_lessons/lesson2.html>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/http://newpg.ru:80/documentation/extjs/extjs_lessons/lesson2.html>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-archive-src: alexa-web-20110622061418-00000/51_19_20101207063308_crawl103.arc.gz
+server-timing: captures_list;dur=0.575273, exclusion.robots;dur=0.062338, exclusion.robots.policy;dur=0.050440, esindex;dur=0.010279, cdx.remote;dur=14.155428, LoadShardBlock;dur=1047.280764, PetaboxLoader3.datanode;dur=1041.578751, PetaboxLoader3.resolve;dur=60.477643, load_resource;dur=174.791373
+x-app-server: wwwb-app222-dc8
+x-ts: 200
+x-tr: 1256
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=1
+set-cookie: wb-p-SERVER=wwwb-app222; path=/
+cache-control: private
+x-location: All
+x-as: 7552
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+server-timing: MISS
+x-nid: Viettel Group
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+

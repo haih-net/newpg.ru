@@ -40,7 +40,7 @@ describe('Восстановление исторических URL', () => {
   })
   test('разметка не исполняет старые скрипты и не обращается за ресурсами в архив', () => {
     for (const page of Object.values(snapshots)) {
-      expect(page.html).not.toMatch(/<script\b|<iframe\b|\son[a-z]+=/i)
+      expect(page.html).not.toMatch(/<script\b|<iframe\b|<[^>]+\son[a-z]+=/i)
       expect(page.html).not.toMatch(
         /(?:src|href)=["']https?:\/\/(?:www\.)?newpg\.ru\//i,
       )
@@ -125,7 +125,7 @@ describe('Страницы сохраняют архивное содержим�
             !href.startsWith('http://maps.google.ru/'),
         ),
       )
-      expect(rendered).not.toMatch(/<script\b|<iframe\b|\son[a-z]+=/i)
+      expect(rendered).not.toMatch(/<script\b|<iframe\b|<[^>]+\son[a-z]+=/i)
       expect(getArchivePage(path).page).not.toHaveProperty('Component')
       expect(getArchivePage(path).page).not.toHaveProperty('html')
     },
@@ -134,7 +134,7 @@ describe('Страницы сохраняют архивное содержим�
 
 const decode = (value: string): string =>
   value.replace(
-    /&(?:amp|quot|apos|lt|gt|nbsp|#\d+|#x[\da-f]+);/gi,
+    /&(?:amp|quot|apos|lt|gt|nbsp|raquo|#\d+|#x[\da-f]+);/gi,
     (entity) => {
       if (entity.startsWith('&#')) {
         return String.fromCodePoint(
@@ -150,6 +150,7 @@ const decode = (value: string): string =>
         '&lt;': '<',
         '&gt;': '>',
         '&nbsp;': ' ',
+        '&raquo;': '»',
       }
       return entities[entity]
     },
