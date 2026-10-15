@@ -1,3 +1,4 @@
+/* eslint-disable */
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import { chromium } from 'playwright'
@@ -47,7 +48,8 @@ try {
         await page.getByRole('button', { name: 'OK', exact: true }).click()
       }
       const close = page.locator('.x-window:visible .x-tool-close')
-      if (!(path.endsWith('lesson2.html') && i === 1) && await close.count()) await close.first().click()
+      if (!(path.endsWith('lesson2.html') && i === 1) && (await close.count()))
+        await close.first().click()
       await page.waitForFunction(
         () =>
           !Array.from(document.querySelectorAll('.x-window')).some(

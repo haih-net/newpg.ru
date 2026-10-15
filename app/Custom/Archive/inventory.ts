@@ -1863,7 +1863,8 @@ export const inventory: readonly ArchiveInventoryEntry[] = [
     status: 'unverified',
     archiveUrl:
       'https://web.archive.org/web/20130101000000id_/http://newpg.ru/documentation/modx/modx-revolution/xpdo-urok-2.-getcollection.html',
-    httpStatus: 'отказ соединения Web Archive при повторном возобновлении 15 октября 2026',
+    httpStatus:
+      'отказ соединения Web Archive при повторном возобновлении 15 октября 2026',
     publicationDate: null,
     dateSource: null,
   },
