@@ -91,6 +91,9 @@ async function startServer() {
     )
   } else {
     // Production: serve static files and prebuilt SSR bundle
+    app.use(
+      express.static(resolve('shared'), { dotfiles: 'deny', index: false }),
+    )
     const sirv = (await import('sirv')).default
     const serveStatic = sirv('build/client', { extensions: [] })
     app.use((req, res, next) => {
