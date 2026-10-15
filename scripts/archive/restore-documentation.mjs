@@ -172,13 +172,28 @@ for (const record of records) {
     }
   }
   const lesson = record.path.match(/lesson(\d)\.html$/)?.[1]
+  const names = {
+    'modx.html': 'ModxPage',
+    'modx-revolution.html': 'ModxRevolutionPage',
+    'modx-revolution-optimizatsiya-kesh.html': 'ModxCachePage',
+    'modx-revolution-po-shagam.html': 'ModxStepsPage',
+    'modx-revolution-ustanovka.html': 'ModxInstallationPage',
+    'modx-revolution-fajlovaya-model.html': 'ModxFilesPage',
+    'ustanovka-dopolnitelnyh-paketov-na-modx-revolution.html':
+      'ModxPackagesPage',
+    'modx-revolution-nastrojki-bezopasnosti.html': 'ModxSecurityPage',
+    'xpdo.html': 'XpdoPage',
+    'xpdo-urok-1.-getobject.html': 'XpdoLesson1Page',
+    'xpdo-urok-2.-getcollection.html': 'XpdoLesson2Page',
+    'xpdo-urok-3.-newquery.html': 'XpdoLesson3Page',
+    'xpdo-urok-4.-select.html': 'XpdoLesson4Page',
+    'extjs_lessons.html': 'ExtJsLessonsPage',
+  }
   const name = lesson
     ? 'ExtJsLesson' + lesson + 'Page'
-    : record.path.includes('optimizatsiya')
-      ? 'ModxCachePage'
-      : record.path.includes('/modx/')
-        ? 'ModxRevolutionPage'
-        : 'ExtJsLessonsPage'
+    : names[path.basename(record.path)]
+  if (!name) throw Error('Нужно назначить компонент для ' + record.path)
+
   const script =
     lesson && lesson !== '6'
       ? `/js/ExtJS/lessons/lesson${lesson === '4' ? '3' : lesson}.js`

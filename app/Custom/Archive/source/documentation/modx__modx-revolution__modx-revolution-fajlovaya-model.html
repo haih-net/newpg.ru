@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="keywords" content="Система Управления Контентом , разработка сайтов, программирование, веб-студия, MODx Revolution документация, MODx Revolution, CMS/CMF MODx, CMS" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MODx Revolution файловая модель. Core. Manager. Connectors. Assets. MODx Revolution документация | Веб-студия «Новая парадигма» Москва 774-67-02</title>
+<meta name="Description" content="MODx Revolution файловая модель" />
+<base href="http://newpg.ru/" />
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("jquery", "1.4.2");
+</script>
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="diz/css/style_new.css" /> 
+<link type="text/css" rel="stylesheet" href="css/newsList.css" />
+
+<!-- Ya.Share -->
+<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+<link type="text/css" rel="stylesheet" href="css/share.css" />
+
+<link type="text/css" rel="stylesheet" href="js/google/prettify/prettify.css" />
+<script type="text/javascript" src="js/google/prettify/prettify.js"></script>
+<script type="text/javascript" src="js/lesson.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    prettyPrint();
+})
+</script>
+
+<!-- Header -->
+
+<!-- End of Header -->
+<link type="text/css" rel="stylesheet" href="diz/css/index.css" />
+<link type="text/css" rel="stylesheet" href="css/jsLessons.css" />
+
+<link rel="stylesheet" href="ExtJS/resources/css/ext-all.css" type="text/css" media="screen" />
+<script type="text/javascript" src="ExtJS/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="ExtJS/ext-all.js"></script>
+<script type="text/javascript" src="ExtJS/bugFix/fix.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+
+
+
+</head>
+<body>
+<div class="wrap">
+	<div class="body">
+		<div class="header">
+			<div class="contacts"><!-- span class="text middle"><img style="padding-top:5px;" src="/template/images/tel_top.png" alt="" /></span --></div>
+
+<div class="main_menu">
+	<div class="menu">
+		<ul class="menu"><li><span  class="l_corner"></span><span class="row"><a href="/about.html" title="О компании"><img class="white" alt="О компании" src="images/menu/about.png" /><img class="black" alt="О компании" src="images/menu/black_about.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/services.html" title="Услуги"><img class="white" alt="Услуги" src="images/menu/service.png" /><img class="black" alt="Услуги" src="images/menu/black_service.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/portfolio.html" title="Портфолио"><img class="white" alt="Портфолио" src="images/menu/portfolio.png" /><img class="black" alt="Портфолио" src="images/menu/black_portfolio.png" /></a></span><span class="r_corner"></span></li>
+<li><span  class="l_corner"></span><span class="row"><a href="/contacts.html" title="Контактная информация"><img class="white" alt="Контактная информация" src="images/menu/contact.png" /><img class="black" alt="Контактная информация" src="images/menu/black_contact.png" /></a></span><span class="r_corner"></span></li>
+<li class="last active"><span  class="l_corner"></span><span class="row"><a href="/documentation.html" title="Документация"><img class="white" alt="Документация" src="images/menu/documentation.png" /><img class="black" alt="Документация" src="images/menu/black_documentation.png" /></a></span><span class="r_corner"></span></li class="last active">
+</ul>
+	</div> 
+	<div class="logo"><a href="http://newpg.ru/" title="На главную"><img src="images/logo.png" alt="На главную" title="Студия Новая Парадигма"  /></a></div>
+	<div  class="clear"></div>
+</div> 
+		</div>
+		<div class="middleBlock">
+			 
+    <div class="left_block">
+       <div class="menu"><!-- <a style="text-decoration: none;" href="http://pro-cent.ru/partnery/ooo-novaya-paradigma/actions/master-klass-po-modx-revolution-ot-razrabotchika-gipermarketa-skidok-pro-cent.ru.html" "Мастер-классы и тренинги по MODx Revolution"><img border="0" title="" alt="" src="images/baners/modx-masterclass.jpg"></a> -->
+ </div>
+	<div class="menu">
+		<ul class="menu"><li class="level1"><a href="http://newpg.ru/" title="Главная страница" >Главная</a></li>
+<li class="level1"><a href="/about.html" title="О компании" >О компании</a></li>
+<li class="level1"><a href="/nashi-proekty.html" title="Наши проекты" >Наши проекты</a></li>
+<li class="level1"><a href="/news.html" title="Новости" >Новости</a></li>
+<li class="level1"><a href="/services.html" title="Услуги" >Услуги</a></li>
+<li class="level1"><a href="/portfolio.html" title="Портфолио" >Портфолио</a></li>
+<li class="level1"><a href="/contacts.html" title="Контактная информация" >Контактная информация</a></li>
+<li class="last level1 active"><a href="/documentation.html" title="Документация" >Документация</a><ul><li class="level2"><a href="/documentation/extjs.html" title="ExtJS" >ExtJS</a></li>
+<li class="last level2 active"><a href="/documentation/modx.html" title="CMS/CMF MODX" >CMS/CMF MODX</a><ul><li class="level3 active"><a href="/documentation/modx/modx-revolution.html" title="MODx Revolution" >MODx Revolution</a><ul><li class="level4"><a href="/documentation/modx/modx-revolution/modx-revolution-po-shagam.html" title="MODx Revolution по шагам" >MODx Revolution по шагам</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/modx-revolution-ustanovka.html" title="MODx Revolution Установка " >MODx Revolution Установка </a></li>
+<li class="level4 active self"><a href="/documentation/modx/modx-revolution/modx-revolution-fajlovaya-model.html" title="MODx Revolution файловая модель" >MODx Revolution файловая модель</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/ustanovka-dopolnitelnyh-paketov-na-modx-revolution.html" title="Установка дополнительных пакетов на MODx Revolution" >Установка дополнительных пакетов на MODx Revolution</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/modx-revolution-optimizatsiya-kesh.html" title="MODx Revolution Оптимизация КЭШ" >MODx Revolution Оптимизация КЭШ</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/modx-revolution-nastrojki-bezopasnosti.html" title="MODx Revolution настройки безопасности" >MODx Revolution настройки безопасности</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/xpdo.html" title="xPDO" >xPDO</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/xpdo-urok-1.-getobject.html" title="xPDO Урок 1. GetObject()" >xPDO Урок 1. GetObject()</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/xpdo-urok-2.-getcollection.html" title="xPDO Урок 2. GetCollection()" >xPDO Урок 2. GetCollection()</a></li>
+<li class="level4"><a href="/documentation/modx/modx-revolution/xpdo-urok-3.-newquery.html" title="xPDO Урок 3. newQuery()" >xPDO Урок 3. newQuery()</a></li>
+<li class="last level4"><a href="/documentation/modx/modx-revolution/xpdo-urok-4.-select.html" title="xPDO Урок 4. Select()" >xPDO Урок 4. Select()</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+	</div> 
+       
+</div>
+    <div class="rightBlock">
+
+<div class="newsBlock">
+<h2 class="blockTitle">ПОДЕЛИТЬСЯ</h2>
+<div  class="share"></div>
+<div id="ya_share1"></div>
+
+
+
+<script type="text/javascript">
+var els = ['yaru', 'twitter', 'vkontakte', 'facebook', 'odnoklassniki','lj','liveinternet',  'yazakladki',  'moikrug', 'moimir', 'myspace', 'blogger', 'digg', 'evernote', 'delicious', 'friendfeed', 'gbuzz', 'greader'];
+
+var Share = new Ya.share({
+            element: 'ya_share1',
+            elementStyle: {
+                'type': 'none',
+                'border': false,
+                'quickServices': els
+            }
+            // link: 'http://www.yandex.com/',
+            // title: 'Yandex — the best search engine in the universe!',
+            /*,popupStyle: {
+                blocks: {
+                    'Поделись-ка!': ['yaru', 'twitter', '', 'vkontakte'],
+                    'Поделись-ка по-другому!': ['yaru', 'twitter', 'vkontakte']
+                },
+                copyPasteField: true
+            },
+            serviceSpecific: {
+                twitter: {
+                    title: '#Yandex — the best search engine in the universe!'
+               }
+            }*/
+            //  ,l10n:  'en'
+            ,onready: function(){
+               /*var els = [  'b-share-icon_yaru', 'b-share-icon_twitter','b-share-icon_vkontakte', 'b-share-icon_facebook', 'b-share-icon_blogger', 'b-share-icon_digg', 'b-share-icon_evernote', 'b-share-icon_delicious', 'b-share-icon_friendfeed', 'b-share-icon_friendfeed', 'b-share-icon_gbuzz', 'b-share-icon_gbuzz', 'b-share-icon_greader', 'b-share-icon_juick', 'b-share-icon_liveinternet', 'b-share-icon_linkedin', 'b-share-icon_lj', 'b-share-icon_moikrug', 'b-share-icon_moimir'];*/
+			   //var text = '';
+			   
+			   // Удаляем все классы ссылок
+			   //$('.b-share__handle').each(function(el){alert($(el)[0]);})
+			   jQuery('.b-share__handle').each(function(el){
+				   		jQuery(this).removeClass('b-share__handle');
+			   		}
+				)
+			   
+			   
+			   
+               for(i in  els){
+                   // Находим нужную нам иконку
+				   var oldClass  = 'b-share-icon_' + els[i];
+				   var newClass = oldClass+'_new shareIcon';
+				   var icon = jQuery( "."+oldClass);
+				   //alert(icon[0]);
+				   
+				   // Удаляем класс
+				   icon.removeClass('b-share-icon' );
+				   icon.removeClass(oldClass );
+				   
+				   // Устанавливаем новый  класс
+				   icon.addClass('shareIcon');  
+				   icon.addClass( newClass); 
+				   //text = text + '.' + newClass + "{background-position:0;}\n";
+               }
+			   //alert(text);
+            }
+            ,image: 'http://newpg.ru/images/newpg.ru.png'
+});
+</script>
+
+</div>
+
+<div class="newsBlock">
+<h2 class="blockTitle"><a href="news.html" title="Новости">НОВОСТИ</a></h2>
+<div class="news">
+      <div class="title"><span class="date">2011-05-30</span> <a href="news/2011/05/30/razrabotan-sajt-dlya-instituta-sotsialno-ekonomicheskih-i-politicheskih-issledovanij.html" title="Разработан сайт для Фонда ИСЭПИ">Разработан сайт для Фонда ИСЭПИ</a></div>
+      <div class="intro">Веб-студией "Новая парадигма" разработан сайт для Фонда "Институт социально-экономических и политических исследований"  <a href="news/2011/05/30/razrabotan-sajt-dlya-instituta-sotsialno-ekonomicheskih-i-politicheskih-issledovanij.html" title="Разработан сайт для Фонда ИСЭПИ">Подробнее...</a><div class="nextLink"></div></div>
+</div><div class="news">
+      <div class="title"><span class="date">2011-05-17</span> <a href="news/2011/05/17/csmcmf-modx-zanyala-4-oe-mesto-sredi-besplatnyh-cms.html" title="CMS/CMF MODx заняла 4-ое место среди бесплатных CMS">CMS/CMF MODx заняла 4-ое место среди бесплатных CMS</a></div>
+      <div class="intro">По данным авторитетного портала <a href="http://www.ratingruneta.ru/" target="_blank">Рейтинг Рунета</a> Система Управления Контентом <a title="Бесплатная Система Управления Контентом CMS/CMF MODx" href="documentation/modx.html">CMS/CMF MODx</a> в России занимает <a href="http://www.ratingruneta.ru/cms/opensource/" target="_blank">4-ое место</a> по популярности.  <a href="news/2011/05/17/csmcmf-modx-zanyala-4-oe-mesto-sredi-besplatnyh-cms.html" title="CMS/CMF MODx заняла 4-ое место среди бесплатных CMS">Подробнее...</a><div class="nextLink"></div></div>
+</div><div class="news">
+      <div class="title"><span class="date">2011-04-25</span> <a href="news/2011/04/25/razgon-modx-revolution.html" title="Разгон MODx Revolution">Разгон MODx Revolution</a></div>
+      <div class="intro">Исследовательским отделом веб-студии "Новая парадигма" были произведены исследования, насколько хорошо фреймворк MODx Revolution работает при значительном увеличении числа документов.  <a href="news/2011/04/25/razgon-modx-revolution.html" title="Разгон MODx Revolution">Подробнее...</a><div class="nextLink"></div></div>
+</div>
+</div>
+
+</div>
+    <div class="center_block">
+        <div class="breadcrumbs"><span class="B_crumbBox"><span class="B_firstCrumb"><a href="/">Главная</a></span> &raquo; <a class="B_crumb" href="/documentation.html" title="Документация по ExtJS">Документация</a> &raquo; <a class="B_crumb" href="/documentation/modx.html" title="CMS/CMF MODX">CMS/CMF MODX</a> &raquo; <a class="B_crumb" href="/documentation/modx/modx-revolution.html" title="MODx Revolution">MODx Revolution</a> &raquo; <h1 class="B_lastCrumb"><span class="B_currentCrumb">MODx Revolution файловая модель</span></h1></span></div>
+        <div id="content"><p>Основные папки MODx Revolution:
+</p>
+<ul>
+<li><strong>/core</strong>. Ядро. Это, пожалуй, единственное, без чего 
+MODx Revolution не может работать. Там находятся все основные файлы и 
+библиотеки. При этом ядро можно перенести абсолютно в любую директорию 
+на сервере, даже за пределы сайта))), а само ядро можно использовать 
+сразу для нескольких совершенно независимых сайтов. Это очень удобно в 
+целях обслуживания сайтов. Так, обновив всего одно ядро в одном месте, 
+мы делаем обновление сразу всех сайтов. Еще один приятный момент: можно 
+параллельно устанавливать сразу несколько ядер системы. К примеру, вышла
+ новая версия MODx Revolution, вы скачали ядро, в настройках сайта 
+указали путь к новому ядру, проверили как работает сайт, и в случае если
+ что-то идет не так, вы легко можете восстановить сайт просто прописав в
+ настройках путь к старому ядру.</li>
+<li><strong>/manager</strong>. Дирректория админ-панели. Как я говорил 
+раньше, можно и свою админку написать, в случае необходимости. Но если 
+вы просто переносите админку или переименовываете каталог, то необходимо
+ произвести несколько телодвижений (именно в этой очередности):
+<ul>
+<li>Изменить настройки. То есть открываем <strong>/core/config/config.inc.php</strong>, находим <strong>$modx_manager_path=</strong> и <strong>$modx_manager_url=</strong> и корректируем их.</li>
+<li>Очистить кэш системы вручную. То есть открываем папку <strong>/core/cache/system_settings/</strong> (в более ранних версиях MODx Revolution это скорее всего <strong>/core/cache/</strong>, так как начиная с версии 2.1.0 структура кэша притерпела значительные изменения) и удаляем там файл <strong>config.cache.php</strong></li>
+<li>Очистить кэш карты действий контекста <strong>mgr/.</strong> Для этого открываем папку <strong>/core/cache/action_map/mgr</strong> (в более ранних версиях это скорее всего <strong>/core/cache/mgr/</strong>) и удаляем <strong>actions.cache.php</strong>.
+ Именно в этом файле хранится кэш настройки, которая указывает на старую
+ дирректорию админки, в результате чего пока мы не обновим этот файл, 
+админка не будет нормально работать даже с обновленными настройками.</li>
+<li>Очистить на всякий случай весь кэш сайта. Для этого авторизовавшись в админ-панели жмем Сайт-&gt;Обновить сайт.</li>
+</ul>
+</li>
+<li><strong>assets/</strong>. Как правило используется для хранения внешних файлов (картинок js- и css- файлов и т.п.)<strong></strong></li>
+<li><strong>connectors/</strong>. Эта папка используется для хранения файлов для AJAX-запросов. Все AJAX-запросы в админке проходят через содержимое этой папки, и при написании своих AJAX-модулей так же используйте эту папку.</li>
+</ul>
+        <div  class="clear"></div>
+        <p>&nbsp; </p>
+        <div class="meOnHabr">Если вам помог мой материал и вы есть на Хабрахабре, <a href="http://fi1osof.habrahabr.ru/" title="я на Хабре" target="_blank">плюсание карму в дар</a> :-)</div><div id="rang" class="center">&nbsp;</div><div id="navigator"></div>
+    </div>
+</div>
+<div class="clear"></div>
+
+
+
+
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer_content"> 
+	<div class="footer_wrapper">
+		<div class="footer_menu">
+			<ul class="footer_menu"><li class="first"><a href="http://newpg.ru/" title="Главная страница" >Главная</a></li>
+<li><a href="/about.html" title="О компании" >О компании</a></li>
+<li><a href="/nashi-proekty.html" title="Наши проекты" >Наши проекты</a></li>
+<li><a href="/news.html" title="Новости" >Новости</a></li>
+<li><a href="/services.html" title="Услуги" >Услуги</a></li>
+<li><a href="/portfolio.html" title="Портфолио" >Портфолио</a></li>
+<li><a href="/contacts.html" title="Контактная информация" >Контактная информация</a></li>
+<li class="last active"><a href="/documentation.html" title="Документация" >Документация</a></li>
+</ul>
+		</div>
+		<div class="hr"></div>
+		<div class="bottom_menu">
+			<ul class="bottom_menu"><li class="first level1"><ul><li class="first level2"><a href="/services/sozdanie-saitov/obnovlenie-saitov.html" title="Обновление сайтов" >Обновление сайтов</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/sait-kak-samovyragenie.html" title="Самовыражение" >Самовыражение</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/kak-sostavit-tehzadanie.html" title="Как составить техзадание?" >Как составить техзадание?</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/primer-audita-sayta.html" title="Пример аудита сайта. Редирект" >Аудит и анализ сайта</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/statistika-poseschaemosti.html" title="Статистика посещений сайта" >Статистика посещений</a></li>
+<li class="level2"><a href="/services/sozdanie-saitov/skolko-stoit-site.html" title="Сколько стоит сайт?" >Сколько стоит сайт?</a></li>
+<li class="last level2"><a href="/services/sozdanie-saitov/tipy-saitov.html" title="Типы сайтов" >Типы сайтов</a></li>
+</ul></li>
+<li class="level1"><ul><li class="first level2"><a href="/services/poiskovoe-prodvigenie/301_redirect.html" title="Как правильно перенести сайт" >Как правильно перенести сайт</a></li>
+<li class="level2"><a href="/services/poiskovoe-prodvigenie/geograficheskaya-prinadlegnost.html" title="Географическая принадлежность" >Географическая принадлежность</a></li>
+<li class="last level2"><a href="/services/poiskovoe-prodvigenie/slogno-li-byt-pervym-v-rossii.html" title="Сложно ли быть первым в России?" >Сложно ли быть первым в России?</a></li>
+</ul></li>
+<li class="last level1"><ul><li class="first level2"><a href="portfolio/obnovlenie-saitov/obnovlenie-sajta-advokata-koronnogo-e.b.html" title="Пример обновления сайта" >Пример обновления сайта</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/polnaya-poddergka-saytov.html" title="Полная поддержка сайтов" >Полная поддержка сайтов</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/kak-samomu-obnovliat-site.html" title="Как самому обновлять сайт?" >Как самому обновлять сайт?</a></li>
+<li class="level2"><a href="/services/poddergka-prodvigenie/kak-obnovlyat-sait-samomu.html" title="Как обновлять сайт самому?" >Как обновлять сайт самому?</a></li>
+<li class="last level2"><a href="/services/poddergka-prodvigenie/obzor-populyarnyh-cms.html" title="Краткий обзор популярных Систем Управления Контентом" >Обзор популярных CMS</a></li>
+</ul></li>
+</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="hr"></div>
+		<div class="footer_contacts">
+			<div class="copy">
+				<p>&copy; 2010 Компания Новая Парадигма</p>
+				<p>Все права защищены.</p>
+			</div>
+			<!-- div class="phone">
+				<img src="/template/images/tel10.png" /> 		
+			</div -->
+			<div id="statistics">
+				<div class="counter"><a href="http://yandex.ru/cy?base=0&amp;host=newpg.ru"><img src="http://www.yandex.ru/cycounter?newpg.ru" width="88" height="31" alt="Яндекс цитирования" border="0" /></a></div><div class="counter">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t13.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+</div><div class="counter">
+
+<!--Rating@Mail.ru counter-->
+<script language="javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+<script language="javascript1.1"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1910053" target="_blank">'+
+'<img src="http://d5.c2.bd.a1.top.mail.ru/counter?id=1910053;t=130;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
+'height="40" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
+<noscript><a target="_blank" href="http://top.mail.ru/jump?from=1910053">
+<img src="http://d5.c2.bd.a1.top.mail.ru/counter?js=na;id=1910053;t=130" 
+height="40" width="88" border="0" alt="Рейтинг@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//--></script>
+<!--// Rating@Mail.ru counter-->
+
+</div>
+			</div>
+			<div  class="clear"></div>
+		</div>
+	</div>
+</div>
+	</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17101674-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><!-- Yandex.Metrika -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter1446525 = new Ya.Metrika(1446525);
+             yaCounter1446525.clickmap(true);
+             yaCounter1446525.trackLinks(true);
+        
+        } catch(e) {}
+    });
+})(window, 'yandex_metrika_callbacks');
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1446525" alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->
+</body>
+</html>
+

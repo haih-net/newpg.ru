@@ -64,5 +64,74 @@
     "status": 200,
     "bytes": 69119,
     "file": "modx__modx-revolution__modx-revolution-optimizatsiya-kesh.html"
+  },
+  {
+    "path": "/documentation/modx.html",
+    "requestedUrl": "https://web.archive.org/web/20130101000000id_/http://newpg.ru/documentation/modx.html",
+    "url": "https://web.archive.org/web/20130106122453id_/http://newpg.ru/documentation/modx.html",
+    "status": 200,
+    "bytes": 28315,
+    "file": "modx.html"
+  },
+  {
+    "path": "/documentation/modx/modx-revolution/modx-revolution-po-shagam.html",
+    "requestedUrl": "https://web.archive.org/web/20130101000000id_/http://newpg.ru/documentation/modx/modx-revolution/modx-revolution-po-shagam.html",
+    "url": "https://web.archive.org/web/20121224035245id_/http://newpg.ru/documentation/modx/modx-revolution/modx-revolution-po-shagam.html",
+    "status": 200,
+    "bytes": 41560,
+    "file": "modx__modx-revolution__modx-revolution-po-shagam.html"
+  },
+  {
+    "path": "/documentation/modx/modx-revolution/modx-revolution-ustanovka.html",
+    "requestedUrl": "https://web.archive.org/web/20130101000000id_/http://newpg.ru/documentation/modx/modx-revolution/modx-revolution-ustanovka.html",
+    "url": "https://web.archive.org/web/20130113101339id_/http://newpg.ru/documentation/modx/modx-revolution/modx-revolution-ustanovka.html",
+    "status": 200,
+    "bytes": 33386,
+    "file": "modx__modx-revolution__modx-revolution-ustanovka.html"
+  },
+  {
+    "path": "/documentation/modx/modx-revolution/modx-revolution-fajlovaya-model.html",
+    "requestedUrl": "https://web.archive.org/web/20130101000000id_/http://newpg.ru/documentation/modx/modx-revolution/modx-revolution-fajlovaya-model.html",
+    "url": "https://web.archive.org/web/20121221042340id_/http://newpg.ru/documentation/modx/modx-revolution/modx-revolution-fajlovaya-model.html",
+    "status": 200,
+    "bytes": 27357,
+    "file": "modx__modx-revolution__modx-revolution-fajlovaya-model.html"
+  },
+  {
+    "path": "/documentation/modx/modx-revolution/ustanovka-dopolnitelnyh-paketov-na-modx-revolution.html",
+    "requestedUrl": "https://web.archive.org/web/20130101000000id_/http://newpg.ru/documentation/modx/modx-revolution/ustanovka-dopolnitelnyh-paketov-na-modx-revolution.html",
+    "url": "https://web.archive.org/web/20130115215532id_/http://newpg.ru/documentation/modx/modx-revolution/ustanovka-dopolnitelnyh-paketov-na-modx-revolution.html",
+    "status": 200,
+    "bytes": 35316,
+    "file": "modx__modx-revolution__ustanovka-dopolnitelnyh-paketov-na-modx-revolution.html"
+  },
+  {
+    "path": "/documentation/modx/modx-revolution/modx-revolution-nastrojki-bezopasnosti.html",
+    "requestedUrl": "https://web.archive.org/web/20130101000000id_/http://newpg.ru/documentation/modx/modx-revolution/modx-revolution-nastrojki-bezopasnosti.html",
+    "url": "https://web.archive.org/web/20121231055013id_/http://newpg.ru/documentation/modx/modx-revolution/modx-revolution-nastrojki-bezopasnosti.html",
+    "status": 200,
+    "bytes": 31150,
+    "file": "modx__modx-revolution__modx-revolution-nastrojki-bezopasnosti.html"
+  },
+  {
+    "path": "/documentation/modx/modx-revolution/xpdo.html",
+    "requestedUrl": "https://web.archive.org/web/20130101000000id_/http://newpg.ru/documentation/modx/modx-revolution/xpdo.html",
+    "url": "https://web.archive.org/web/20121221043203id_/http://newpg.ru/documentation/modx/modx-revolution/xpdo.html",
+    "status": 200,
+    "bytes": 28442,
+    "file": "modx__modx-revolution__xpdo.html"
+  },
+  {
+    "path": "/documentation/modx/modx-revolution/xpdo-urok-1.-getobject.html",
+    "requestedUrl": "https://web.archive.org/web/20130101000000id_/http://newpg.ru/documentation/modx/modx-revolution/xpdo-urok-1.-getobject.html",
+    "url": "https://web.archive.org/web/20130106125638id_/http://newpg.ru/documentation/modx/modx-revolution/xpdo-urok-1.-getobject.html",
+    "status": 200,
+    "bytes": 26334,
+    "file": "modx__modx-revolution__xpdo-urok-1.-getobject.html"
+  },
+  {
+    "path": "/documentation/modx/modx-revolution/xpdo-urok-2.-getcollection.html",
+    "requestedUrl": "https://web.archive.org/web/20130101000000id_/http://newpg.ru/documentation/modx/modx-revolution/xpdo-urok-2.-getcollection.html",
+    "error": "<urlopen error [Errno 111] Connection refused>"
   }
 ]
