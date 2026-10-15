@@ -67,13 +67,18 @@ const FileType = builder.objectRef<FileRecord>('File').implement({
     CreatedBy: t.field({
       type: User,
       nullable: true,
-      resolve: async (file, _, ctx) =>
-        file.createdById
+      resolve: async (file, _, ctx) => {
+        if (!ctx.db) {
+          throw new Error('DB is not initialized')
+        }
+
+        return file.createdById
           ? ((await ctx
               .db<UserRecord>('User')
               .where('id', file.createdById)
               .first()) ?? null)
-          : null,
+          : null
+      },
     }),
   }),
 })
@@ -98,6 +103,10 @@ export async function findFile(
   ctx: Context,
   where: { id?: string | null; path?: string | null; hash?: string | null },
 ): Promise<FileRecord | null> {
+  if (!ctx.db) {
+    throw new Error('DB is not initialized')
+  }
+
   const conditions = Object.entries(where).filter(
     ([, value]) => value !== null && value !== undefined,
   )
@@ -128,6 +137,10 @@ builder.mutationField('updateFile', (t) =>
       data: t.arg({ type: FileUpdate, required: true }),
     },
     resolve: async (_, args, ctx) => {
+      if (!ctx.db) {
+        throw new Error('DB is not initialized')
+      }
+
       const user = requireUser(ctx)
       const file = await findFile(ctx, args.where)
       if (!file) {
@@ -151,6 +164,10 @@ builder.mutationField('singleUpload', (t) =>
     nullable: false,
     args: { data: t.arg({ type: SingleUpload, required: true }) },
     resolve: async (_, args, ctx) => {
+      if (!ctx.db) {
+        throw new Error('DB is not initialized')
+      }
+
       const user = requireUser(ctx)
       if (user.status !== 'active') {
         throw new GraphQLError('Active account required')

@@ -18,6 +18,10 @@ builder.mutationField('updateCurrentUser', (t) =>
     nullable: true,
     args: { data: t.arg({ type: CurrentUserUpdateInput, required: true }) },
     resolve: async (_root, { data }, ctx) => {
+      if (!ctx.db) {
+        throw new Error('DB is not initialized')
+      }
+
       if (!ctx.currentUser) {
         throw new GraphQLError('Authorization required', {
           extensions: { code: 'UNAUTHENTICATED' },
@@ -58,6 +62,10 @@ builder.mutationField('updateUser', (t) =>
       where: t.arg({ type: UserWhereUniqueInput, required: true }),
     },
     resolve: async (_root, { data, where }, ctx) => {
+      if (!ctx.db) {
+        throw new Error('DB is not initialized')
+      }
+
       if (!ctx.currentUser?.sudo) {
         throw new GraphQLError('Access denied', {
           extensions: { code: 'FORBIDDEN' },

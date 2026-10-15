@@ -76,35 +76,50 @@ export const User = builder.objectRef<UserRecord>('User').implement({
     EthAccount: t.field({
       type: EthAccount,
       nullable: true,
-      resolve: async (user, _args, ctx) =>
-        user.id === ctx.currentUser?.id
+      resolve: async (user, _args, ctx) => {
+        if (!ctx.db) {
+          throw new Error('DB is not initialized')
+        }
+
+        return user.id === ctx.currentUser?.id
           ? ((await ctx
               .db<EthAccountRecord>('EthAccount')
               .where('userId', user.id)
               .first()) ?? null)
-          : null,
+          : null
+      },
     }),
     TelegramAccount: t.field({
       type: TelegramAccount,
       nullable: true,
-      resolve: async (user, _args, ctx) =>
-        user.id === ctx.currentUser?.id
+      resolve: async (user, _args, ctx) => {
+        if (!ctx.db) {
+          throw new Error('DB is not initialized')
+        }
+
+        return user.id === ctx.currentUser?.id
           ? ((await ctx
               .db<TelegramAccountRecord>('TelegramAccount')
               .where('userId', user.id)
               .first()) ?? null)
-          : null,
+          : null
+      },
     }),
     Balance: t.field({
       type: Balance,
       nullable: true,
-      resolve: async (user, _args, ctx) =>
-        user.id === ctx.currentUser?.id
+      resolve: async (user, _args, ctx) => {
+        if (!ctx.db) {
+          throw new Error('DB is not initialized')
+        }
+
+        return user.id === ctx.currentUser?.id
           ? ((await ctx
               .db<BalanceRecord>('Balance')
               .where('userId', user.id)
               .first()) ?? null)
-          : null,
+          : null
+      },
     }),
   }),
 })

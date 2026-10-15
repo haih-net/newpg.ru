@@ -30,8 +30,12 @@ export async function createToken(user: UserRecord, db: Knex): Promise<string> {
 
 export async function authenticate(
   token: string,
-  db: Knex,
+  db: Knex | null,
 ): Promise<UserRecord | null> {
+  if (!db) {
+    return null
+  }
+
   const secret = jwtSecret()
   let payload: jwt.JwtPayload | string
   try {

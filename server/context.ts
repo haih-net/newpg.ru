@@ -6,7 +6,7 @@ import type { Context } from './schema/builder'
 
 export async function createContext(
   req: Request,
-  database: Knex = db,
+  database: Knex | null = db,
 ): Promise<Context> {
   const header = req.headers.authorization
   const token = header?.match(/^Bearer\s+(\S+)$/i)?.[1] ?? null

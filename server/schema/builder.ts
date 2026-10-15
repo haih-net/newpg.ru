@@ -8,7 +8,7 @@ import { Knex } from 'knex'
 
 export interface Context {
   req: Request
-  db: Knex
+  db: Knex | null
   currentUser: UserRecord | null
 }
 

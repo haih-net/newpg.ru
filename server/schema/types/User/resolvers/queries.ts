@@ -16,8 +16,13 @@ builder.queryField('user', (t) =>
     type: User,
     nullable: true,
     args: { where: t.arg({ type: UserWhereUniqueInput, required: true }) },
-    resolve: async (_root, { where }, ctx) =>
-      (await findUser(ctx.db, where).first()) ?? null,
+    resolve: async (_root, { where }, ctx) => {
+      if (!ctx.db) {
+        throw new Error('DB is not initialized')
+      }
+
+      return (await findUser(ctx.db, where).first()) ?? null
+    },
   }),
 )
 builder.queryField('users', (t) =>
@@ -29,6 +34,10 @@ builder.queryField('users', (t) =>
       take: t.arg.int(),
     },
     resolve: (_root, { where, skip, take }, ctx) => {
+      if (!ctx.db) {
+        throw new Error('DB is not initialized')
+      }
+
       if (
         (skip !== null && skip !== undefined && skip < 0) ||
         (take !== null && take !== undefined && take < 0)
@@ -55,6 +64,10 @@ builder.queryField('usersCount', (t) =>
   t.int({
     args: { where: t.arg({ type: UserWhereInput }) },
     resolve: async (_root, { where }, ctx) => {
+      if (!ctx.db) {
+        throw new Error('DB is not initialized')
+      }
+
       const result = await usersQuery(ctx.db, where, ctx.currentUser).count<
         { count: string }[]
       >({ count: '*' })

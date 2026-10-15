@@ -15,6 +15,10 @@ builder.mutationField('signin', (t) =>
       data: t.arg({ type: UserSigninDataInput, required: true }),
     },
     resolve: async (_root, { where, data }, ctx) => {
+      if (!ctx.db) {
+        throw new Error('DB is not initialized')
+      }
+
       const failure = (message: string) => ({
         success: false,
         message,
